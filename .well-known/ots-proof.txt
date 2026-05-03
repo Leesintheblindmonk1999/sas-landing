@@ -1,0 +1,3 @@
+OpenTimestamps proof for SAS landing page.
+Hash: 5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996
+Verifiable with: ots verify ots-proof.txt
