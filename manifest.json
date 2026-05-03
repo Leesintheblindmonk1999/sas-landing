@@ -1,0 +1,5 @@
+{
+  "entry": "index.html",
+  "health_fetch": "https://sas-api.onrender.com/health",
+  "fixed": "inline CSS/JS fallback"
+}
