@@ -133,23 +133,15 @@ async function health() {
     const r = await fetch(API_URL, { cache: "no-store" });
     if (!r.ok) throw new Error("HTTP " + r.status);
 
-    const j = await r.json().catch(() => ({}));
+    const j = await r.json();
 
     dot.className = "dot online";
     title.textContent = dict[l].online;
     detail.textContent = API_URL + " · " + (j.status || "ok");
   } catch (e) {
-    try {
-      await fetch(API_URL, { cache: "no-store", mode: "no-cors" });
-
-      dot.className = "dot online";
-      title.textContent = dict[l].online + " (opaque)";
-      detail.textContent = API_URL + " · reachable / CORS opaque";
-    } catch (e2) {
-      dot.className = "dot offline";
-      title.textContent = dict[l].offline;
-      detail.textContent = API_URL + " · " + e.message;
-    }
+    dot.className = "dot offline";
+    title.textContent = dict[l].offline;
+    detail.textContent = API_URL + " · " + e.message;
   }
 }
 
@@ -171,13 +163,6 @@ function repairContactForm() {
   const form = document.querySelector("#contact-form");
   if (!form) return;
 
-  /*
-    Critical fix:
-    - The old script used preventDefault() + mailto:
-    - That does not send a real message from GitHub Pages.
-    - This version lets the browser submit the form to FormSubmit.
-    - form.onsubmit = null also neutralizes any older inline handler loaded before this file.
-  */
   form.onsubmit = null;
 
   form.setAttribute("action", CONTACT_ENDPOINT);
@@ -192,7 +177,6 @@ function repairContactForm() {
     "https://leesintheblindmonk1999.github.io/sas-landing/?sent=1#contact"
   );
 
-  // Honeypot anti-spam field. Real users do not see it.
   let honey = form.querySelector('input[name="_honey"]');
   if (!honey) {
     honey = document.createElement("input");
