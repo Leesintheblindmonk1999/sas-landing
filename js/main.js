@@ -286,3 +286,63 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+const SAS_ACTIVITY_API_BASE = "https://sas-api.onrender.com";
+
+async function loadSasPublicActivity() {
+  const total24hEl = document.getElementById("sas-requests-24h");
+  const total7dEl = document.getElementById("sas-requests-7d");
+  const signalEl = document.getElementById("sas-monitoring-signal");
+  const listEl = document.getElementById("sas-activity-list");
+
+  if (!total24hEl || !total7dEl || !signalEl || !listEl) return;
+
+  try {
+    const [statsRes, activityRes] = await Promise.all([
+      fetch(`${SAS_ACTIVITY_API_BASE}/public/stats`, { cache: "no-store" }),
+      fetch(`${SAS_ACTIVITY_API_BASE}/public/activity?limit=100`, { cache: "no-store" }),
+    ]);
+
+    if (!statsRes.ok) throw new Error(`stats HTTP ${statsRes.status}`);
+    if (!activityRes.ok) throw new Error(`activity HTTP ${activityRes.status}`);
+
+    const stats = await statsRes.json();
+    const activity = await activityRes.json();
+
+    total24hEl.textContent = String(stats.window_24h?.total_requests ?? "n/a");
+    total7dEl.textContent = String(stats.window_7d?.total_requests ?? "n/a");
+
+    const signal = stats.monitoring_signal || {};
+    signalEl.textContent = signal.active
+      ? "Anomalous traffic detected / Tráfico anómalo detectado"
+      : "Normal public activity / Actividad pública normal";
+
+    const events = activity.events || [];
+
+    if (!events.length) {
+      listEl.innerHTML = "<p>No public activity available yet.</p>";
+      return;
+    }
+
+    listEl.innerHTML = events
+      .map((ev) => {
+        const statusClass = String(ev.status_bucket || "other").replace("xx", "");
+        return `
+          <div class="activity-row status-${statusClass}">
+            <code>${ev.method}</code>
+            <span>${ev.path}</span>
+            <small>${ev.country || "unknown"} · ${ev.time_bucket_utc || "unknown"} · ${ev.status_bucket}</small>
+          </div>
+        `;
+      })
+      .join("");
+  } catch (err) {
+    total24hEl.textContent = "Unavailable";
+    total7dEl.textContent = "Unavailable";
+    signalEl.textContent = "Unavailable";
+    listEl.innerHTML = `<p>Public activity unavailable.</p>`;
+    console.warn("SAS public activity failed:", err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadSasPublicActivity);
