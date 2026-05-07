@@ -91,6 +91,69 @@ The landing displays the main SAS v1.1.0 benchmark:
 | F1 Score | 98.79% |
 | False positives | 0 |
 
+# SAS Landing Page
+
+[https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
+
+Official public landing page for **SAS - Symbiotic Autoprotection System** and the **κD = 0.56 Durante Constant**.
+
+This repository contains the static GitHub Pages site for the public presentation layer of SAS: benchmark, legal traceability, neutrality statement, public API status, anonymized live activity, and commercial contact.
+
+---
+
+**SAS - Symbiotic Autoprotection System** is a structural coherence audit framework for detecting semantic rupture and hallucination patterns in generative AI outputs.
+
+The landing page presents:
+
+- The **κD = 0.56** threshold, also referred to as the Durante Constant.
+- Public benchmark summary:
+  - **2,000 evaluated pairs**
+  - **98.80% accuracy**
+  - **100% precision**
+  - **97.60% recall**
+  - **98.79% F1-score**
+  - **0 false positives**
+- Public API reference:
+  - [https://sas-api.onrender.com](https://sas-api.onrender.com)
+  - [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs)
+- Public anonymized API activity:
+  - Last 24h product requests
+  - Last 7d product requests
+  - Monitoring signal
+  - Last 100 anonymized requests
+- Legal and technical traceability:
+  - **TAD:** EX-2026-18792778
+  - **Zenodo DOI:** 10.5281/zenodo.19702379
+  - **OpenTimestamps / Bitcoin anchor:** `5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996`
+- Commercial contact form for pilots, licensing, and technical audits.
+
+The public activity section is intentionally privacy-preserving. It does **not** expose raw IP addresses, API keys, API key hashes, or request IDs.
+
+---
+
+
+
+---
+
+## Live Site
+
+[https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
+
+---
+
+## Public API
+
+| Resource | URL |
+|---|---|
+| API root | [https://sas-api.onrender.com](https://sas-api.onrender.com) |
+| API docs | [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs) |
+| Health | [https://sas-api.onrender.com/health](https://sas-api.onrender.com/health) |
+| Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
+| Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
+| Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
+
+---
+
 ### Confusion Matrix
 
 | Prediction | Actual hallucination | Actual clean |
@@ -488,6 +551,35 @@ La landing muestra el benchmark principal de SAS v1.1.0:
 | Recall | 97.60% |
 | F1 Score | 98.79% |
 | Falsos positivos | 0 |
+
+---
+
+**SAS - Symbiotic Autoprotection System** es un framework de auditoría de coherencia estructural para detectar rupturas semánticas y patrones de alucinación en salidas de IA generativa. La landing page presenta: - El umbral **κD = 0.56**, también referido como Constante de Durante. - Resumen público del benchmark: - **2.000 pares evaluados** - **98,80% accuracy** - **100% precision** - **97,60% recall** - **98,79% F1-score** - **0 falsos positivos** - API pública de referencia: - [https://sas-api.onrender.com](https://sas-api.onrender.com) - [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs) - Actividad pública anonimizada: - Requests de producto en las últimas 24h - Requests de producto en los últimos 7 días - Señal de monitoreo - Últimos 100 requests anonimizados - Trazabilidad legal y técnica: - **TAD:** EX-2026-18792778 - **Zenodo DOI:** 10.5281/zenodo.19702379 - **OpenTimestamps / anclaje Bitcoin:** `5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996` - Formulario de contacto comercial para pilotos, licencias y auditorías técnicas. La sección de actividad pública está diseñada para preservar privacidad. No expone IPs reales, API keys, hashes de API keys ni request IDs.
+
+---
+
+---
+
+## Live Site
+
+[https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
+
+---
+
+## Public API
+
+| Resource | URL |
+|---|---|
+| API root | [https://sas-api.onrender.com](https://sas-api.onrender.com) |
+| API docs | [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs) |
+| Health | [https://sas-api.onrender.com/health](https://sas-api.onrender.com/health) |
+| Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
+| Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
+| Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
+
+---
+
+
 
 ### Matriz de confusión
 
