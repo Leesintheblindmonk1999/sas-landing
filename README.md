@@ -154,6 +154,24 @@ The public activity section is intentionally privacy-preserving. It does **not**
 
 ---
 
+## Live Demo
+
+The landing page includes a public interactive SAS demo powered by the production API endpoint:
+
+```text
+POST https://sas-api.onrender.com/public/demo/audit
+```
+
+The demo compares a source text against a response using the same source-vs-response audit logic as `/v1/diff`. It shows ISI, κD, verdict, triggered modules, and latency in real time.
+
+Public demo limits and privacy controls:
+
+- No API key is exposed in the frontend.
+- Maximum 2,000 characters per field.
+- Simple rate limit per anonymized IP hash.
+- Full input text is not stored by the demo endpoint.
+- The response exposes only the public audit summary.
+
 ### Confusion Matrix
 
 | Prediction | Actual hallucination | Actual clean |
@@ -580,6 +598,24 @@ La landing muestra el benchmark principal de SAS v1.1.0:
 ---
 
 
+
+## Demo en vivo
+
+La landing incluye una demo pública interactiva conectada al endpoint de producción:
+
+```text
+POST https://sas-api.onrender.com/public/demo/audit
+```
+
+La demo compara un texto fuente contra una respuesta usando la misma lógica source-vs-response de `/v1/diff`. Muestra ISI, κD, veredicto, módulos activados y latencia en tiempo real.
+
+Límites y controles de privacidad de la demo pública:
+
+- No se expone ninguna API key en el frontend.
+- Máximo 2.000 caracteres por campo.
+- Rate limit simple por IP hasheada.
+- El texto completo no se almacena en el endpoint de demo.
+- La respuesta expone únicamente el resumen público de auditoría.
 
 ### Matriz de confusión
 
