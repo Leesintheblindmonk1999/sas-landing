@@ -7,9 +7,11 @@
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/)
 [![Public API](https://img.shields.io/badge/Public%20API-sas--api.onrender.com-brightgreen?style=for-the-badge)](https://sas-api.onrender.com)
+[![Demo](https://img.shields.io/badge/Public%20Demo-no%20API%20key-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/#demo)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19702379-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.19702379)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
 [![Benchmark](https://img.shields.io/badge/Benchmark-98.80%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
+[![Payments](https://img.shields.io/badge/Billing-Polar%20%2B%20Mercado%20Pago-orange?style=for-the-badge)](#hosted-api-access--billing)
 
 </div>
 
@@ -19,19 +21,19 @@
 
 ## Language / Idioma
 
-[🇬🇧 English](#-english) · [🇪🇸 Español](#-español)
+[English](#english) · [Español](#español)
 
 </div>
 
 ---
 
-# 🇬🇧 English
+# English
 
 ## Overview
 
-`/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core constant **κD = 0.56**, also referred to as the **Durante Constant**.
+`/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core threshold **κD = 0.56**, also referred to as the **Durante Constant**.
 
-The site presents SAS as an open technical standard for structural coherence auditing in generative AI outputs. It connects the public API, benchmark evidence, legal traceability, OpenTimestamps anchoring, and commercial contact layer in a single static website.
+The site presents SAS as an open technical standard candidate for structural coherence auditing in generative AI outputs. It connects the live public API, no-key demo, benchmark evidence, legal traceability, OpenTimestamps anchoring, privacy-preserving public activity, hosted API access, and commercial contact layer in a single static GitHub Pages site.
 
 **Live site:**  
 [https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
@@ -42,26 +44,40 @@ The site presents SAS as an open technical standard for structural coherence aud
 **Main SAS repository:**  
 [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
 
+**Official Python client:**  
+[https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
+
+---
+
+## Repository Ecosystem
+
+| Repository | Purpose |
+|---|---|
+| [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Core FastAPI service, structural coherence engine, benchmark artifacts, API routes, hosted-service logic, and license. |
+| [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Static public website for the standard, demo, benchmark summary, live activity, traceability, and commercial routing. |
+| [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Official Python package and CLI for developers integrating with the hosted or self-hosted SAS API. |
+
 ---
 
 ## Strategic Purpose
 
-This landing page is not just a visual presentation. It is a public technical legitimacy layer for SAS.
+This landing page is not only a visual presentation. It is the public legitimacy and access layer for SAS.
 
 Its purpose is to:
 
-1. Present SAS as an open structural audit standard.
-2. Display verifiable empirical validation.
-3. Reinforce authorship and traceability for **Gonzalo Emir Durante**.
-4. Separate SAS from any exclusive geopolitical use.
-5. Route users toward the public API, the repository, the DOI, and commercial contact.
-6. Provide a neutral, auditable, and accessible public entry point for international users.
+1. Present SAS as an open structural audit standard candidate.
+2. Give users a no-key demo of the live reference implementation.
+3. Display empirical benchmark validation and clear claim boundaries.
+4. Reinforce authorship and traceability for **Gonzalo Emir Durante**.
+5. Route developers toward the API, repository, Python client, DOI, and documentation.
+6. Route commercial users toward hosted API access, pilots, licensing, or private deployment.
+7. Preserve neutrality by avoiding geopolitical exclusivity or closed institutional control.
 
 ---
 
 ## What SAS Communicates
 
-SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, and reference-related dimensions.
+SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions.
 
 The landing communicates that SAS is:
 
@@ -69,16 +85,18 @@ The landing communicates that SAS is:
 - auditable;
 - technically traceable;
 - benchmarked;
+- privacy-aware;
 - neutral by design;
+- usable through a hosted API or self-hosted deployment;
 - available for public or private organizations under symmetric attribution rules.
 
-SAS is not presented as a universal factual oracle or automatic legal certification system. It is a **technical evidence layer for structural coherence auditing**.
+SAS is not presented as a universal factual oracle, legal certification engine, medical certification tool, or absolute guarantee against every hallucination. It is a **technical evidence layer for structural coherence auditing**.
 
 ---
 
 ## Benchmark / Validation
 
-The landing displays the main SAS v1.1.0 benchmark:
+The landing displays the main SAS benchmark:
 
 | Metric | Result |
 |---|---:|
@@ -90,54 +108,16 @@ The landing displays the main SAS v1.1.0 benchmark:
 | Recall | 97.60% |
 | F1 Score | 98.79% |
 | False positives | 0 |
+| κD | 0.56 |
 
-# SAS Landing Page
+### Confusion Matrix
 
-[https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
+| Prediction | Actual hallucination | Actual clean |
+|---|---:|---:|
+| Hallucination | TP = 976 | FP = 0 |
+| Clean | FN = 24 | TN = 1000 |
 
-Official public landing page for **SAS - Symbiotic Autoprotection System** and the **κD = 0.56 Durante Constant**.
-
-This repository contains the static GitHub Pages site for the public presentation layer of SAS: benchmark, legal traceability, neutrality statement, public API status, anonymized live activity, and commercial contact.
-
----
-
-**SAS - Symbiotic Autoprotection System** is a structural coherence audit framework for detecting semantic rupture and hallucination patterns in generative AI outputs.
-
-The landing page presents:
-
-- The **κD = 0.56** threshold, also referred to as the Durante Constant.
-- Public benchmark summary:
-  - **2,000 evaluated pairs**
-  - **98.80% accuracy**
-  - **100% precision**
-  - **97.60% recall**
-  - **98.79% F1-score**
-  - **0 false positives**
-- Public API reference:
-  - [https://sas-api.onrender.com](https://sas-api.onrender.com)
-  - [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs)
-- Public anonymized API activity:
-  - Last 24h product requests
-  - Last 7d product requests
-  - Monitoring signal
-  - Last 100 anonymized requests
-- Legal and technical traceability:
-  - **TAD:** EX-2026-18792778
-  - **Zenodo DOI:** 10.5281/zenodo.19702379
-  - **OpenTimestamps / Bitcoin anchor:** `5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996`
-- Commercial contact form for pilots, licensing, and technical audits.
-
-The public activity section is intentionally privacy-preserving. It does **not** expose raw IP addresses, API keys, API key hashes, or request IDs.
-
----
-
-
-
----
-
-## Live Site
-
-[https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
+This benchmark is presented as empirical validation for the evaluated dataset. It should not be interpreted as a universal guarantee across every domain, model, language, or input distribution.
 
 ---
 
@@ -151,35 +131,109 @@ The public activity section is intentionally privacy-preserving. It does **not**
 | Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
 | Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
 | Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
+| Public demo audit | `POST https://sas-api.onrender.com/public/demo/audit` |
+| Free key request | `POST https://sas-api.onrender.com/public/request-key` |
 
 ---
 
 ## Live Demo
 
-The landing page includes a public interactive SAS demo powered by the production API endpoint:
+The landing page includes a public interactive SAS demo powered by the production endpoint:
 
 ```text
 POST https://sas-api.onrender.com/public/demo/audit
 ```
 
-The demo compares a source text against a response using the same source-vs-response audit logic as `/v1/diff`. It shows ISI, κD, verdict, triggered modules, and latency in real time.
+The demo compares a source text against a response using the same source-vs-response structural audit logic exposed by the SAS reference API. It shows:
 
-Public demo limits and privacy controls:
+- ISI;
+- κD;
+- verdict;
+- triggered modules;
+- latency;
+- public audit summary.
+
+### Demo Privacy Controls
 
 - No API key is exposed in the frontend.
 - Maximum 2,000 characters per field.
-- Simple rate limit per anonymized IP hash.
+- Rate limiting is applied through anonymized IP hashing.
 - Full input text is not stored by the demo endpoint.
-- The response exposes only the public audit summary.
+- The public response exposes only audit summary fields.
+- No raw IPs, raw API keys, API key hashes, or request IDs are published.
 
-### Confusion Matrix
+Example:
 
-| Prediction | Actual hallucination | Actual clean |
-|---|---:|---:|
-| Hallucination | TP = 976 | FP = 0 |
-| Clean | FN = 24 | TN = 1000 |
+```bash
+curl -X POST https://sas-api.onrender.com/public/demo/audit \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": "The Eiffel Tower is located in Paris, France.",
+    "response": "The Eiffel Tower is located in Berlin, Germany."
+  }'
+```
 
-This benchmark is presented as empirical validation for the evaluated dataset. It should not be interpreted as a universal guarantee across every domain, model, language, or input distribution.
+---
+
+## Hosted API Access / Billing
+
+The landing should route users toward the current hosted API access model:
+
+| Access path | Description |
+|---|---|
+| **Free key** | Users can request a free API key through `POST /public/request-key`. The key is generated and delivered automatically by email. |
+| **Pro access** | Paid access can be handled through Polar for international cards and Mercado Pago for LATAM users. |
+| **Automatic key provisioning** | After confirmed payment, the hosted service can generate and send the corresponding API key automatically. |
+| **Enterprise / Pilot** | Larger deployments, pilots, private integrations, and on-premise licensing are routed to direct commercial contact. |
+
+Free key example:
+
+```bash
+curl -X POST https://sas-api.onrender.com/public/request-key \
+  -H "Content-Type: application/json" \
+  -d '{"email": "your@email.com", "name": "Your Name"}'
+```
+
+Plan check example:
+
+```bash
+curl https://sas-api.onrender.com/v1/whoami \
+  -H "X-API-Key: sas_xxxxxxxxxxxxxxxxxxxxx"
+```
+
+> The landing should describe hosted access as a service layer. It must not imply that payment changes or relaxes the open-source license of the SAS repository.
+
+---
+
+## Developer Routing
+
+The landing should direct developers to the official Python client:
+
+```bash
+pip install sas-client
+```
+
+Basic CLI examples:
+
+```bash
+sas health
+sas readyz
+sas public-stats
+sas public-activity --limit 10
+sas --api-key YOUR_API_KEY diff "Python is a programming language." "A python is a snake."
+```
+
+Environment variable:
+
+```bash
+export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+```
+
+Self-hosted API support:
+
+```bash
+sas --base-url http://localhost:8000 health
+```
 
 ---
 
@@ -193,17 +247,19 @@ This benchmark is presented as empirical validation for the evaluated dataset. I
 | OpenTimestamps hash | `5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996` |
 | Public API | `https://sas-api.onrender.com` |
 | Main repository | `https://github.com/Leesintheblindmonk1999/SAS` |
+| Landing repository | `https://github.com/Leesintheblindmonk1999/sas-landing` |
+| Python client | `https://github.com/Leesintheblindmonk1999/sas-client` |
 | License | GPL-3.0 + Durante Invariance License |
 
 ---
 
 ## Neutrality / Geopolitical Shielding
 
-SAS and **κD = 0.56** are presented as an open standard available to any public or private organization under the same rules.
+SAS and **κD = 0.56** are presented as an open technical standard candidate available to public and private organizations under the same attribution and licensing rules.
 
-There are no exclusivities, privileges, or geopolitical access restrictions. The main condition is explicit attribution to **Gonzalo Emir Durante**, preservation of the technical integrity of the standard, and compliance with the applicable license.
+There are no exclusivities, privileges, or geopolitical access restrictions claimed by the landing. The main conditions are explicit attribution to **Gonzalo Emir Durante**, preservation of the technical integrity of the standard, and compliance with the applicable license.
 
-This positioning prevents the standard from being framed as closed, partisan, state-exclusive, military-exclusive, or region-specific. SAS is positioned as an open technical standard with mandatory attribution and symmetric rules.
+This positioning prevents the standard from being framed as closed, partisan, state-exclusive, military-exclusive, or region-specific.
 
 ---
 
@@ -214,11 +270,13 @@ This positioning prevents the standard from being framed as closed, partisan, st
 - Theme persistence through `localStorage`.
 - Language persistence through `localStorage`.
 - Real fetch to the public API `/health` endpoint.
+- Public API stats and anonymized activity sections.
+- Interactive no-key demo using `/public/demo/audit`.
 - Controlled fallback if the API is unavailable or blocked by CORS during local testing.
 - Self-contained benchmark visual.
 - Neutrality / geopolitical shielding section.
 - Legal section with TAD, DOI, and OpenTimestamps reference.
-- Contact form through `mailto:`.
+- Commercial contact through `mailto:` or configured contact flow.
 - Static deployment.
 - No heavy framework.
 - No cookies.
@@ -238,8 +296,9 @@ This landing page is designed for:
 - technical reviewers;
 - companies evaluating API licensing;
 - institutions requiring document traceability;
-- readers coming from the Zenodo DOI;
-- users coming from GitHub, LinkedIn, or publications.
+- developers integrating the Python client;
+- enterprise users evaluating pilots or private deployment;
+- readers coming from Zenodo DOI, GitHub, LinkedIn, or publications.
 
 ---
 
@@ -249,6 +308,7 @@ To preserve technical precision and reputational safety, the landing avoids clai
 
 - a universal factual oracle;
 - automatic legal certification;
+- medical, financial, or legal professional judgment;
 - an absolute guarantee against every hallucination;
 - a closed or exclusive solution;
 - a geopolitical surveillance tool.
@@ -266,11 +326,13 @@ sas-landing/
 │   ├── styles.css              # Base layout, responsive design, components
 │   └── themes.css              # Theme variables: light, dark, tech
 ├── js/
-│   ├── main.js                 # Language switcher, API health fetch, form behavior, scroll reveal
+│   ├── main.js                 # Language switcher, API fetches, demo, form behavior, scroll reveal
 │   └── theme.js                # Theme selector and localStorage persistence
 ├── assets/
 │   ├── logo.svg                # SAS geometric logo
 │   └── benchmark.png           # Self-contained benchmark visualization
+├── manifest.json               # PWA/site metadata when enabled
+├── .nojekyll                   # GitHub Pages static deployment helper
 └── .well-known/
     └── ots-proof.txt           # OpenTimestamps public proof notice / hash reference
 ```
@@ -289,7 +351,7 @@ index.html
 
 ### Option 2 — Recommended local server
 
-For the most accurate behavior, especially for fetch and browser security behavior:
+For the most accurate behavior, especially for `fetch()` and browser security behavior:
 
 ```bash
 python -m http.server 8000
@@ -313,7 +375,7 @@ https://sas-api.onrender.com/health
 
 If the request succeeds, the page shows the API as online.
 
-If the request fails due to Render cold start, connectivity, browser security, or CORS restrictions during local testing, the page shows a controlled fallback instead of breaking.
+If the request fails due to Render cold start, connectivity, browser security, or CORS restrictions during local testing, the page should show a controlled fallback instead of breaking.
 
 ---
 
@@ -323,13 +385,13 @@ If the request fails due to Render cold start, connectivity, browser security, o
 
 Recommended deployment:
 
-1. Create or open the repository:
+1. Open the repository:
 
 ```text
 Leesintheblindmonk1999/sas-landing
 ```
 
-2. Upload the static files:
+2. Upload or update the static files:
 
 ```text
 index.html
@@ -337,6 +399,8 @@ css/
 js/
 assets/
 .well-known/
+manifest.json
+.nojekyll
 README.md
 ```
 
@@ -361,11 +425,14 @@ This site:
 - does not use cookies;
 - does not integrate analytics;
 - does not use tracking pixels;
-- does not store data in a custom backend;
-- does not store contact form messages on a server;
-- does not store visitor IPs inside the repository or inside the landing itself.
+- does not store data in a custom landing backend;
+- does not store contact form messages on a landing server;
+- does not expose raw IPs, API keys, API key hashes, or request IDs;
+- does not publish full demo input text.
 
-The contact form uses `mailto:` and opens the user’s local email client. The data typed by the user is only sent if the user decides to send the email.
+The contact flow may use `mailto:` or an explicitly configured external contact/payment flow. The data typed by the user is only sent when the user submits through that chosen client or provider.
+
+Public activity is privacy-preserving and should show only aggregated or anonymized operational metadata.
 
 Note: if the site is hosted on GitHub Pages or another external provider, that provider may process standard technical access logs under its own policies.
 
@@ -443,16 +510,20 @@ All features are widely supported in modern browsers.
 Before publishing a new landing version:
 
 - [ ] Confirm API URL is correct.
+- [ ] Confirm `/public/demo/audit` works.
+- [ ] Confirm `/public/stats` and `/public/activity` work.
+- [ ] Confirm `/public/request-key` copy matches the hosted API behavior.
+- [ ] Confirm Polar and Mercado Pago links or references match the current production flow.
 - [ ] Confirm DOI is current.
 - [ ] Confirm TAD registry number is unchanged.
 - [ ] Confirm benchmark metrics match the latest benchmark artifact.
 - [ ] Confirm OpenTimestamps hash matches the intended record.
 - [ ] Test English / Spanish language switch.
 - [ ] Test `LIGHT / DARK / TECH` theme switch.
-- [ ] Test contact form mailto.
+- [ ] Test contact form or commercial route.
 - [ ] Test mobile layout.
 - [ ] Test GitHub Pages deployment.
-- [ ] Verify that no secrets, API keys, or private files are included.
+- [ ] Verify that no secrets, API keys, private files, webhook secrets, or payment credentials are included.
 
 ---
 
@@ -464,13 +535,14 @@ The SAS standard and **κD = 0.56** are published under:
 GPL-3.0 + Durante Invariance License
 ```
 
-The landing page itself is part of the public SAS communication layer and should preserve:
+The landing page is part of the public SAS communication layer and should preserve:
 
 - attribution to Gonzalo Emir Durante;
 - reference to TAD `EX-2026-18792778`;
 - reference to Zenodo DOI `10.5281/zenodo.19702379`;
 - the OpenTimestamps hash reference;
-- the neutrality statement.
+- the neutrality statement;
+- the distinction between open-source SAS code and hosted API service access.
 
 For complete licensing details, see the main SAS repository:
 
@@ -480,7 +552,7 @@ For complete licensing details, see the main SAS repository:
 
 ## Contact
 
-For commercial inquiries, pilots, licensing, integrations, or technical questions:
+For commercial inquiries, pilots, licensing, integrations, private deployment, or technical questions:
 
 ```text
 duranteg2@gmail.com
@@ -492,25 +564,26 @@ Main links:
 - Public API: [https://sas-api.onrender.com](https://sas-api.onrender.com)
 - API docs: [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs)
 - Main repository: [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
+- Python client: [https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
 - DOI: [https://doi.org/10.5281/zenodo.19702379](https://doi.org/10.5281/zenodo.19702379)
 
 ---
 
 <div align="center">
 
-[⬆ Back to language selector](#language--idioma)
+[Back to language selector](#language--idioma)
 
 </div>
 
 ---
 
-# 🇪🇸 Español
+# Español
 
 ## Descripción general
 
-`/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de su constante central **κD = 0.56**, también denominada **Durante Constant**.
+`/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de su umbral central **κD = 0.56**, también denominado **Durante Constant**.
 
-El sitio presenta SAS como un estándar técnico abierto para auditoría de coherencia estructural en salidas de IA generativa. Conecta en una única página estática la API pública, la evidencia de benchmark, la trazabilidad legal, el anclaje OpenTimestamps y el contacto comercial.
+El sitio presenta SAS como candidato a estándar técnico abierto para auditoría de coherencia estructural en salidas de IA generativa. Conecta en una única web estática de GitHub Pages la API pública, la demo sin API key, la evidencia de benchmark, la trazabilidad legal, el anclaje OpenTimestamps, la actividad pública anonimizada, el acceso hosted a la API y el contacto comercial.
 
 **Sitio en vivo:**  
 [https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
@@ -521,26 +594,40 @@ El sitio presenta SAS como un estándar técnico abierto para auditoría de cohe
 **Repositorio principal de SAS:**  
 [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
 
+**Cliente Python oficial:**  
+[https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
+
+---
+
+## Ecosistema de repositorios
+
+| Repositorio | Función |
+|---|---|
+| [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Servicio FastAPI core, motor de coherencia estructural, artefactos de benchmark, rutas API, lógica del servicio alojado y licencia. |
+| [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Sitio público estático para el estándar, demo, resumen de benchmark, actividad pública, trazabilidad y contacto comercial. |
+| [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Paquete Python y CLI oficial para desarrolladores que integran la API SAS alojada o autoalojada. |
+
 ---
 
 ## Objetivo estratégico
 
-Esta landing no es solo una presentación visual. Es una capa pública de legitimación técnica para SAS.
+Esta landing no es solo una presentación visual. Es la capa pública de legitimidad y acceso de SAS.
 
 Su función es:
 
-1. Presentar SAS como estándar abierto de auditoría estructural.
-2. Mostrar validación empírica verificable.
-3. Reforzar la autoría y trazabilidad de **Gonzalo Emir Durante**.
-4. Separar SAS de cualquier uso geopolítico exclusivo.
-5. Dirigir usuarios hacia la API pública, el repositorio, el DOI y el contacto comercial.
-6. Proveer una entrada internacional neutral, auditable y accesible.
+1. Presentar SAS como candidato a estándar abierto de auditoría estructural.
+2. Dar a los usuarios una demo sin API key de la implementación pública de referencia.
+3. Mostrar validación empírica y límites claros de las afirmaciones.
+4. Reforzar la autoría y trazabilidad de **Gonzalo Emir Durante**.
+5. Dirigir desarrolladores hacia la API, repositorio, cliente Python, DOI y documentación.
+6. Dirigir usuarios comerciales hacia acceso hosted, pilotos, licencias o despliegue privado.
+7. Preservar neutralidad evitando exclusividad geopolítica o control institucional cerrado.
 
 ---
 
 ## Qué comunica SAS
 
-SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas y referenciales.
+SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales.
 
 La landing comunica que SAS es:
 
@@ -548,74 +635,30 @@ La landing comunica que SAS es:
 - auditable;
 - técnicamente trazable;
 - validado por benchmark;
+- consciente de la privacidad;
 - neutral por diseño;
+- utilizable mediante API alojada o despliegue propio;
 - disponible para organizaciones públicas o privadas bajo reglas simétricas de atribución.
 
-SAS no se presenta como oráculo factual universal ni como sistema automático de certificación legal. Se presenta como una **capa técnica de evidencia para auditoría estructural de coherencia**.
+SAS no se presenta como oráculo factual universal, motor de certificación legal, certificación médica ni garantía absoluta contra toda alucinación. Se presenta como una **capa técnica de evidencia para auditoría estructural de coherencia**.
 
 ---
 
 ## Benchmark / Validación
 
-La landing muestra el benchmark principal de SAS v1.1.0:
+La landing muestra el benchmark principal de SAS:
 
 | Métrica | Resultado |
 |---|---:|
 | Pares evaluados | 2.000 |
-| Alucinaciones | 1.000 |
-| Textos limpios | 1.000 |
+| Ejemplos con alucinación | 1.000 |
+| Ejemplos limpios | 1.000 |
 | Accuracy | 98.80% |
 | Precision | 100.00% |
 | Recall | 97.60% |
 | F1 Score | 98.79% |
 | Falsos positivos | 0 |
-
----
-
-**SAS - Symbiotic Autoprotection System** es un framework de auditoría de coherencia estructural para detectar rupturas semánticas y patrones de alucinación en salidas de IA generativa. La landing page presenta: - El umbral **κD = 0.56**, también referido como Constante de Durante. - Resumen público del benchmark: - **2.000 pares evaluados** - **98,80% accuracy** - **100% precision** - **97,60% recall** - **98,79% F1-score** - **0 falsos positivos** - API pública de referencia: - [https://sas-api.onrender.com](https://sas-api.onrender.com) - [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs) - Actividad pública anonimizada: - Requests de producto en las últimas 24h - Requests de producto en los últimos 7 días - Señal de monitoreo - Últimos 100 requests anonimizados - Trazabilidad legal y técnica: - **TAD:** EX-2026-18792778 - **Zenodo DOI:** 10.5281/zenodo.19702379 - **OpenTimestamps / anclaje Bitcoin:** `5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996` - Formulario de contacto comercial para pilotos, licencias y auditorías técnicas. La sección de actividad pública está diseñada para preservar privacidad. No expone IPs reales, API keys, hashes de API keys ni request IDs.
-
----
-
----
-
-## Live Site
-
-[https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
-
----
-
-## Public API
-
-| Resource | URL |
-|---|---|
-| API root | [https://sas-api.onrender.com](https://sas-api.onrender.com) |
-| API docs | [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs) |
-| Health | [https://sas-api.onrender.com/health](https://sas-api.onrender.com/health) |
-| Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
-| Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
-| Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
-
----
-
-
-
-## Demo en vivo
-
-La landing incluye una demo pública interactiva conectada al endpoint de producción:
-
-```text
-POST https://sas-api.onrender.com/public/demo/audit
-```
-
-La demo compara un texto fuente contra una respuesta usando la misma lógica source-vs-response de `/v1/diff`. Muestra ISI, κD, veredicto, módulos activados y latencia en tiempo real.
-
-Límites y controles de privacidad de la demo pública:
-
-- No se expone ninguna API key en el frontend.
-- Máximo 2.000 caracteres por campo.
-- Rate limit simple por IP hasheada.
-- El texto completo no se almacena en el endpoint de demo.
-- La respuesta expone únicamente el resumen público de auditoría.
+| κD | 0.56 |
 
 ### Matriz de confusión
 
@@ -625,6 +668,122 @@ Límites y controles de privacidad de la demo pública:
 | Limpio | FN = 24 | TN = 1000 |
 
 Este benchmark se presenta como validación empírica sobre el dataset evaluado. No debe interpretarse como garantía universal de rendimiento sobre todo dominio, modelo, idioma o distribución de entrada posible.
+
+---
+
+## API pública
+
+| Recurso | URL |
+|---|---|
+| API root | [https://sas-api.onrender.com](https://sas-api.onrender.com) |
+| API docs | [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs) |
+| Health | [https://sas-api.onrender.com/health](https://sas-api.onrender.com/health) |
+| Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
+| Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
+| Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
+| Demo pública de auditoría | `POST https://sas-api.onrender.com/public/demo/audit` |
+| Solicitud de Free key | `POST https://sas-api.onrender.com/public/request-key` |
+
+---
+
+## Demo en vivo
+
+La landing incluye una demo pública interactiva conectada al endpoint de producción:
+
+```text
+POST https://sas-api.onrender.com/public/demo/audit
+```
+
+La demo compara un texto fuente contra una respuesta usando la lógica de auditoría estructural source-vs-response expuesta por la API de referencia SAS. Muestra:
+
+- ISI;
+- κD;
+- veredicto;
+- módulos activados;
+- latencia;
+- resumen público de auditoría.
+
+### Controles de privacidad de la demo
+
+- No se expone ninguna API key en el frontend.
+- Máximo 2.000 caracteres por campo.
+- Se aplica rate limit mediante hash anonimizado de IP.
+- El texto completo no se almacena en el endpoint de demo.
+- La respuesta pública expone solo campos resumidos de auditoría.
+- No se publican IPs reales, API keys, hashes de API keys ni request IDs.
+
+Ejemplo:
+
+```bash
+curl -X POST https://sas-api.onrender.com/public/demo/audit \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": "The Eiffel Tower is located in Paris, France.",
+    "response": "The Eiffel Tower is located in Berlin, Germany."
+  }'
+```
+
+---
+
+## Acceso hosted a la API / Billing
+
+La landing debe dirigir usuarios hacia el modelo actual de acceso a la API alojada:
+
+| Vía de acceso | Descripción |
+|---|---|
+| **Free key** | Los usuarios pueden pedir una API key gratuita mediante `POST /public/request-key`. La key se genera y envía automáticamente por email. |
+| **Acceso Pro** | El acceso pago puede manejarse mediante Polar para tarjetas internacionales y Mercado Pago para usuarios LATAM. |
+| **Provisionamiento automático de keys** | Tras confirmación de pago, el servicio alojado puede generar y enviar automáticamente la API key correspondiente. |
+| **Enterprise / Piloto** | Despliegues grandes, pilotos, integraciones privadas y licencias on-premise se derivan a contacto comercial directo. |
+
+Ejemplo de Free key:
+
+```bash
+curl -X POST https://sas-api.onrender.com/public/request-key \
+  -H "Content-Type: application/json" \
+  -d '{"email": "your@email.com", "name": "Your Name"}'
+```
+
+Ejemplo para verificar plan:
+
+```bash
+curl https://sas-api.onrender.com/v1/whoami \
+  -H "X-API-Key: sas_xxxxxxxxxxxxxxxxxxxxx"
+```
+
+> La landing debe describir el acceso hosted como una capa de servicio. No debe sugerir que pagar cambia o relaja la licencia open source del repositorio SAS.
+
+---
+
+## Ruta para desarrolladores
+
+La landing debe dirigir desarrolladores hacia el cliente Python oficial:
+
+```bash
+pip install sas-client
+```
+
+Ejemplos básicos de CLI:
+
+```bash
+sas health
+sas readyz
+sas public-stats
+sas public-activity --limit 10
+sas --api-key YOUR_API_KEY diff "Python is a programming language." "A python is a snake."
+```
+
+Variable de entorno:
+
+```bash
+export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+```
+
+Soporte para API autoalojada:
+
+```bash
+sas --base-url http://localhost:8000 health
+```
 
 ---
 
@@ -638,17 +797,19 @@ Este benchmark se presenta como validación empírica sobre el dataset evaluado.
 | Hash OpenTimestamps | `5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996` |
 | API pública | `https://sas-api.onrender.com` |
 | Repositorio principal | `https://github.com/Leesintheblindmonk1999/SAS` |
+| Repositorio landing | `https://github.com/Leesintheblindmonk1999/sas-landing` |
+| Cliente Python | `https://github.com/Leesintheblindmonk1999/sas-client` |
 | Licencia | GPL-3.0 + Durante Invariance License |
 
 ---
 
 ## Neutralidad / Blindaje geopolítico
 
-SAS y **κD = 0.56** se presentan como un estándar abierto disponible para cualquier organización pública o privada bajo las mismas reglas.
+SAS y **κD = 0.56** se presentan como candidato a estándar técnico abierto disponible para organizaciones públicas y privadas bajo las mismas reglas de atribución y licencia.
 
-No hay exclusividades, privilegios ni restricciones geopolíticas de acceso. La condición principal es la atribución explícita a **Gonzalo Emir Durante**, la preservación de la integridad técnica del estándar y el cumplimiento de la licencia aplicable.
+La landing no afirma exclusividades, privilegios ni restricciones geopolíticas de acceso. Las condiciones principales son la atribución explícita a **Gonzalo Emir Durante**, la preservación de la integridad técnica del estándar y el cumplimiento de la licencia aplicable.
 
-Este posicionamiento evita que el estándar sea interpretado como cerrado, partidario, estatal, militar o exclusivo de una región. SAS queda posicionado como un estándar técnico abierto, con atribución obligatoria y reglas simétricas.
+Este posicionamiento evita que el estándar sea interpretado como cerrado, partidario, estatal, militar o exclusivo de una región.
 
 ---
 
@@ -659,11 +820,13 @@ Este posicionamiento evita que el estándar sea interpretado como cerrado, parti
 - Persistencia de tema mediante `localStorage`.
 - Persistencia de idioma mediante `localStorage`.
 - Fetch real al endpoint público `/health`.
+- Secciones de stats públicas y actividad anonimizada.
+- Demo interactiva sin API key usando `/public/demo/audit`.
 - Fallback controlado si la API no responde o si CORS bloquea la consulta local.
-- Imagen autocontenida del benchmark.
+- Visual autocontenido del benchmark.
 - Sección de neutralidad / blindaje geopolítico.
 - Sección legal con TAD, DOI y referencia OpenTimestamps.
-- Formulario de contacto mediante `mailto:`.
+- Contacto comercial mediante `mailto:` o flujo de contacto configurado.
 - Despliegue estático.
 - Sin framework pesado.
 - Sin cookies.
@@ -683,8 +846,9 @@ Esta landing está diseñada para:
 - revisores técnicos;
 - empresas que evalúan licencias de API;
 - instituciones que necesitan trazabilidad documental;
-- lectores que llegan desde el DOI de Zenodo;
-- usuarios que llegan desde GitHub, LinkedIn o publicaciones.
+- desarrolladores que integran el cliente Python;
+- usuarios enterprise que evalúan pilotos o despliegue privado;
+- lectores que llegan desde Zenodo DOI, GitHub, LinkedIn o publicaciones.
 
 ---
 
@@ -694,6 +858,7 @@ Para preservar precisión técnica y blindaje reputacional, la landing evita afi
 
 - un oráculo factual universal;
 - una certificación legal automática;
+- juicio profesional médico, financiero o legal;
 - una garantía absoluta contra toda alucinación;
 - una solución cerrada o exclusiva;
 - una herramienta de vigilancia geopolítica.
@@ -711,11 +876,13 @@ sas-landing/
 │   ├── styles.css              # Layout base, responsive design y componentes
 │   └── themes.css              # Variables de temas: light, dark, tech
 ├── js/
-│   ├── main.js                 # Selector de idioma, fetch API health, formulario, scroll reveal
+│   ├── main.js                 # Selector de idioma, fetch API, demo, formulario, scroll reveal
 │   └── theme.js                # Selector de tema y persistencia localStorage
 ├── assets/
 │   ├── logo.svg                # Logo geométrico SAS
 │   └── benchmark.png           # Visualización autocontenida del benchmark
+├── manifest.json               # Metadata PWA/site si está habilitada
+├── .nojekyll                   # Helper para despliegue estático en GitHub Pages
 └── .well-known/
     └── ots-proof.txt           # Aviso público OpenTimestamps / referencia hash
 ```
@@ -734,7 +901,7 @@ index.html
 
 ### Opción 2 — Servidor local recomendado
 
-Para un comportamiento más realista, especialmente por seguridad del navegador y `fetch`:
+Para un comportamiento más realista, especialmente por `fetch()` y seguridad del navegador:
 
 ```bash
 python -m http.server 8000
@@ -758,7 +925,7 @@ https://sas-api.onrender.com/health
 
 Si la solicitud responde correctamente, la página muestra la API como online.
 
-Si falla por cold start de Render, conectividad, seguridad del navegador o restricciones CORS durante pruebas locales, la página muestra un fallback controlado sin romper la experiencia.
+Si falla por cold start de Render, conectividad, seguridad del navegador o restricciones CORS durante pruebas locales, la página debe mostrar un fallback controlado sin romper la experiencia.
 
 ---
 
@@ -768,13 +935,13 @@ Si falla por cold start de Render, conectividad, seguridad del navegador o restr
 
 Despliegue recomendado:
 
-1. Crear o abrir el repositorio:
+1. Abrir el repositorio:
 
 ```text
 Leesintheblindmonk1999/sas-landing
 ```
 
-2. Subir los archivos estáticos:
+2. Subir o actualizar los archivos estáticos:
 
 ```text
 index.html
@@ -782,6 +949,8 @@ css/
 js/
 assets/
 .well-known/
+manifest.json
+.nojekyll
 README.md
 ```
 
@@ -806,11 +975,14 @@ Este sitio:
 - no usa cookies;
 - no integra analytics;
 - no usa píxeles de seguimiento;
-- no almacena datos en un backend propio;
-- no guarda mensajes del formulario en servidor propio;
-- no almacena IPs dentro del repositorio ni dentro de la landing.
+- no almacena datos en un backend propio de la landing;
+- no guarda mensajes de contacto en un servidor de la landing;
+- no expone IPs reales, API keys, hashes de API keys ni request IDs;
+- no publica el texto completo ingresado en la demo.
 
-El formulario de contacto usa `mailto:` y abre el cliente de correo local del usuario. Los datos escritos por el usuario solo se envían si el usuario decide enviar el correo.
+El flujo de contacto puede usar `mailto:` o un flujo externo de contacto/pago explícitamente configurado. Los datos escritos por el usuario solo se envían cuando el usuario confirma el envío mediante el cliente o proveedor elegido.
+
+La actividad pública preserva privacidad y debe mostrar únicamente metadata operacional agregada o anonimizada.
 
 Nota: si el sitio se aloja en GitHub Pages u otro proveedor externo, ese proveedor puede procesar logs técnicos estándar de acceso bajo sus propias políticas.
 
@@ -888,16 +1060,20 @@ Todas estas funciones están ampliamente soportadas en navegadores modernos.
 Antes de publicar una nueva versión de la landing:
 
 - [ ] Confirmar que la URL de la API sea correcta.
+- [ ] Confirmar que `/public/demo/audit` funcione.
+- [ ] Confirmar que `/public/stats` y `/public/activity` funcionen.
+- [ ] Confirmar que el texto de `/public/request-key` coincida con el comportamiento actual de la API alojada.
+- [ ] Confirmar que los links o referencias de Polar y Mercado Pago coincidan con el flujo productivo actual.
 - [ ] Confirmar que el DOI sea el vigente.
 - [ ] Confirmar que el registro TAD no cambió.
 - [ ] Confirmar que las métricas del benchmark coincidan con el artefacto más reciente.
 - [ ] Confirmar que el hash OpenTimestamps sea el correcto.
 - [ ] Probar selector Inglés / Español.
 - [ ] Probar selector `LIGHT / DARK / TECH`.
-- [ ] Probar formulario `mailto:`.
+- [ ] Probar formulario o ruta comercial.
 - [ ] Probar layout mobile.
 - [ ] Probar despliegue en GitHub Pages.
-- [ ] Verificar que no haya secretos, API keys ni archivos privados.
+- [ ] Verificar que no haya secretos, API keys, archivos privados, webhook secrets ni credenciales de pago.
 
 ---
 
@@ -915,7 +1091,8 @@ La landing page forma parte de la capa pública de comunicación de SAS y debe p
 - referencia al TAD `EX-2026-18792778`;
 - referencia al Zenodo DOI `10.5281/zenodo.19702379`;
 - referencia al hash OpenTimestamps;
-- declaración de neutralidad.
+- declaración de neutralidad;
+- distinción entre código open source de SAS y acceso al servicio API alojado.
 
 Para detalles completos de licencia, ver el repositorio principal de SAS:
 
@@ -925,7 +1102,7 @@ Para detalles completos de licencia, ver el repositorio principal de SAS:
 
 ## Contacto
 
-Para consultas comerciales, pilotos, licencias, integraciones o preguntas técnicas:
+Para consultas comerciales, pilotos, licencias, integraciones, despliegue privado o preguntas técnicas:
 
 ```text
 duranteg2@gmail.com
@@ -937,13 +1114,14 @@ Enlaces principales:
 - API pública: [https://sas-api.onrender.com](https://sas-api.onrender.com)
 - API docs: [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs)
 - Repositorio principal: [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
+- Cliente Python: [https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
 - DOI: [https://doi.org/10.5281/zenodo.19702379](https://doi.org/10.5281/zenodo.19702379)
 
 ---
 
 <div align="center">
 
-[⬆ Volver al selector de idioma](#language--idioma)
+[Volver al selector de idioma](#language--idioma)
 
 </div>
 
