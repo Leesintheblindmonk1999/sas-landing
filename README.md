@@ -8,6 +8,8 @@
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/)
 [![Public API](https://img.shields.io/badge/Public%20API-sas--api.onrender.com-brightgreen?style=for-the-badge)](https://sas-api.onrender.com)
 [![Demo](https://img.shields.io/badge/Public%20Demo-no%20API%20key-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/#demo)
+[![Free Key](https://img.shields.io/badge/Free%20API%20Key-email%20delivery-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/#access)
+[![PyPI](https://img.shields.io/badge/PyPI-sas--client-blue?style=for-the-badge)](https://pypi.org/project/sas-client/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19702379-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.19702379)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
 [![Benchmark](https://img.shields.io/badge/Benchmark-98.80%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
@@ -33,7 +35,7 @@
 
 `/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core threshold **κD = 0.56**, also referred to as the **Durante Constant**.
 
-The site presents SAS as an open technical standard candidate for structural coherence auditing in generative AI outputs. It connects the live public API, no-key demo, benchmark evidence, legal traceability, OpenTimestamps anchoring, privacy-preserving public activity, hosted API access, and commercial contact layer in a single static GitHub Pages site.
+The site presents SAS as an open technical standard candidate for structural coherence auditing in generative AI outputs. It connects the live public API, no-key demo, benchmark evidence, legal traceability, OpenTimestamps anchoring, privacy-preserving public activity, hosted API access, CLI onboarding, billing, and commercial contact layer in a single static GitHub Pages site.
 
 **Live site:**  
 [https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
@@ -45,7 +47,7 @@ The site presents SAS as an open technical standard candidate for structural coh
 [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
 
 **Official Python client:**  
-[https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
+[https://pypi.org/project/sas-client/](https://pypi.org/project/sas-client/)
 
 ---
 
@@ -54,7 +56,7 @@ The site presents SAS as an open technical standard candidate for structural coh
 | Repository | Purpose |
 |---|---|
 | [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Core FastAPI service, structural coherence engine, benchmark artifacts, API routes, hosted-service logic, and license. |
-| [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Static public website for the standard, demo, benchmark summary, live activity, traceability, and commercial routing. |
+| [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Static public website for the standard, demo, benchmark summary, live activity, traceability, CLI onboarding, and commercial routing. |
 | [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Official Python package and CLI for developers integrating with the hosted or self-hosted SAS API. |
 
 ---
@@ -69,9 +71,10 @@ Its purpose is to:
 2. Give users a no-key demo of the live reference implementation.
 3. Display empirical benchmark validation and clear claim boundaries.
 4. Reinforce authorship and traceability for **Gonzalo Emir Durante**.
-5. Route developers toward the API, repository, Python client, DOI, and documentation.
-6. Route commercial users toward hosted API access, pilots, licensing, or private deployment.
-7. Preserve neutrality by avoiding geopolitical exclusivity or closed institutional control.
+5. Route developers toward the API, repository, Python client, DOI, documentation, and hosted access.
+6. Reduce onboarding friction through web form, CLI, curl, and PowerShell examples.
+7. Route commercial users toward hosted API access, pilots, licensing, or private deployment.
+8. Preserve neutrality by avoiding geopolitical exclusivity or closed institutional control.
 
 ---
 
@@ -88,9 +91,59 @@ The landing communicates that SAS is:
 - privacy-aware;
 - neutral by design;
 - usable through a hosted API or self-hosted deployment;
+- available through a no-key public demo;
+- accessible through a Free API key flow;
 - available for public or private organizations under symmetric attribution rules.
 
 SAS is not presented as a universal factual oracle, legal certification engine, medical certification tool, or absolute guarantee against every hallucination. It is a **technical evidence layer for structural coherence auditing**.
+---
+
+## Quick Start
+
+### Option A — Try the no-key demo
+
+Use the landing:
+
+```text
+https://leesintheblindmonk1999.github.io/sas-landing/#demo
+```
+
+Or call the public demo endpoint:
+
+```bash
+curl -X POST https://sas-api.onrender.com/public/demo/audit \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": "The Eiffel Tower is located in Paris, France.",
+    "response": "The Eiffel Tower is located in Berlin, Germany."
+  }'
+```
+
+### Option B — Request a Free API key from the terminal
+
+```bash
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+```
+
+After receiving the key by email:
+
+```bash
+export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
+```
+
+### Option C — Windows PowerShell
+
+```powershell
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+
+$env:SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
+```
 
 ---
 
@@ -131,8 +184,12 @@ This benchmark is presented as empirical validation for the evaluated dataset. I
 | Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
 | Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
 | Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
+| Public demo help | `GET https://sas-api.onrender.com/public/demo/audit` |
 | Public demo audit | `POST https://sas-api.onrender.com/public/demo/audit` |
+| Free key help | `GET https://sas-api.onrender.com/public/request-key` |
 | Free key request | `POST https://sas-api.onrender.com/public/request-key` |
+| Authenticated identity | `GET https://sas-api.onrender.com/v1/whoami` |
+| Authenticated diff | `POST https://sas-api.onrender.com/v1/diff` |
 
 ---
 
@@ -177,28 +234,67 @@ curl -X POST https://sas-api.onrender.com/public/demo/audit \
 
 ## Hosted API Access / Billing
 
-The landing should route users toward the current hosted API access model:
+The landing routes users toward the current hosted API access model.
 
 | Access path | Description |
 |---|---|
-| **Free key** | Users can request a free API key through `POST /public/request-key`. The key is generated and delivered automatically by email. |
+| **Free key** | Users can request a free API key through the web form, CLI, curl, PowerShell, or `POST /public/request-key`. The key is generated and delivered automatically by email. |
 | **Pro access** | Paid access can be handled through Polar for international cards and Mercado Pago for LATAM users. |
 | **Automatic key provisioning** | After confirmed payment, the hosted service can generate and send the corresponding API key automatically. |
 | **Enterprise / Pilot** | Larger deployments, pilots, private integrations, and on-premise licensing are routed to direct commercial contact. |
 
-Free key example:
+### Free key onboarding paths
+
+The landing exposes multiple equivalent ways to request a Free API key:
+
+| Method | Best for | Notes |
+|---|---|---|
+| Web form | Non-technical users | Fill name/email and submit. |
+| CLI | Developers using `sas-client` | Recommended path for terminal users. |
+| curl | API/manual HTTP testing | Good for Linux/macOS and API clients. |
+| PowerShell | Windows users | Avoids shell quoting problems from Unix examples. |
+
+### CLI
+
+```bash
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+```
+
+After receiving the key:
+
+```bash
+export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
+```
+
+### curl
 
 ```bash
 curl -X POST https://sas-api.onrender.com/public/request-key \
   -H "Content-Type: application/json" \
-  -d '{"email": "your@email.com", "name": "Your Name"}'
+  -d '{"email":"you@example.com","name":"Your Name"}'
 ```
 
-Plan check example:
+After receiving the key:
 
 ```bash
-curl https://sas-api.onrender.com/v1/whoami \
-  -H "X-API-Key: sas_xxxxxxxxxxxxxxxxxxxxx"
+curl -X POST https://sas-api.onrender.com/v1/diff \
+  -H "X-API-Key: sas_xxxxxxxxxxxxxxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{"text_a":"Paris is in France.","text_b":"Paris is in Germany.","experimental":true}'
+```
+
+### PowerShell
+
+```powershell
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+
+$env:SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
 ```
 
 > The landing should describe hosted access as a service layer. It must not imply that payment changes or relaxes the open-source license of the SAS repository.
@@ -207,20 +303,26 @@ curl https://sas-api.onrender.com/v1/whoami \
 
 ## Developer Routing
 
-The landing should direct developers to the official Python client:
+The landing directs developers to the official Python client:
 
 ```bash
 pip install sas-client
 ```
 
-Basic CLI examples:
+Core CLI commands:
 
 ```bash
 sas health
 sas readyz
+sas plans
 sas public-stats
 sas public-activity --limit 10
-sas --api-key YOUR_API_KEY diff "Python is a programming language." "A python is a snake."
+sas request-key --email you@example.com --name "Your Name"
+sas demo-audit "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
+sas whoami
+sas diff "Python is a programming language." "A python is a snake."
+sas audit "Text to audit"
+sas chat "Explain SAS in one paragraph"
 ```
 
 Environment variable:
@@ -229,11 +331,34 @@ Environment variable:
 export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
 ```
 
+Windows PowerShell:
+
+```powershell
+$env:SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+```
+
 Self-hosted API support:
 
 ```bash
 sas --base-url http://localhost:8000 health
 ```
+
+---
+
+## Error and Onboarding UX
+
+The landing mirrors the hosted API onboarding behavior:
+
+| Situation | UX behavior |
+|---|---|
+| User visits `/public/request-key` with GET | API returns help with CLI, curl, PowerShell, plan info, and next steps. |
+| User visits `/public/demo/audit` with GET | API returns demo usage help. |
+| User sends invalid request body | API returns `422` with actionable examples and fix commands. |
+| User sends oversized payload | API returns `413 Payload Too Large`. |
+| User requests a key successfully | API sends a Free key by email. |
+| User has a key | `sas whoami` confirms plan and quota. |
+
+This is intended to convert common mistakes into onboarding rather than dead-end errors.
 
 ---
 
@@ -272,6 +397,11 @@ This positioning prevents the standard from being framed as closed, partisan, st
 - Real fetch to the public API `/health` endpoint.
 - Public API stats and anonymized activity sections.
 - Interactive no-key demo using `/public/demo/audit`.
+- Free key request form.
+- CLI / curl / PowerShell onboarding block inside the Free Key card.
+- Copy buttons for onboarding commands.
+- Dedicated Windows PowerShell path for API key setup.
+- Pro checkout route through Polar and Mercado Pago.
 - Controlled fallback if the API is unavailable or blocked by CORS during local testing.
 - Self-contained benchmark visual.
 - Neutrality / geopolitical shielding section.
@@ -297,8 +427,9 @@ This landing page is designed for:
 - companies evaluating API licensing;
 - institutions requiring document traceability;
 - developers integrating the Python client;
+- Windows users who need PowerShell-ready examples;
 - enterprise users evaluating pilots or private deployment;
-- readers coming from Zenodo DOI, GitHub, LinkedIn, or publications.
+- readers coming from Zenodo DOI, GitHub, LinkedIn, Hacker News, or publications.
 
 ---
 
@@ -498,10 +629,11 @@ The project intentionally avoids:
 - `fetch()`
 - `localStorage`
 - `IntersectionObserver`
+- `navigator.clipboard`
 - CSS variables
 - responsive CSS Grid / Flexbox
 
-All features are widely supported in modern browsers.
+All features are widely supported in modern browsers. Clipboard copy may require a secure context depending on browser policy.
 
 ---
 
@@ -513,6 +645,12 @@ Before publishing a new landing version:
 - [ ] Confirm `/public/demo/audit` works.
 - [ ] Confirm `/public/stats` and `/public/activity` work.
 - [ ] Confirm `/public/request-key` copy matches the hosted API behavior.
+- [ ] Confirm `sas request-key` command matches the current PyPI client.
+- [ ] Confirm `sas whoami` works with a valid key.
+- [ ] Confirm `sas diff` works with a valid key.
+- [ ] Test CLI / curl / PowerShell tabs in the Free Key card.
+- [ ] Test copy buttons.
+- [ ] Confirm Windows PowerShell examples work.
 - [ ] Confirm Polar and Mercado Pago links or references match the current production flow.
 - [ ] Confirm DOI is current.
 - [ ] Confirm TAD registry number is unchanged.
@@ -564,7 +702,7 @@ Main links:
 - Public API: [https://sas-api.onrender.com](https://sas-api.onrender.com)
 - API docs: [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs)
 - Main repository: [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
-- Python client: [https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
+- Python client: [https://pypi.org/project/sas-client/](https://pypi.org/project/sas-client/)
 - DOI: [https://doi.org/10.5281/zenodo.19702379](https://doi.org/10.5281/zenodo.19702379)
 
 ---
@@ -583,7 +721,7 @@ Main links:
 
 `/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de su umbral central **κD = 0.56**, también denominado **Durante Constant**.
 
-El sitio presenta SAS como candidato a estándar técnico abierto para auditoría de coherencia estructural en salidas de IA generativa. Conecta en una única web estática de GitHub Pages la API pública, la demo sin API key, la evidencia de benchmark, la trazabilidad legal, el anclaje OpenTimestamps, la actividad pública anonimizada, el acceso hosted a la API y el contacto comercial.
+El sitio presenta SAS como candidato a estándar técnico abierto para auditoría de coherencia estructural en salidas de IA generativa. Conecta en una única web estática de GitHub Pages la API pública, la demo sin API key, la evidencia de benchmark, la trazabilidad legal, el anclaje OpenTimestamps, la actividad pública anonimizada, el acceso hosted a la API, el onboarding por CLI, billing y el contacto comercial.
 
 **Sitio en vivo:**  
 [https://leesintheblindmonk1999.github.io/sas-landing/](https://leesintheblindmonk1999.github.io/sas-landing/)
@@ -595,7 +733,7 @@ El sitio presenta SAS como candidato a estándar técnico abierto para auditorí
 [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
 
 **Cliente Python oficial:**  
-[https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
+[https://pypi.org/project/sas-client/](https://pypi.org/project/sas-client/)
 
 ---
 
@@ -604,7 +742,7 @@ El sitio presenta SAS como candidato a estándar técnico abierto para auditorí
 | Repositorio | Función |
 |---|---|
 | [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Servicio FastAPI core, motor de coherencia estructural, artefactos de benchmark, rutas API, lógica del servicio alojado y licencia. |
-| [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Sitio público estático para el estándar, demo, resumen de benchmark, actividad pública, trazabilidad y contacto comercial. |
+| [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Sitio público estático para el estándar, demo, resumen de benchmark, actividad pública, trazabilidad, onboarding por CLI y contacto comercial. |
 | [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Paquete Python y CLI oficial para desarrolladores que integran la API SAS alojada o autoalojada. |
 
 ---
@@ -620,8 +758,9 @@ Su función es:
 3. Mostrar validación empírica y límites claros de las afirmaciones.
 4. Reforzar la autoría y trazabilidad de **Gonzalo Emir Durante**.
 5. Dirigir desarrolladores hacia la API, repositorio, cliente Python, DOI y documentación.
-6. Dirigir usuarios comerciales hacia acceso hosted, pilotos, licencias o despliegue privado.
-7. Preservar neutralidad evitando exclusividad geopolítica o control institucional cerrado.
+6. Reducir fricción de entrada mediante formulario web, CLI, curl y PowerShell.
+7. Dirigir usuarios comerciales hacia acceso hosted, pilotos, licencias o despliegue privado.
+8. Preservar neutralidad evitando exclusividad geopolítica o control institucional cerrado.
 
 ---
 
@@ -638,9 +777,59 @@ La landing comunica que SAS es:
 - consciente de la privacidad;
 - neutral por diseño;
 - utilizable mediante API alojada o despliegue propio;
+- disponible mediante demo pública sin key;
+- accesible mediante Free API key;
 - disponible para organizaciones públicas o privadas bajo reglas simétricas de atribución.
 
 SAS no se presenta como oráculo factual universal, motor de certificación legal, certificación médica ni garantía absoluta contra toda alucinación. Se presenta como una **capa técnica de evidencia para auditoría estructural de coherencia**.
+---
+
+## Inicio rápido
+
+### Opción A — Probar la demo sin key
+
+Usar la landing:
+
+```text
+https://leesintheblindmonk1999.github.io/sas-landing/#demo
+```
+
+O llamar al endpoint público:
+
+```bash
+curl -X POST https://sas-api.onrender.com/public/demo/audit \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": "The Eiffel Tower is located in Paris, France.",
+    "response": "The Eiffel Tower is located in Berlin, Germany."
+  }'
+```
+
+### Opción B — Pedir una Free API key desde terminal
+
+```bash
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+```
+
+Después de recibir la key por email:
+
+```bash
+export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
+```
+
+### Opción C — Windows PowerShell
+
+```powershell
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+
+$env:SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
+```
 
 ---
 
@@ -681,8 +870,12 @@ Este benchmark se presenta como validación empírica sobre el dataset evaluado.
 | Readiness | [https://sas-api.onrender.com/readyz](https://sas-api.onrender.com/readyz) |
 | Public stats | [https://sas-api.onrender.com/public/stats](https://sas-api.onrender.com/public/stats) |
 | Public activity | [https://sas-api.onrender.com/public/activity?limit=100](https://sas-api.onrender.com/public/activity?limit=100) |
+| Ayuda de demo pública | `GET https://sas-api.onrender.com/public/demo/audit` |
 | Demo pública de auditoría | `POST https://sas-api.onrender.com/public/demo/audit` |
+| Ayuda de Free key | `GET https://sas-api.onrender.com/public/request-key` |
 | Solicitud de Free key | `POST https://sas-api.onrender.com/public/request-key` |
+| Identidad autenticada | `GET https://sas-api.onrender.com/v1/whoami` |
+| Diff autenticado | `POST https://sas-api.onrender.com/v1/diff` |
 
 ---
 
@@ -727,28 +920,67 @@ curl -X POST https://sas-api.onrender.com/public/demo/audit \
 
 ## Acceso hosted a la API / Billing
 
-La landing debe dirigir usuarios hacia el modelo actual de acceso a la API alojada:
+La landing dirige usuarios hacia el modelo actual de acceso a la API alojada.
 
 | Vía de acceso | Descripción |
 |---|---|
-| **Free key** | Los usuarios pueden pedir una API key gratuita mediante `POST /public/request-key`. La key se genera y envía automáticamente por email. |
+| **Free key** | Los usuarios pueden pedir una API key gratuita mediante formulario web, CLI, curl, PowerShell o `POST /public/request-key`. La key se genera y envía automáticamente por email. |
 | **Acceso Pro** | El acceso pago puede manejarse mediante Polar para tarjetas internacionales y Mercado Pago para usuarios LATAM. |
 | **Provisionamiento automático de keys** | Tras confirmación de pago, el servicio alojado puede generar y enviar automáticamente la API key correspondiente. |
 | **Enterprise / Piloto** | Despliegues grandes, pilotos, integraciones privadas y licencias on-premise se derivan a contacto comercial directo. |
 
-Ejemplo de Free key:
+### Caminos de onboarding para Free key
+
+La landing expone varias formas equivalentes de pedir una Free API key:
+
+| Método | Mejor para | Notas |
+|---|---|---|
+| Formulario web | Usuarios no técnicos | Completar nombre/email y enviar. |
+| CLI | Desarrolladores usando `sas-client` | Camino recomendado para usuarios de terminal. |
+| curl | Pruebas HTTP/API manuales | Útil para Linux/macOS y clientes API. |
+| PowerShell | Usuarios Windows | Evita problemas de comillas con ejemplos Unix. |
+
+### CLI
+
+```bash
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+```
+
+Después de recibir la key:
+
+```bash
+export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
+```
+
+### curl
 
 ```bash
 curl -X POST https://sas-api.onrender.com/public/request-key \
   -H "Content-Type: application/json" \
-  -d '{"email": "your@email.com", "name": "Your Name"}'
+  -d '{"email":"you@example.com","name":"Your Name"}'
 ```
 
-Ejemplo para verificar plan:
+Después de recibir la key:
 
 ```bash
-curl https://sas-api.onrender.com/v1/whoami \
-  -H "X-API-Key: sas_xxxxxxxxxxxxxxxxxxxxx"
+curl -X POST https://sas-api.onrender.com/v1/diff \
+  -H "X-API-Key: sas_xxxxxxxxxxxxxxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{"text_a":"Paris is in France.","text_b":"Paris is in Germany.","experimental":true}'
+```
+
+### PowerShell
+
+```powershell
+pip install sas-client
+sas request-key --email you@example.com --name "Your Name"
+
+$env:SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+sas whoami
+sas diff "Paris is in France." "Paris is in Germany."
 ```
 
 > La landing debe describir el acceso hosted como una capa de servicio. No debe sugerir que pagar cambia o relaja la licencia open source del repositorio SAS.
@@ -757,20 +989,26 @@ curl https://sas-api.onrender.com/v1/whoami \
 
 ## Ruta para desarrolladores
 
-La landing debe dirigir desarrolladores hacia el cliente Python oficial:
+La landing dirige desarrolladores hacia el cliente Python oficial:
 
 ```bash
 pip install sas-client
 ```
 
-Ejemplos básicos de CLI:
+Comandos principales:
 
 ```bash
 sas health
 sas readyz
+sas plans
 sas public-stats
 sas public-activity --limit 10
-sas --api-key YOUR_API_KEY diff "Python is a programming language." "A python is a snake."
+sas request-key --email you@example.com --name "Your Name"
+sas demo-audit "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
+sas whoami
+sas diff "Python is a programming language." "A python is a snake."
+sas audit "Text to audit"
+sas chat "Explain SAS in one paragraph"
 ```
 
 Variable de entorno:
@@ -779,11 +1017,34 @@ Variable de entorno:
 export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
 ```
 
+Windows PowerShell:
+
+```powershell
+$env:SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
+```
+
 Soporte para API autoalojada:
 
 ```bash
 sas --base-url http://localhost:8000 health
 ```
+
+---
+
+## UX de errores y onboarding
+
+La landing refleja el comportamiento de onboarding de la API alojada:
+
+| Situación | Comportamiento UX |
+|---|---|
+| Usuario visita `/public/request-key` con GET | La API devuelve ayuda con CLI, curl, PowerShell, plan y próximos pasos. |
+| Usuario visita `/public/demo/audit` con GET | La API devuelve ayuda de uso de la demo. |
+| Usuario manda body inválido | La API devuelve `422` con ejemplos accionables y comandos de corrección. |
+| Usuario manda payload demasiado grande | La API devuelve `413 Payload Too Large`. |
+| Usuario pide una key correctamente | La API envía una Free key por email. |
+| Usuario tiene una key | `sas whoami` confirma plan y cuota. |
+
+El objetivo es convertir errores comunes en onboarding en lugar de callejones sin salida.
 
 ---
 
@@ -822,6 +1083,11 @@ Este posicionamiento evita que el estándar sea interpretado como cerrado, parti
 - Fetch real al endpoint público `/health`.
 - Secciones de stats públicas y actividad anonimizada.
 - Demo interactiva sin API key usando `/public/demo/audit`.
+- Formulario de solicitud de Free key.
+- Bloque de onboarding CLI / curl / PowerShell dentro de la tarjeta Free Key.
+- Botones de copiado para comandos de onboarding.
+- Ruta específica para usuarios Windows con PowerShell.
+- Checkout Pro mediante Polar y Mercado Pago.
 - Fallback controlado si la API no responde o si CORS bloquea la consulta local.
 - Visual autocontenido del benchmark.
 - Sección de neutralidad / blindaje geopolítico.
@@ -847,8 +1113,9 @@ Esta landing está diseñada para:
 - empresas que evalúan licencias de API;
 - instituciones que necesitan trazabilidad documental;
 - desarrolladores que integran el cliente Python;
+- usuarios Windows que necesitan ejemplos listos para PowerShell;
 - usuarios enterprise que evalúan pilotos o despliegue privado;
-- lectores que llegan desde Zenodo DOI, GitHub, LinkedIn o publicaciones.
+- lectores que llegan desde Zenodo DOI, GitHub, LinkedIn, Hacker News o publicaciones.
 
 ---
 
@@ -1051,7 +1318,7 @@ El proyecto evita intencionalmente:
 - variables CSS
 - CSS Grid / Flexbox responsive
 
-Todas estas funciones están ampliamente soportadas en navegadores modernos.
+Todas estas funciones están ampliamente soportadas en navegadores modernos. El copiado al portapapeles puede requerir contexto seguro según la política del navegador.
 
 ---
 
@@ -1063,6 +1330,12 @@ Antes de publicar una nueva versión de la landing:
 - [ ] Confirmar que `/public/demo/audit` funcione.
 - [ ] Confirmar que `/public/stats` y `/public/activity` funcionen.
 - [ ] Confirmar que el texto de `/public/request-key` coincida con el comportamiento actual de la API alojada.
+- [ ] Confirmar que el comando `sas request-key` coincida con el cliente actual de PyPI.
+- [ ] Confirmar que `sas whoami` funcione con una key válida.
+- [ ] Confirmar que `sas diff` funcione con una key válida.
+- [ ] Probar pestañas CLI / curl / PowerShell en la tarjeta Free Key.
+- [ ] Probar botones de copiado.
+- [ ] Confirmar que los ejemplos de Windows PowerShell funcionen.
 - [ ] Confirmar que los links o referencias de Polar y Mercado Pago coincidan con el flujo productivo actual.
 - [ ] Confirmar que el DOI sea el vigente.
 - [ ] Confirmar que el registro TAD no cambió.
@@ -1114,7 +1387,7 @@ Enlaces principales:
 - API pública: [https://sas-api.onrender.com](https://sas-api.onrender.com)
 - API docs: [https://sas-api.onrender.com/docs](https://sas-api.onrender.com/docs)
 - Repositorio principal: [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
-- Cliente Python: [https://github.com/Leesintheblindmonk1999/sas-client](https://github.com/Leesintheblindmonk1999/sas-client)
+- Cliente Python: [https://pypi.org/project/sas-client/](https://pypi.org/project/sas-client/)
 - DOI: [https://doi.org/10.5281/zenodo.19702379](https://doi.org/10.5281/zenodo.19702379)
 
 ---
