@@ -1844,3 +1844,74 @@ Enlaces principales:
 `Neutral · Auditable · Open · Traceable`
 
 </div>
+
+
+## H1 update — Developer SDKs and onboarding
+
+The landing now exposes the current SAS developer ecosystem more directly:
+
+| Surface | Package / Link |
+|---|---|
+| Python client / CLI | `pip install sas-client` |
+| Node.js / TypeScript SDK | `npm install sas-audit-client` |
+| Node SDK repository | `https://github.com/Leesintheblindmonk1999/sas-js` |
+| npm package | `https://www.npmjs.com/package/sas-audit-client` |
+| Main SAS API | `https://sas-api.onrender.com` |
+
+Naming note:
+
+```text
+npm package: sas-audit-client
+GitHub repo: sas-js
+Exported class: SASClient
+```
+
+Request-key onboarding copy now reminds users to:
+
+- check inbox and spam folder;
+- wait a few minutes for email delivery;
+- check previous email if they already requested a key.
+
+This H1 update is focused on conversion clarity, not backend changes.
+
+## H1.1 DeepSeek audit fixes
+
+Applied after technical audit:
+
+- Added descriptive `alt` text to the benchmark image.
+- Added basic ARIA roles for access tabs:
+  - `role="tablist"`
+  - `role="tab"`
+  - `role="tabpanel"`
+  - `aria-controls`
+  - `aria-labelledby`
+  - `aria-selected`
+- Added timeout support to `accessPostJSON` using `AbortController`.
+- Hardened module filtering with `String(m)` before `.toLowerCase()`.
+- Rechecked and fixed literal `/public/demo/audit)` occurrences.
+- Added a limited CSS fallback for browsers without `color-mix()` support.
+
+Deferred intentionally to a later H2 refactor:
+
+- Full CSS unification.
+- Moving all inline JavaScript into external files.
+- Larger front-end modularization.
+
+Reason: H1.1 focuses on low-risk correctness, accessibility, and robustness without changing backend behavior or restructuring the landing.
+
+# H1 Final Deployable Patch
+
+Applied after Claude audit:
+
+- FIX-1: `sasSyncAccessTabAria(arguments[0])` changed to `sasSyncAccessTabAria(tab)`.
+  - Reason: the helper expects a tab key string, not the DOM button element.
+
+- FIX-2: `error.data = data` changed to `error.payload = data` inside `accessPostJSON`.
+  - Reason: request-key callers read `err.payload`; keeping this shape preserves API error detail messages.
+
+Result:
+
+- No blockers remaining from Claude audit.
+- H1.1 remains deployable.
+- Large CSS/JS refactor remains deferred to H2.
+
