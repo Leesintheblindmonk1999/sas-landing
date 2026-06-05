@@ -346,3 +346,50 @@ async function loadSasPublicActivity() {
 }
 
 document.addEventListener("DOMContentLoaded", loadSasPublicActivity);
+
+
+// H1 SDK copy fallbacks. Safe no-op if the site translation layer already handles data-i18n.
+document.addEventListener("DOMContentLoaded", () => {
+  const h1Copy = {
+    en: {
+      sdkEyebrow: "Developer SDKs",
+      sdkTitle: "Integrate SAS from Python or Node.js",
+      sdkSubtitle: "Use SAS as an auditable structural coherence layer through official developer clients.",
+      sdkPythonTitle: "Python client / CLI",
+      sdkPythonText: "Install the official Python client and CLI for terminal workflows, audits, demos, and API-key onboarding.",
+      sdkViewPypi: "View on PyPI",
+      sdkViewPythonRepo: "GitHub repo",
+      sdkNodeTitle: "Node SDK",
+      sdkNodeText: "Published on npm as sas-audit-client. Use the SASClient class from server-side Node.js applications.",
+      sdkNamingNote: "Naming: npm package sas-audit-client, GitHub repository sas-js, exported class SASClient.",
+      sdkViewNpm: "View on npm",
+      sdkViewNodeRepo: "GitHub repo",
+      heroNodeSdkCta: "Install Node SDK",
+      requestKeySpamNote: "After requesting a key, check your inbox and spam folder. Delivery may take a few minutes. If you already requested a key with the same email, check your previous email before requesting again."
+    },
+    es: {
+      sdkEyebrow: "SDKs para desarrolladores",
+      sdkTitle: "Integrá SAS desde Python o Node.js",
+      sdkSubtitle: "Usá SAS como una capa auditable de coherencia estructural mediante clientes oficiales.",
+      sdkPythonTitle: "Cliente Python / CLI",
+      sdkPythonText: "Instalá el cliente oficial de Python y CLI para terminal, auditorías, demos y onboarding de API keys.",
+      sdkViewPypi: "Ver en PyPI",
+      sdkViewPythonRepo: "Repositorio GitHub",
+      sdkNodeTitle: "SDK Node",
+      sdkNodeText: "Publicado en npm como sas-audit-client. Usá la clase SASClient desde aplicaciones Node.js del lado servidor.",
+      sdkNamingNote: "Nombres: paquete npm sas-audit-client, repositorio GitHub sas-js, clase exportada SASClient.",
+      sdkViewNpm: "Ver en npm",
+      sdkViewNodeRepo: "Repositorio GitHub",
+      heroNodeSdkCta: "Instalar SDK Node",
+      requestKeySpamNote: "Después de pedir una key, revisá tu inbox y la carpeta de spam. La entrega puede tardar unos minutos. Si ya pediste una key con el mismo correo, revisá el email anterior antes de pedir otra."
+    }
+  };
+  const lang = (document.documentElement.lang || localStorage.getItem("sas_lang") || "en").slice(0, 2);
+  const copy = h1Copy[lang] || h1Copy.en;
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (copy[key] && !el.dataset.i18nLocked) {
+      if (el.children.length === 0) el.textContent = copy[key];
+    }
+  });
+});
