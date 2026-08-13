@@ -1,3 +1,131 @@
-OpenTimestamps proof for SAS landing page.
-Hash: 5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996
-Verifiable with: ots verify ots-proof.txt
+OpenTimestamps proof notice — SAS / Project Manifold κD = 0.56
+================================================================
+
+Primary public OTS hash for the SAS landing page:
+
+5a434d7234fd55cb45829d539eee34a5ea05a3c594e26d76bb41695c46b2a996
+
+Verification:
+
+ots verify .well-known/ots-proof.txt
+
+
+Research line integrity snapshot
+================================
+
+This file is a public traceability anchor for the SAS / κD = 0.56
+research line. It records the original OTS proof notice together with
+the Zenodo DOIs and SHA-256 hashes of the published research milestones.
+
+SAS standard and software record
+--------------------------------
+
+Title       SAS — Symbiotic Autoprotection System
+Author      Gonzalo Emir Durante
+DOI         10.5281/zenodo.19702379
+Record      https://doi.org/10.5281/zenodo.19702379
+
+
+Historical κD prior-art snapshot
+--------------------------------
+
+Project Manifold 0.56
+Repository  https://github.com/Leesintheblindmonk1999/Project_Manifold_056
+
+The Project Manifold 0.56 repository preserves the original R0
+implementation, the six-phase audit architecture, the κD threshold
+notation, the early TDA + Ricci-inspired + simplicial pipeline, and
+the historical integrity manifests.
+
+It is a research and prior-art record. It is not the active production
+implementation of SAS.
+
+
+Published Zenodo records
+------------------------
+
+SAS standard
+https://doi.org/10.5281/zenodo.19702379
+
+κD semantic shielding annex
+https://doi.org/10.5281/zenodo.18457687
+
+Stochastic interaction / hidden-state uncertainty paper
+https://doi.org/10.5281/zenodo.20335612
+
+R0 — Infrastructure and baseline stability audit
+https://doi.org/10.5281/zenodo.20647532
+
+R0-bis — Nonlinear dependence and redundancy audit
+https://doi.org/10.5281/zenodo.20671824
+
+R0.5P-1 — Historical-query external-clean prompt-paraphrase audit
+https://doi.org/10.5281/zenodo.20742205
+
+R0.5P-2A — Numerical false-presupposition instruction-paraphrase audit
+https://zenodo.org/records/20838365
+
+R1 — Real local structural evaluation v1.0.7
+https://zenodo.org/records/21034155
+
+R0.5D — Declarative external-clean corpus for halueval_qa
+https://doi.org/10.5281/zenodo.21231662
+
+R1-D — Structural evaluation over declarative corpus R0.5D
+https://doi.org/10.5281/zenodo.21282332
+
+R2.1 — Structural code hallucination detection via AST fingerprinting
+https://doi.org/10.5281/zenodo.21365707
+
+R2.1-b — Toward reference-free code hallucination detection
+https://doi.org/10.5281/zenodo.21420392
+
+R2.1-b function-level — Reference-free validation of Python API calls
+https://doi.org/10.5281/zenodo.21466891
+
+
+Representative artifact hashes
+------------------------------
+
+SAS benchmark artifact SHA-256
+
+0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe
+
+R0 public artifact SHA-256
+
+b1c4b2eddc7b887f8721f3f193b5d1263e4822f13efd08f8b20ae95389dd36fe
+
+R0 integrity manifest master digest
+
+b8fbe7c0e334fd483634c16c87a8b2cff77debc118b35b115d89d25e04f45e1b
+
+
+Registry and public endpoints
+-----------------------------
+
+TAD Argentina registration
+EX-2026-18792778
+
+Active SAS repository
+https://github.com/Leesintheblindmonk1999/SAS
+
+SAS landing page
+https://leesintheblindmonk1999.github.io/sas-landing/
+
+SAS public API
+https://sas-api.onrender.com
+
+
+Methodological boundary
+-----------------------
+
+The records listed above document a reproducible research progression
+for structural coherence auditing, external-clean generation, verifier
+calibration, and prior-art traceability.
+
+They do not claim final production validation of SAS, universal
+hallucination detection, or benchmark superiority over other systems.
+
+κD = 0.56 is treated as an operational audit threshold under empirical
+validation by domain. It is not presented as a universal physical
+constant, legal certification, or factual oracle.
