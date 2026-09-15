@@ -211,8 +211,8 @@ The landing displays the main SAS benchmark:
 
 | Prediction | Actual hallucination | Actual clean |
 |---|---:|---:|
-| Hallucination | TP = 976 | FP = 0 |
-| Clean | FN = 24 | TN = 1000 |
+| Hallucination | TP = 1,764 | FP = 0 |
+| Clean | FN = 36 | TN = 1,800 |
 
 This benchmark is presented as empirical validation for the evaluated dataset. It should not be interpreted as a universal guarantee across every domain, model, language, or input distribution.
 
