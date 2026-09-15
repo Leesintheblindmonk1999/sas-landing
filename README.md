@@ -100,7 +100,7 @@ Its purpose is to:
 
 | Evaluation | Result | Scope |
 |---|---|---|
-| Benchmark forensic V3 | Accuracy 99.00% · Precision 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset-specific: 1,800 + clean 1800 + hallucination pairs | 
+| Benchmark forensic V3 | Accuracy 99.00% · Precision 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset-specific: 1,800 hallucination + 1,800 sanity-check pairs 
 | R1-D structural evaluation | F1 0.5230 · Flow + CRE + Negation | Declarative QA corpus (halueval_qa) |
 | R1-D lexical baseline | AUC 0.749 | Same corpus, reference baseline |
 | R2.1 code AST | AUC 0.9141 raw · AUC 0.9421 length-controlled | Code domain, reference required |
@@ -1012,7 +1012,7 @@ Su función es:
 
 | Evaluación | Resultado | Alcance |
 |---|---|---|
-| Benchmark forense V3 | Accuracy 99.00% · Precisión 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset específico: 1.800 pares limpios/alucinación |
+| Benchmark forense V3 | Accuracy 99.00% · Precisión 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset específico: 1.800 pares con alucinación + 1.800 sanity check |
 | Evaluación estructural R1-D | F1 0.5230 · Flow + CRE + Negation | Corpus QA declarativo (halueval_qa) |
 | Baseline lexical R1-D | AUC 0.749 | Mismo corpus, baseline de referencia |
 | Código AST R2.1 | AUC 0.9141 bruto · AUC 0.9421 controlado por longitud | Dominio código, requiere referencia |
