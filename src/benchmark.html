@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAS Benchmark v3.0</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #111; /* Dark background outside the canvas for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* 1400x900 Capture Canvas */
+        .canvas {
+            width: 1400px;
+            height: 900px;
+            background-color: #020403;
+            /* Subtle turquoise grid */
+            background-image: 
+                linear-gradient(rgba(0, 255, 208, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 208, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Main Content Box */
+        .main-box {
+            width: 1320px;
+            height: 820px;
+            border: 2px solid #00ffd0;
+            padding: 55px 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: transparent; /* Lets the grid show through, mimicking original */
+        }
+
+        /* Header Section */
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #e7fff9;
+            font-size: 60px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            color: #83aaa0;
+            font-size: 26px;
+            font-weight: 400;
+        }
+
+        /* Chart Section */
+        .chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-grow: 1;
+            padding: 0 30px;
+            margin-bottom: 40px;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 220px;
+        }
+
+        .bar-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 100%;
+            height: 380px; /* Fixed container height to scale bars visually */
+        }
+
+        .value {
+            color: #00ffd0;
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .bar {
+            width: 100%;
+            background-color: #00ffd0;
+            /* Box shadow for a slight glow effect on the bars */
+            box-shadow: 0 0 10px rgba(0, 255, 208, 0.15);
+        }
+
+        .label {
+            color: #e7fff9;
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Section */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .matrix {
+            border: 2px solid #00ffd0;
+            padding: 16px 40px;
+            color: #00ffd0;
+            font-size: 40px;
+            font-weight: 800;
+            text-align: center;
+            background-color: rgba(0, 255, 208, 0.02);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="canvas">
+        <div class="main-box">
+            
+            <!-- Header -->
+            <div class="header">
+                <h1>SAS v3.0 BENCHMARK</h1>
+                <p>1,800 pairs | HaluEval + TruthfulQA | kappa_D = 0.56 | TAD EX-2026-18792778</p>
+            </div>
+
+            <!-- Chart (Visual scaling from 85% baseline to highlight differences) -->
+            <div class="chart">
+                
+                <!-- Accuracy -->
+                <div class="bar-group">
+                    <div class="bar-col">
+                        <div class="value">99.00%</div>
+                        <div class="bar" style="height: 93.3%;"></div> <!-- (99-85)/15 -->
+                    </div>
+                    <div class="label">Accuracy</div>
+                </div>
+
+                <!-- Precision -->
+                <div class="bar-group">
+                    <div class="bar-col">
+                        <div class="value">100%</div>
+                        <div class="bar" style="height: 100%;"></div> <!-- (100-85)/15 -->
+                    </div>
+                    <div class="label">Precision</div>
+                </div>
+
+                <!-- Recall -->
+                <div class="bar-group">
+                    <div class="bar-col">
+                        <div class="value">98.00%</div>
+                        <div class="bar" style="height: 86.6%;"></div> <!-- (98-85)/15 -->
+                    </div>
+                    <div class="label">Recall</div>
+                </div>
+
+                <!-- F1 Score -->
+                <div class="bar-group">
+                    <div class="bar-col">
+                        <div class="value">98.99%</div>
+                        <div class="bar" style="height: 93.2%;"></div> <!-- (98.99-85)/15 -->
+                    </div>
+                    <div class="label">F1 Score</div>
+                </div>
+
+            </div>
+
+            <!-- Footer / Matrix -->
+            <div class="footer">
+                <div class="matrix">Confusion Matrix: TP=1764 | FN=36 | TN=1800 | FP=0</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
