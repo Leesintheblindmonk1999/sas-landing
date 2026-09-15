@@ -1,9 +1,4 @@
 
-# El contenido es muy largo para una sola ejecución. Voy a guardarlo directamente en un archivo.
-# Primero, generar el contenido completo del README
-
-readme_part1 = '''# SAS Landing Page
-
 <div align="center">
 
 **Official public landing page for SAS — Symbiotic Autoprotection System**  
@@ -18,7 +13,7 @@ readme_part1 = '''# SAS Landing Page
 [![npm](https://img.shields.io/badge/npm-sas--audit--client-red?style=for-the-badge)](https://www.npmjs.com/package/sas-audit-client)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19702379-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.19702379)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
-[![Benchmark](https://img.shields.io/badge/Benchmark-98.80%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
+[![Benchmark](https://img.shields.io/badge/Benchmark-99.00%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
 
 </div>
 
@@ -105,7 +100,7 @@ Its purpose is to:
 
 | Evaluation | Result | Scope |
 |---|---|---|
-| Benchmark forensic V1 | Accuracy 98.80% · Precision 100% · Recall 97.60% · F1 98.79% · FP 0 | Dataset-specific: 2,000 clean/hallucination pairs |
+| Benchmark forensic V3 | Accuracy 99.00% · Precision 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset-specific: 1,800 + clean 1800 + hallucination pairs | 
 | R1-D structural evaluation | F1 0.5230 · Flow + CRE + Negation | Declarative QA corpus (halueval_qa) |
 | R1-D lexical baseline | AUC 0.749 | Same corpus, reference baseline |
 | R2.1 code AST | AUC 0.9141 raw · AUC 0.9421 length-controlled | Code domain, reference required |
@@ -202,13 +197,13 @@ The landing displays the main SAS benchmark:
 
 | Metric | Result |
 |---|---:|
-| Evaluated pairs | 2,000 |
-| Hallucination examples | 1,000 |
-| Clean examples | 1,000 |
-| Accuracy | 98.80% |
+| Evaluated pairs | 1,800 |
+| Hallucination pairs | 1,800 |
+| Sanity check pairs | 1,800 |
+| Accuracy | 99.00% |
 | Precision | 100.00% |
-| Recall | 97.60% |
-| F1 Score | 98.79% |
+| Recall | 98.00% |
+| F1 Score | 98.99% |
 | False positives | 0 |
 | κD | 0.56 |
 
@@ -1017,7 +1012,7 @@ Su función es:
 
 | Evaluación | Resultado | Alcance |
 |---|---|---|
-| Benchmark forense V1 | Accuracy 98.80% · Precisión 100% · Recall 97.60% · F1 98.79% · FP 0 | Dataset específico: 2.000 pares limpios/alucinación |
+| Benchmark forense V3 | Accuracy 99.00% · Precisión 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset específico: 1.800 pares limpios/alucinación |
 | Evaluación estructural R1-D | F1 0.5230 · Flow + CRE + Negation | Corpus QA declarativo (halueval_qa) |
 | Baseline lexical R1-D | AUC 0.749 | Mismo corpus, baseline de referencia |
 | Código AST R2.1 | AUC 0.9141 bruto · AUC 0.9421 controlado por longitud | Dominio código, requiere referencia |
@@ -1114,13 +1109,13 @@ La landing muestra el benchmark principal de SAS:
 
 | Métrica | Resultado |
 |---|---:|
-| Pares evaluados | 2.000 |
-| Ejemplos con alucinación | 1.000 |
-| Ejemplos limpios | 1.000 |
-| Accuracy | 98.80% |
+| Pares evaluados | 1.800 |
+| Pares con alucinación | 1.800 |
+| Pares sanity check | 1.800 |
+| Accuracy | 99.00% |
 | Precision | 100.00% |
-| Recall | 97.60% |
-| F1 Score | 98.79% |
+| Recall | 98.00% |
+| F1 Score | 98.99% |
 | Falsos positivos | 0 |
 | κD | 0.56 |
 
@@ -1128,8 +1123,8 @@ La landing muestra el benchmark principal de SAS:
 
 | Predicción | Alucinación real | Texto limpio real |
 |---|---:|---:|
-| Alucinación | TP = 976 | FP = 0 |
-| Limpio | FN = 24 | TN = 1000 |
+| Alucinación | TP = 1,764 | FP = 0 |
+| Limpio | FN = 36 | TN = 1,800 |
 
 Resultado forense específico del dataset. No representa validación universal ni rendimiento garantizado en otros dominios.
 
