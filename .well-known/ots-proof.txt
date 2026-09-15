@@ -3,7 +3,7 @@ OpenTimestamps proof notice — SAS / Project Manifold κD = 0.56
 
 Primary public OTS hash for the SAS landing page:
 
-e433560ad2b9e2a79a12835201756c2078caf508649ab9bb8951731d0d0d2aa6
+17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a
 
 Verification:
 

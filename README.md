@@ -527,7 +527,7 @@ This is intended to convert common mistakes into onboarding rather than dead-end
 | Author | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
 | Zenodo DOI | `10.5281/zenodo.19702379` |
-| OpenTimestamps public notice hash | `e433560ad2b9e2a79a12835201756c2078caf508649ab9bb8951731d0d0d2aa6` |
+| OpenTimestamps public notice hash | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
 | Benchmark artifact SHA-256 | `0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe` |
 | R0 artifact SHA-256 | `b1c4b2eddc7b887f8721f3f193b5d1263e4822f13efd08f8b20ae95389dd36fe` |
 | R0 master digest | `b8fbe7c0e334fd483634c16c87a8b2cff77debc118b35b115d89d25e04f45e1b` |
@@ -791,7 +791,7 @@ The repository includes:
 Associated public notice hash:
 
 ```text
-e433560ad2b9e2a79a12835201756c2078caf508649ab9bb8951731d0d0d2aa6
+17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a
 ```
 
 Suggested verification command:
@@ -1435,7 +1435,7 @@ El objetivo es convertir errores comunes en onboarding en lugar de callejones si
 | Autor | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
 | Zenodo DOI | `10.5281/zenodo.19702379` |
-| Hash público OpenTimestamps | `e433560ad2b9e2a79a12835201756c2078caf508649ab9bb8951731d0d0d2aa6` |
+| Hash público OpenTimestamps | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
 | SHA-256 del artefacto benchmark | `0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe` |
 | SHA-256 artefacto R0 | `b1c4b2eddc7b887f8721f3f193b5d1263e4822f13efd08f8b20ae95389dd36fe` |
 | Digest maestro R0 | `b8fbe7c0e334fd483634c16c87a8b2cff77debc118b35b115d89d25e04f45e1b` |
@@ -1700,7 +1700,7 @@ El repositorio incluye:
 Hash público asociado:
 
 ```text
-e433560ad2b9e2a79a12835201756c2078caf508649ab9bb8951731d0d0d2aa6
+17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a
 ```
 
 Comando sugerido de verificación:
