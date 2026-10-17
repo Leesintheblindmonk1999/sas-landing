@@ -961,9 +961,9 @@ Main links:
 
 ## Descripción general
 
-`/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de su umbral central **κD = 0.56**, también denominado **Durante Constant**.
+`/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de sus umbrales centrales **κD = 0.56** (Durante Constant) y **κR = 0.15** (Recovery Threshold).
 
-SAS es un sistema de auditoría de IA en fase de investigación alpha. Proporciona auditoría de coherencia estructural, detección de ruptura semántica, comparación por lotes y análisis experimental de estabilidad de interacción.
+SAS es un sistema de auditoría de IA en fase de investigación alpha. Proporciona auditoría de coherencia estructural, detección de ruptura semántica, comparación por lotes, análisis experimental de estabilidad de interacción y el **SAS Multimetric Tribunal v1.1.0** — un clasificador de 7 módulos con penalización multiplicativa en cascada y R3.1 Differential Guard opcional.
 
 Esta landing page es la capa pública de acceso para:
 
@@ -999,6 +999,7 @@ Esta landing page es la capa pública de acceso para:
 |---|---|
 | [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Servicio FastAPI core, motor científico, rutas API, artefactos de benchmark, documentación de privacidad, observabilidad y licencia. |
 | [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Sitio público estático para el candidato a estándar, demo, resumen de benchmark, actividad pública, estado de plataforma, onboarding y contacto comercial. |
+| [`sas-multimetric-tribunal`](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal) | Clasificador tribunal independiente: 7 módulos de detección, penalización multiplicativa en cascada, R3.1 Differential Guard y validación multi-split held-out (100 repeticiones). |
 | [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Paquete Python y CLI oficial para desarrolladores. |
 | [`sas-js`](https://github.com/Leesintheblindmonk1999/sas-js) | SDK oficial de Node.js/TypeScript, publicado en npm como `sas-audit-client`. |
 
@@ -1024,7 +1025,7 @@ Su función es:
 
 ## Estado de validación
 
-κD = 0.56 se trata como un **umbral operativo bajo validación empírica por dominio**. No se presenta como constante física, certificación legal ni oráculo factual.
+κD = 0.56 y κR = 0.15 se tratan como **umbrales operativos bajo validación empírica por dominio**. No se presentan como constantes físicas, certificaciones legales ni oráculos factuales.
 
 | Evaluación | Resultado | Alcance |
 |---|---|---|
@@ -1032,6 +1033,12 @@ Su función es:
 | Evaluación estructural R1-D | F1 0.5230 · Flow + CRE + Negation | Corpus QA declarativo (halueval_qa) |
 | Baseline lexical R1-D | AUC 0.749 | Mismo corpus, baseline de referencia |
 | Código AST R2.1 | AUC 0.9141 bruto · AUC 0.9421 controlado por longitud | Dominio código, requiere referencia |
+| **Tribunal v1.1.0** | **7 módulos · κD=0.56 · κR=0.15 · Separación ISI 0.8323** | Clasificación completa de pares (fuente, respuesta) |
+| **R3.1 Differential Guard** | **F1 0.833 ± 0.0055 (100 splits held-out)** | Grounding + Compresión + Heurísticas de respuesta corta |
+| **FINQA** | **87.0%** | Detección de alucinación numérica en QA financiero |
+
+**Publicación revisada por pares:**  
+Qeios DOI `10.32388/T420IV` — [https://www.qeios.com/read/T420IV](https://www.qeios.com/read/T420IV)
 
 Registros Zenodo publicados:
 
@@ -1053,7 +1060,7 @@ R2.1-b function    https://doi.org/10.5281/zenodo.21466891
 
 ## Qué comunica SAS
 
-SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales.
+SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales. El **SAS Multimetric Tribunal v1.1.0** clasifica pares (fuente, respuesta) en 3 zonas estructurales usando 7 módulos de detección con penalización multiplicativa en cascada, más un R3.1 Differential Guard opcional.
 
 La landing comunica que SAS es:
 
@@ -1104,6 +1111,7 @@ Después de recibir la key por email:
 export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
 sas whoami
 sas diff "Paris is in France." "Paris is in Germany."
+sas tribunal "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
 ```
 
 ### Opción C — Windows PowerShell
@@ -1164,6 +1172,7 @@ Resultado forense específico del dataset. No representa validación universal n
 | Identidad autenticada | `GET https://sas-api.onrender.com/v1/whoami` |
 | Diff autenticado | `POST https://sas-api.onrender.com/v1/diff` |
 | Batch autenticado | `POST https://sas-api.onrender.com/v1/batch` |
+| **Auditoría Tribunal** | **`POST https://sas-api.onrender.com/v2/audit`** |
 | Ejemplo de interacción | `GET https://sas-api.onrender.com/v1/interaction/stability/example` |
 | Estabilidad interaccional | `POST https://sas-api.onrender.com/v1/interaction/stability` |
 
@@ -1381,6 +1390,7 @@ sas demo-audit "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
 sas whoami
 sas diff "Python is a programming language." "A python is a snake."
 sas audit "Text to audit"
+sas tribunal "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
 sas chat "Explain SAS in one paragraph"
 ```
 
@@ -1451,13 +1461,16 @@ El objetivo es convertir errores comunes en onboarding en lugar de callejones si
 | Autor | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
 | Zenodo DOI | `10.5281/zenodo.19702379` |
+| **DOI Qeios** | **`10.32388/T420IV`** |
 | Hash público OpenTimestamps | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
 | SHA-256 del artefacto benchmark | `0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe` |
 | SHA-256 artefacto R0 | `b1c4b2eddc7b887f8721f3f193b5d1263e4822f13efd08f8b20ae95389dd36fe` |
 | Digest maestro R0 | `b8fbe7c0e334fd483634c16c87a8b2cff77debc118b35b115d89d25e04f45e1b` |
+| **SHA-256 suplemento v7** | **`57143a9f...9a9c5f4`** |
 | API pública | `https://sas-api.onrender.com` |
 | Repositorio principal | `https://github.com/Leesintheblindmonk1999/SAS` |
 | Repositorio landing | `https://github.com/Leesintheblindmonk1999/sas-landing` |
+| **Repositorio tribunal** | **`https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal`** |
 | Cliente Python | `https://github.com/Leesintheblindmonk1999/sas-client` |
 | Repositorio Node SDK | `https://github.com/Leesintheblindmonk1999/sas-js` |
 | Licencia | GPL-3.0 + Durante Invariance License |
@@ -1468,7 +1481,7 @@ Nota: el hash público OpenTimestamps y el SHA-256 del artefacto benchmark puede
 
 ## Neutralidad / Blindaje geopolítico
 
-SAS y κD = 0.56 se presentan como **candidato a estándar técnico abierto** disponible para organizaciones públicas y privadas bajo las mismas reglas de atribución y licencia.
+SAS y κD = 0.56 · κR = 0.15 se presentan como **candidato a estándar técnico abierto** disponible para organizaciones públicas y privadas bajo las mismas reglas de atribución y licencia.
 
 La landing no afirma exclusividades, privilegios ni restricciones geopolíticas de acceso. Las condiciones principales son la atribución explícita a Gonzalo Emir Durante, la preservación de la integridad técnica del estándar y el cumplimiento de la licencia aplicable.
 
@@ -1493,6 +1506,7 @@ Este posicionamiento evita que el estándar candidato sea interpretado como cerr
 - Botones de copiado para comandos de onboarding.
 - Ruta específica para usuarios Windows con PowerShell.
 - Sección de SDKs para Python y Node.js.
+- **Sección del Tribunal con 7 módulos, zonas estructurales, R3.1 Guard y enlace al paper Qeios.**
 - Checkout Pro mediante Polar y Mercado Pago.
 - Fallback controlado si la API no responde o si CORS bloquea la consulta local.
 - Visual autocontenido del benchmark.
@@ -1536,7 +1550,7 @@ Para preservar precisión técnica y blindaje reputacional, la landing evita afi
 - una solución cerrada o exclusiva;
 - una herramienta de vigilancia geopolítica.
 
-SAS se presenta como una **capa técnica de evidencia para auditoría estructural de coherencia**.
+SAS se presenta como una **capa técnica de evidencia para auditoría estructural de coherencia**. El SAS Multimetric Tribunal es un **clasificador estructural**, no un verificador factual.
 
 ---
 
