@@ -129,3 +129,6 @@ hallucination detection, or benchmark superiority over other systems.
 κD = 0.56 is treated as an operational audit threshold under empirical
 validation by domain. It is not presented as a universal physical
 constant, legal certification, or factual oracle.
+
+# v6 CHANGELOG (2026-10-16)
+3c7bce9048018b246934c5a5464edd94e0c0aa52f3f46807fff978d6cd8e8ace  CHANGELOG.md

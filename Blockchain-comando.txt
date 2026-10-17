@@ -1,0 +1,5 @@
+ots upgrade .well-known\ots-proof.txt.ots
+ots verify .well-known\ots-proof.txt.ots
+git add .well-known/ots-proof.txt.ots
+git commit -m "traceability: OTS proof confirmed in Bitcoin blockchain"
+git push origin main
