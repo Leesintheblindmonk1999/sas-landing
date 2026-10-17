@@ -2,7 +2,7 @@
 <div align="center">
 
 **Official public landing page for SAS — Symbiotic Autoprotection System**  
-**κD = 0.56 · Durante Constant · Structural Coherence Auditing for Generative AI**
+**κD = 0.56 · κR = 0.15 · Durante Constant · Structural Coherence Auditing for Generative AI**
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/)
 [![Public API](https://img.shields.io/badge/Public%20API-sas--api.onrender.com-brightgreen?style=for-the-badge)](https://sas-api.onrender.com)
@@ -12,8 +12,10 @@
 [![PyPI](https://img.shields.io/badge/PyPI-sas--client-blue?style=for-the-badge)](https://pypi.org/project/sas-client/)
 [![npm](https://img.shields.io/badge/npm-sas--audit--client-red?style=for-the-badge)](https://www.npmjs.com/package/sas-audit-client)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19702379-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.19702379)
+[![Qeios Paper](https://img.shields.io/badge/Qeios-10.32388%2FT420IV-purple?style=for-the-badge)](https://www.qeios.com/read/T420IV)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
 [![Benchmark](https://img.shields.io/badge/Benchmark-99.17%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
+[![Tribunal](https://img.shields.io/badge/Tribunal-v1.1.0-ffd700?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal)
 
 </div>
 
@@ -33,9 +35,9 @@
 
 ## Overview
 
-`/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core threshold **κD = 0.56**, also referred to as the **Durante Constant**.
+`/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core thresholds **κD = 0.56** (Durante Constant) and **κR = 0.15** (Recovery Threshold).
 
-SAS is a **research-alpha** defensive AI auditing system. It provides structural coherence auditing, semantic rupture detection, batch comparison workflows, and experimental interaction stability analysis.
+SAS is a **research-alpha** defensive AI auditing system. It provides structural coherence auditing, semantic rupture detection, batch comparison workflows, experimental interaction stability analysis, and the **SAS Multimetric Tribunal v1.1.0** — a 7-module cascading classifier with optional R3.1 Differential Guard.
 
 This landing page is the public access layer for:
 
@@ -71,6 +73,7 @@ This landing page is the public access layer for:
 |---|---|
 | [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Core FastAPI service, scientific engine, API routes, benchmark artifacts, privacy docs, observability stores, and license. |
 | [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Static public website for the standard candidate, demo, benchmark summary, live activity, platform status, CLI onboarding, and commercial routing. |
+| [`sas-multimetric-tribunal`](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal) | Standalone tribunal classifier: 7 detection modules, cascading multiplicative penalty, R3.1 Differential Guard, and held-out multi-split validation (100 reps). |
 | [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Official Python package and CLI for developers integrating with the hosted or self-hosted SAS API. |
 | [`sas-js`](https://github.com/Leesintheblindmonk1999/sas-js) | Official Node.js/TypeScript SDK, published on npm as `sas-audit-client`. |
 
@@ -96,7 +99,7 @@ Its purpose is to:
 
 ## Validation Status
 
-κD = 0.56 is treated as an **operational audit threshold under empirical validation by domain**. It is not presented as a physical constant, legal certification, or factual oracle.
+κD = 0.56 and κR = 0.15 are treated as **operational audit thresholds under empirical validation by domain**. They are not presented as physical constants, legal certifications, or factual oracles.
 
 | Evaluation | Result | Scope |
 |---|---|---|
@@ -104,6 +107,9 @@ Its purpose is to:
 | R1-D structural evaluation | F1 0.5230 · Flow + CRE + Negation | Declarative QA corpus (halueval_qa) |
 | R1-D lexical baseline | AUC 0.749 | Same corpus, reference baseline |
 | R2.1 code AST | AUC 0.9141 raw · AUC 0.9421 length-controlled | Code domain, reference required |
+| **Tribunal v1.1.0** | **7 modules · κD=0.56 · κR=0.15 · ISI separation 0.8323** | Full (source, response) pair classification |
+| **R3.1 Differential Guard** | **F1 0.833 ± 0.0055 (100 held-out splits)** | Grounding + Compression + Short-response heuristics |
+| **FINQA detection** | **87.0%** | Financial QA numerical hallucination detection |
 
 Published Zenodo records:
 
@@ -121,11 +127,14 @@ R2.1-b             https://doi.org/10.5281/zenodo.21420392
 R2.1-b function    https://doi.org/10.5281/zenodo.21466891
 ```
 
+**Peer-reviewed publication:**  
+Qeios DOI `10.32388/T420IV` — [https://www.qeios.com/read/T420IV](https://www.qeios.com/read/T420IV)
+
 ---
 
 ## What SAS Communicates
 
-SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions.
+SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions. The **SAS Multimetric Tribunal v1.1.0** classifies (source, response) pairs into 3 structural zones using 7 detection modules with cascading multiplicative penalty, plus an optional R3.1 Differential Guard.
 
 The landing communicates that SAS is:
 
@@ -176,6 +185,7 @@ After receiving the key by email:
 export SAS_API_KEY="sas_xxxxxxxxxxxxxxxxxxxxx"
 sas whoami
 sas diff "Paris is in France." "Paris is in Germany."
+sas tribunal "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
 ```
 
 ### Option C — Windows PowerShell
@@ -236,6 +246,7 @@ This benchmark is presented as empirical validation for the evaluated dataset. I
 | Authenticated identity | `GET https://sas-api.onrender.com/v1/whoami` |
 | Authenticated diff | `POST https://sas-api.onrender.com/v1/diff` |
 | Authenticated batch | `POST https://sas-api.onrender.com/v1/batch` |
+| **Tribunal audit** | **`POST https://sas-api.onrender.com/v2/audit`** |
 | Interaction example | `GET https://sas-api.onrender.com/v1/interaction/stability/example` |
 | Interaction stability | `POST https://sas-api.onrender.com/v1/interaction/stability` |
 
@@ -455,6 +466,7 @@ sas demo-audit "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
 sas whoami
 sas diff "Python is a programming language." "A python is a snake."
 sas audit "Text to audit"
+sas tribunal "The Eiffel Tower is in Paris." "The Eiffel Tower is in Berlin."
 sas chat "Explain SAS in one paragraph"
 ```
 
@@ -527,13 +539,16 @@ This is intended to convert common mistakes into onboarding rather than dead-end
 | Author | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
 | Zenodo DOI | `10.5281/zenodo.19702379` |
+| **Qeios Paper DOI** | **`10.32388/T420IV`** |
 | OpenTimestamps public notice hash | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
 | Benchmark artifact SHA-256 | `0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe` |
 | R0 artifact SHA-256 | `b1c4b2eddc7b887f8721f3f193b5d1263e4822f13efd08f8b20ae95389dd36fe` |
 | R0 master digest | `b8fbe7c0e334fd483634c16c87a8b2cff77debc118b35b115d89d25e04f45e1b` |
+| **v7 supplement SHA-256** | **`57143a9f...9a9c5f4`** |
 | Public API | `https://sas-api.onrender.com` |
 | Main repository | `https://github.com/Leesintheblindmonk1999/SAS` |
 | Landing repository | `https://github.com/Leesintheblindmonk1999/sas-landing` |
+| **Tribunal repository** | **`https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal`** |
 | Python client | `https://github.com/Leesintheblindmonk1999/sas-client` |
 | Node SDK repository | `https://github.com/Leesintheblindmonk1999/sas-js` |
 | License | GPL-3.0 + Durante Invariance License |
@@ -544,7 +559,7 @@ Note: the OpenTimestamps public notice hash and benchmark artifact SHA-256 may r
 
 ## Neutrality / Geopolitical Shielding
 
-SAS and κD = 0.56 are presented as an **open technical standard candidate** available to public and private organizations under the same attribution and licensing rules.
+SAS and κD = 0.56 · κR = 0.15 are presented as an **open technical standard candidate** available to public and private organizations under the same attribution and licensing rules.
 
 There are no exclusivities, privileges, or geopolitical access restrictions claimed by the landing. The main conditions are explicit attribution to Gonzalo Emir Durante, preservation of the technical integrity of the standard, and compliance with the applicable license.
 
@@ -569,6 +584,7 @@ This positioning prevents the standard candidate from being framed as closed, pa
 - Copy buttons for onboarding commands.
 - Dedicated Windows PowerShell path for API key setup.
 - Developer SDKs section for Python and Node.js.
+- **Tribunal section with 7 modules, structural zones, R3.1 Guard, and Qeios paper link.**
 - Pro checkout route through Polar and Mercado Pago.
 - Controlled fallback if the API is unavailable or blocked by CORS during local testing.
 - Self-contained benchmark visual.
@@ -612,7 +628,7 @@ To preserve technical precision and reputational safety, the landing avoids clai
 - a closed or exclusive solution;
 - a geopolitical surveillance tool.
 
-SAS is presented as a **technical evidence layer for structural coherence auditing**.
+SAS is presented as a **technical evidence layer for structural coherence auditing**. The SAS Multimetric Tribunal is a **structural classifier**, not a factual verifier.
 
 ---
 
