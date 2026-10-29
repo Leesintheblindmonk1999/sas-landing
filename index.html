@@ -2,9 +2,54 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SAS | Symbiotic Autoprotection System | κD = 0.56 · κR = 0.15 · κR = 0.15</title>
-<meta name="description" content="SAS is a defensive AI auditing API for structural coherence, semantic rupture, batch auditing, and experimental interaction stability. κD = 0.56 · κR = 0.15.">
+<title>SAS | Symbiotic Autoprotection System | κD = 0.56 · κR = 0.15</title>
+<meta name="description" content="SAS is a defensive AI auditing API for structural coherence, semantic rupture, batch auditing, and experimental interaction stability. 8 modules, zero external dependencies, ~100 µs/pair. κD = 0.56 · κR = 0.15.">
 <meta name="author" content="Gonzalo Emir Durante"><meta name="theme-color" content="#00ffd0">
+<meta name="keywords" content="hallucination detection, AI auditing, LLM hallucination, semantic coherence, structural audit, RAG validation, κD, Durante Constant, hallucination detector API">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SAS | Symbiotic Autoprotection System | κD = 0.56">
+<meta property="og:description" content="Detect AI hallucination and semantic rupture in generative outputs. 8 modules, zero external dependencies, ~100 µs/pair, Bitcoin-anchored hash chain.">
+<meta property="og:url" content="https://leesintheblindmonk1999.github.io/sas-landing/">
+<meta property="og:image" content="https://leesintheblindmonk1999.github.io/sas-landing/assets/benchmark.png">
+<meta property="og:locale" content="es_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SAS | Symbiotic Autoprotection System | κD = 0.56">
+<meta name="twitter:description" content="Detect AI hallucination and semantic rupture. 8 modules, zero external dependencies, ~100 µs/pair, Bitcoin-anchored hash chain.">
+<meta name="twitter:image" content="https://leesintheblindmonk1999.github.io/sas-landing/assets/benchmark.png">
+<link rel="canonical" href="https://leesintheblindmonk1999.github.io/sas-landing/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SAS — Symbiotic Autoprotection System",
+  "alternateName": "SAS Multimetric Tribunal",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (REST API)",
+  "url": "https://sas-api.onrender.com",
+  "description": "Defensive AI auditing API for structural coherence and semantic rupture detection in generative outputs. 8 modules, zero external dependencies, ~100 µs/pair.",
+  "author": {"@type": "Person", "name": "Gonzalo Emir Durante"},
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "identifier": "10.5281/zenodo.19702379",
+  "sameAs": [
+    "https://github.com/Leesintheblindmonk1999/SAS-API",
+    "https://www.qeios.com/read/T420IV",
+    "https://doi.org/10.5281/zenodo.19702379"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "SAS Benchmark V3 — 1,800 hallucination pairs + 1,800 sanity-check pairs",
+  "description": "Forensic benchmark for structural hallucination detection with κD = 0.56 and κR = 0.15 thresholds.",
+  "url": "https://github.com/Leesintheblindmonk1999/SAS-API",
+  "creator": {"@type": "Person", "name": "Gonzalo Emir Durante"},
+  "identifier": "10.5281/zenodo.19702379",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html"
+}
+</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <style>
 :root{
@@ -189,6 +234,48 @@ input:focus,textarea:focus{transform:translateY(-1px)}
 .sdk-note{font-size:.92rem;color:var(--muted)}
 .sdk-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
 @media(max-width:820px){.sdk-grid{grid-template-columns:1fr}}
+
+/* ── Demo scenarios (pre-cargados) ─────────────────────────────────── */
+.demo-scenarios{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.demo-scenario-btn{display:flex;flex-direction:column;gap:3px;text-align:left;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:12px 14px;cursor:pointer;font-family:var(--font);transition:transform .22s var(--ease),border-color .22s var(--ease),box-shadow .22s var(--ease)}
+.demo-scenario-btn:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 0 18px color-mix(in srgb,var(--accent) 18%,transparent)}
+.demo-scenario-btn.active{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 14%,transparent)}
+.demo-scenario-btn strong{font-size:13px;font-weight:1000;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.demo-scenario-btn small{font-size:11px;color:var(--muted);line-height:1.4}
+.demo-scenario-btn .scenario-tag{display:inline-block;width:max-content;margin-top:4px;padding:2px 8px;font-size:10px;font-weight:1000;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border)}
+.scenario-tag.rescue{color:var(--accent2);border-color:color-mix(in srgb,var(--accent2) 55%,var(--border))}
+.scenario-tag.rupture{color:var(--danger);border-color:color-mix(in srgb,var(--danger) 55%,var(--border))}
+.scenario-tag.veto{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 55%,var(--border))}
+.scenario-tag.coherent{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 55%,var(--border))}
+@media(max-width:560px){.demo-scenarios{grid-template-columns:1fr}}
+
+/* ── Hash chain verification widget ────────────────────────────────── */
+.hashchain-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.hashchain-card{border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));box-shadow:16px 16px 0 var(--shadow);padding:24px;display:grid;gap:16px}
+.hashchain-input{background:var(--bg);color:var(--text);border:1px solid var(--border);padding:14px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;outline:none;width:100%}
+.hashchain-input:focus{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+.hashchain-status{display:none;padding:14px;border:1px solid var(--border);background:var(--bg);font-weight:900;font-size:14px}
+.hashchain-status.ok{display:block;border-color:var(--accent2);color:var(--accent2);background:color-mix(in srgb,var(--accent2) 8%,transparent)}
+.hashchain-status.err{display:block;border-color:var(--danger);color:var(--danger);background:color-mix(in srgb,var(--danger) 8%,transparent)}
+.hashchain-status.warn{display:block;border-color:var(--warn);color:var(--warn);background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.hashchain-levels{display:grid;gap:8px}
+.hashchain-level{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--border);background:var(--bg);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px}
+.hashchain-level .level-num{color:var(--muted);font-weight:1000;letter-spacing:.08em}
+.hashchain-level .level-hash{color:var(--accent);word-break:break-all}
+.hashchain-level .level-desc{grid-column:2;color:var(--muted);font-size:11px}
+.hashchain-verify-btn{justify-self:start}
+@media(max-width:900px){.hashchain-grid{grid-template-columns:1fr}}
+
+/* ── How it works (cómo funciona) ──────────────────────────────────── */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:30px 0}
+.how-step{border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));padding:20px;display:grid;gap:10px;position:relative;transition:transform .22s var(--ease),border-color .22s var(--ease)}
+.how-step:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 70%,var(--border))}
+.how-step .step-num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--accent);font-weight:1000;font-size:13px;letter-spacing:.1em}
+.how-step strong{font-size:16px;text-transform:uppercase;letter-spacing:.04em}
+.how-step p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.how-arrow{position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:var(--accent);font-weight:1000;font-size:18px;z-index:2}
+@media(max-width:900px){.how-grid{grid-template-columns:repeat(2,1fr)}.how-arrow{display:none}}
+@media(max-width:560px){.how-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="theme-tech">
@@ -197,7 +284,7 @@ input:focus,textarea:focus{transform:translateY(-1px)}
 <a class="brand" href="#hero"><svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="256" height="256" fill="#020403"/><path d="M128 26L216 76V180L128 230L40 180V76L128 26Z" stroke="currentColor" stroke-width="8" fill="transparent"/><circle cx="128" cy="128" r="64" stroke="currentColor" stroke-width="6" stroke-dasharray="16 10"/><text x="128" y="132" text-anchor="middle" font-family="Arial" font-size="54" font-weight="900" fill="currentColor">SAS</text></svg><span>SAS</span></a>
 <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
 <div id="navlinks" class="navlinks">
-<a href="#benchmark" data-i18n="nav_benchmark">Benchmark</a><a href="#validation" data-i18n="nav_validation">Validación</a><a href="#observatory" data-i18n="nav_observatory">Observatorio</a><a href="#demo" data-i18n="nav_demo">Demo</a><a href="#access" data-i18n="nav_access">Acceso</a><a href="#platform" data-i18n="nav_platform">Estado</a><a href="#live-activity" data-i18n="nav_live">Actividad</a><a href="#neutrality" data-i18n="nav_neutrality">Neutralidad</a><a href="#legal" data-i18n="nav_legal">Registro</a><a href="#contact" data-i18n="nav_contact">Contacto</a>
+<a href="#how-it-works" data-i18n="nav_how">Cómo funciona</a><a href="#benchmark" data-i18n="nav_benchmark">Benchmark</a><a href="#validation" data-i18n="nav_validation">Validación</a><a href="#observatory" data-i18n="nav_observatory">Observatorio</a><a href="#demo" data-i18n="nav_demo">Demo</a><a href="#access" data-i18n="nav_access">Acceso</a><a href="#platform" data-i18n="nav_platform">Estado</a><a href="#live-activity" data-i18n="nav_live">Actividad</a><a href="#neutrality" data-i18n="nav_neutrality">Neutralidad</a><a href="#legal" data-i18n="nav_legal">Registro</a><a href="#hashchain" data-i18n="nav_hashchain">Hash chain</a><a href="#contact" data-i18n="nav_contact">Contacto</a>
 </div>
 <div class="controls"><button class="btn-mini active" data-lang="es">ES</button><button class="btn-mini" data-lang="en">EN</button><button class="btn-mini theme-text" data-theme="light">LIGHT</button><button class="btn-mini theme-text" data-theme="dark">DARK</button><button class="btn-mini theme-text active" data-theme="tech">TECH</button></div>
 </nav></header>
@@ -209,6 +296,18 @@ input:focus,textarea:focus{transform:translateY(-1px)}
 <div class="status" aria-live="polite"><span id="api-dot" class="dot"></span><div><strong id="api-title" data-i18n="checking">Verificando API pública</strong><small id="api-detail">https://sas-api.onrender.com/health</small></div></div>
 </div>
 <aside class="panel reveal"><div class="panel-top"><span>PROJECT MANIFOLD 0.56</span><span class="live">LIVE</span></div><div class="kappa">κD = 0.56 · κR = 0.15</div><p class="section-text" data-i18n="kdesc">Constante de Durante: umbral crítico de coherencia estructural.</p><div class="id-grid"><div><span>Accuracy</span><strong>99.17%</strong></div><div><span>Precision</span><strong>100%</strong></div><div><span>Recall</span><strong>98.00%</strong></div><div><span>FP</span><strong>0</strong></div></div><code class="mono">TAD EX-2026-18792778</code></aside>
+</div></section>
+
+<!-- HOW IT WORKS SECTION -->
+<section id="how-it-works" class="section hard"><div class="container">
+<div class="head reveal"><p class="kicker">HOW IT WORKS / CÓMO FUNCIONA</p><h2 data-i18n="how_title">Ocho módulos. Una cascada. Un veredicto.</h2><p class="section-text" data-i18n="how_text">SAS compara el texto fuente con la respuesta generada y calcula el Índice de Similitud Estructural (ISI). Cada módulo penaliza un tipo distinto de ruptura. El resultado cae en una de tres zonas.</p></div>
+<div class="how-grid reveal">
+<div class="how-step"><span class="step-num">01</span><strong data-i18n="how_s1_t">Entrada</strong><p data-i18n="how_s1_d">Pegás el texto fuente y la respuesta a auditar. Sin API key en la demo.</p><span class="how-arrow">→</span></div>
+<div class="how-step"><span class="step-num">02</span><strong data-i18n="how_s2_t">8 módulos</strong><p data-i18n="how_s2_d">Solapamiento léxico, entidades críticas, flujo, negación, curvatura semántica, aritmética, referencias y topología.</p><span class="how-arrow">→</span></div>
+<div class="how-step"><span class="step-num">03</span><strong data-i18n="how_s3_t">Cascada</strong><p data-i18n="how_s3_d">Cada módulo aplica una penalización multiplicativa. El R3.2 puede rescatar o vetar según invarianza topológica.</p><span class="how-arrow">→</span></div>
+<div class="how-step"><span class="step-num">04</span><strong data-i18n="how_s4_t">Zona</strong><p data-i18n="how_s4_d">ISI ≥ κD (0.56) = COHERENTE. κR ≤ ISI < κD = RUPTURA RECUPERABLE. ISI < κR (0.15) = COLAPSO.</p></div>
+</div>
+<div class="actions reveal"><a class="action primary" href="#demo" data-i18n="how_cta">Probar la demo</a><a class="action line" href="https://github.com/Leesintheblindmonk1999/SAS-API" target="_blank" rel="noopener" data-i18n="how_repo">Ver el código</a></div>
 </div></section>
 
 <section id="benchmark" class="section"><div class="container"><div class="head reveal"><p class="kicker">BENCHMARK / VALIDATION</p><h2 data-i18n="btitle">1.800 pares evaluados. Cero falsos positivos.</h2><p class="section-text" data-i18n="btext">1.800 pares con alucinación + 1.800 pares sanity check. Métricas trazables con hash, DOI y prueba OpenTimestamps.</p><p class="section-text platform-note" data-i18n="benchmark_limit_note">Resultados específicos del dataset forense V1. No representan validación universal ni rendimiento garantizado en otros dominios.</p></div><div class="bench-grid bench-grid-balanced"><div class="metrics metrics-balanced reveal"><article class="metric"><span>Accuracy</span><strong>99.17%</strong></article><article class="metric"><span>Precision</span><strong>100%</strong></article><article class="metric"><span>Recall</span><strong>98.00%</strong></article><article class="metric"><span>F1 Score</span><strong>98.99%</strong></article><article class="metric zero"><span>False Positives</span><strong>0</strong></article><article class="metric kappa-metric"><span>Durante Constant</span><strong>κD = 0.56 · κR = 0.15</strong><small>Structural coherence threshold</small></article></div><figure class="chart-card benchmark-card reveal"><div class="benchmark-orbit" aria-hidden="true"><span>κD</span><strong>0.56</strong></div><img src="assets/benchmark.png" alt="SAS benchmark visual: confusion matrix and structural audit accuracy summary"><figcaption data-i18n="bcap">Benchmark SAS v3.0: artefacto visual autocontenido.</figcaption></figure></div><div class="matrix reveal"><h3 data-i18n="mtitle">Matriz de confusión</h3><table><thead><tr><th></th><th data-i18n="ah">Alucinación real</th><th data-i18n="ac">Texto limpio real</th></tr></thead><tbody><tr><th data-i18n="ph">Predicción: alucinación</th><td>TP = 1,764</td><td>FP = 0</td></tr><tr><th data-i18n="pc">Predicción: limpio</th><td>FN = 36</td><td>TN = 1,800</td></tr></tbody></table></div></div></section>
@@ -369,6 +468,12 @@ input:focus,textarea:focus{transform:translateY(-1px)}
 <div class="demo-inputs">
 <div class="demo-field"><label class="demo-label" for="demo-source" data-i18n="demo_source_label">Texto fuente</label><textarea id="demo-source" class="demo-textarea" maxlength="2000" data-i18n-placeholder="demo_source_placeholder" placeholder="La Torre Eiffel está ubicada en París, Francia, y fue construida en 1889."></textarea><span class="demo-charcount"><span id="demo-source-count">0</span>/2000</span></div>
 <div class="demo-field"><label class="demo-label" for="demo-response" data-i18n="demo_response_label">Respuesta a auditar</label><textarea id="demo-response" class="demo-textarea" maxlength="2000" data-i18n-placeholder="demo_response_placeholder" placeholder="La Torre Eiffel está ubicada en Berlín, Alemania, y fue construida en 1950."></textarea><span class="demo-charcount"><span id="demo-response-count">0</span>/2000</span></div>
+<div class="demo-scenarios" role="group" aria-label="Demo scenarios">
+<button class="demo-scenario-btn" type="button" data-scenario="paraphrase"><strong data-i18n="scn_paraphrase_t">Paráfrasis</strong><small data-i18n="scn_paraphrase_d">Mismo contenido, otras palabras → RESCUE</small><span class="scenario-tag rescue" data-i18n="scn_rescue">RESCUE</span></button>
+<button class="demo-scenario-btn" type="button" data-scenario="hallucination"><strong data-i18n="scn_hallucination_t">Alucinación</strong><small data-i18n="scn_hallucination_d">Entidades mutadas → RUPTURA</small><span class="scenario-tag rupture" data-i18n="scn_rupture">RUPTURA</span></button>
+<button class="demo-scenario-btn" type="button" data-scenario="contradiction"><strong data-i18n="scn_contradiction_t">Contradicción</strong><small data-i18n="scn_contradiction_d">Negación invertida → VETO</small><span class="scenario-tag veto" data-i18n="scn_veto">VETO</span></button>
+<button class="demo-scenario-btn" type="button" data-scenario="copular"><strong data-i18n="scn_copular_t">Copular</strong><small data-i18n="scn_copular_d">Equivalencia estructural → COHERENTE</small><span class="scenario-tag coherent" data-i18n="scn_coherent">COHERENTE</span></button>
+</div>
 <div class="demo-actions"><button id="demo-example-btn" class="action line" type="button" data-i18n="demo_example">Cargar ejemplo</button><button id="demo-run-btn" class="action primary" type="button" data-i18n="demo_audit">Auditar</button></div>
 <p class="demo-privacy" data-i18n="demo_privacy">Demo pública limitada: máximo 2.000 caracteres por campo, sin API key y sin almacenamiento del texto completo.</p>
 </div>
@@ -592,6 +697,32 @@ console.log(await client.health());</code></pre>
 
 <section id="legal" class="section"><div class="container"><div class="head reveal"><p class="kicker">LEGAL / TRACEABILITY</p><h2 data-i18n="ltitle">Registro, DOI y anclaje criptográfico.</h2></div><div class="legal-grid"><article class="legal-card reveal"><span>TAD Argentina</span><strong>EX-2026-18792778</strong><p data-i18n="tad">Registro administrativo argentino asociado al estándar SAS / κD.</p></article><article class="legal-card reveal"><span>Zenodo DOI</span><strong>10.5281/zenodo.19702379</strong><a href="https://doi.org/10.5281/zenodo.19702379" target="_blank" rel="noopener">doi.org/10.5281/zenodo.19702379</a></article><article class="legal-card reveal"><span>Qeios Paper</span><strong>10.32388/T420IV</strong><a href="https://www.qeios.com/read/T420IV" target="_blank" rel="noopener">www.qeios.com/read/T420IV</a></article><article class="legal-card reveal"><span>OpenTimestamps</span><strong data-i18n="anchor">Anclado a Bitcoin</strong><a href=".well-known/ots-proof.txt" data-i18n="olink">Abrir prueba OTS</a></article></div></div></section>
 
+<!-- HASH CHAIN VERIFICATION SECTION -->
+<section id="hashchain" class="section hard"><div class="container">
+<div class="head reveal"><p class="kicker">FORENSIC HASH CHAIN / CADENA FORENSE</p><h2 data-i18n="hc_title">Verificá la integridad del sistema.</h2><p class="section-text" data-i18n="hc_text">Cada archivo del sistema tiene un SHA-256 individual. Los hashes se anidan en 6 niveles y se anclan a Bitcoin vía OpenTimestamps. Pegá un hash para verificarlo contra la cadena pública.</p></div>
+<div class="hashchain-grid reveal">
+<div class="hashchain-card">
+<span class="demo-label" data-i18n="hc_verify_label">Verificar un hash</span>
+<input id="hashchain-input" class="hashchain-input" type="text" data-i18n-placeholder="hc_placeholder" placeholder="Pegá un SHA-256 (64 caracteres hex)...">
+<div class="demo-actions"><button id="hashchain-verify-btn" class="action primary" type="button" data-i18n="hc_verify_btn">Verificar</button></div>
+<div id="hashchain-status" class="hashchain-status" aria-live="polite"></div>
+<p class="demo-privacy" data-i18n="hc_note">La verificación compara contra los hashes publicados en el repositorio. Para verificación criptográfica completa contra Bitcoin, usá <code>ots verify</code> con los archivos <code>.ots</code> del repo.</p>
+</div>
+<div class="hashchain-card">
+<span class="demo-label" data-i18n="hc_levels_label">Cadena de 6 niveles</span>
+<div class="hashchain-levels">
+<div class="hashchain-level"><span class="level-num">L1</span><span class="level-hash">efa44d32030f88a22ef86d0bc363c66aedd7222fc1aa7a3e917c710e67a97aed</span><span class="level-desc" data-i18n="hc_l1">103 archivos .py individuales</span></div>
+<div class="hashchain-level"><span class="level-num">L2</span><span class="level-hash">16e31da6fbdae95ca186869ecef75814ea63e01a336e734538461adb349b98d8</span><span class="level-desc" data-i18n="hc_l2">8 módulos del tribunal concatenados</span></div>
+<div class="hashchain-level"><span class="level-num">L3</span><span class="level-hash">b6290c5b49c35305d39ce8cfd689b6d377e091e85eccecaa385610f9a1ea36ce</span><span class="level-desc" data-i18n="hc_l3">app/main.py</span></div>
+<div class="hashchain-level"><span class="level-num">L4</span><span class="level-hash">3f0fe473610f461e052876bb46b9f7ae51cd0d3da08b206de07dbc3f5468cf87</span><span class="level-desc" data-i18n="hc_l4">requirements.txt</span></div>
+<div class="hashchain-level"><span class="level-num">L5</span><span class="level-hash">748ed05910c1a6ccb12b985c1b1b115e9e9077e25b6732439c3c4ce8ceaed478</span><span class="level-desc" data-i18n="hc_l5">docker-compose.yml</span></div>
+<div class="hashchain-level"><span class="level-num">L6</span><span class="level-hash">d8fe8721039baa38aaedf76ba9a19a5f1ff3d33c6e12a8d097552bb7537019e7</span><span class="level-desc" data-i18n="hc_l6">chain.txt (self-hash)</span></div>
+</div>
+<div class="demo-actions"><a class="action line" href="https://github.com/Leesintheblindmonk1999/SAS-API/tree/main/hash_chain" target="_blank" rel="noopener" data-i18n="hc_repo_btn">Ver hash_chain en GitHub</a><a class="action" href=".well-known/ots-proof.txt" data-i18n="hc_ots_btn">Prueba OTS</a></div>
+</div>
+</div>
+</div></section>
+
 <section id="contact" class="section contact"><div class="container split"><div class="contact-copy reveal"><p class="kicker">COMMERCIAL CONTACT</p><h2 data-i18n="ctitle">Pilotos, licencias y auditorías.</h2><p data-i18n="ctext">Para startups RAG, integraciones empresariales, licencias on-premise o auditoría técnica de salidas LLM.</p><div class="links"><a href="mailto:duranteg2@gmail.com">duranteg2@gmail.com</a><a href="https://sas-api.onrender.com" target="_blank" rel="noopener">https://sas-api.onrender.com</a><a href="https://github.com/Leesintheblindmonk1999/SAS" target="_blank" rel="noopener">GitHub / SAS</a></div></div><form
   id="contact-form"
   class="contact-form reveal"
@@ -618,6 +749,9 @@ Object.assign(dict.es,{nav_observatory:"Observatorio",pilot_title:"SAS Pilot",pi
 Object.assign(dict.en,{nav_observatory:"Observatory",pilot_title:"SAS Pilot",pilot_text:"Guided integration, validation on real use cases, technical report. Ideal for RAG startups that need to certify their pipeline before scaling.",pilot_price_note:"one-time · or ARS 1,500,000 via Mercado Pago",pilot_button:"Continue to payment",pilot_note:"Includes guided integration, pipeline audit, and a technical report with results. One-time payment, non-recurring.",ent_title:"SAS Enterprise",ent_text:"Over 10,000 requests per month, dedicated instance, SLA, 24/7 support, and on-premise deployment if needed.",ent_price:"Contact us",ent_price_note:"custom quote",ent_button:"Get in touch",obs_title:"Structural ISI by dataset. October 2026 edition.",obs_text:"Aggregated tribunal results on public datasets. No model names — only reproducible methodology. κD = 0.56 · κR = 0.15.",obs_panel_title:"ISI SCORES · OCTOBER 2026",obs_th_dataset:"Dataset",obs_th_n:"n",obs_th_isi:"Mean ISI",obs_th_kd:"≥κD (0.56)",obs_th_kr:"<κR (0.15)",obs_th_zone:"κD Zone",obs_note1:"* FinQA: short numerical responses — the tribunal detects low structural coherence by domain nature (methodological finding).",obs_note2:"** MedHallu: 2,000-pair sample out of 10,000 total. Low ISI expected in lengthy medical responses with specialized vocabulary.",obs_note3:"Methodology: sas-api.onrender.com/v2/audit · 7 modules · CPU 30 µs/pair · κD = 0.56 · κR = 0.15",nav_observatory:"Observatory",nav_validation:"Validation",validation_title:"κD = 0.56 · κR = 0.15 is validated by domain, not as a universal law.",validation_text:"SAS publishes partial results with DOIs, hashes, and explicit methodological boundaries. This section separates V1 forensic evidence from ongoing structural research.",validation_v1:"1,800 hallucination pairs + 1,800 sanity-check pairs. Dataset-specific. Not universal validation.",validation_r1d:"Flow + CRE + Negation on halueval_qa. Lexical baseline AUC 0.749.",validation_r21:"Structural comparison against reference. Length-controlled: AUC 0.9421.",validation_roadmap_title:"Published research line",validation_roadmap_text:"Each stage is anchored in Zenodo with DOI, hash, and methodological boundary. Validation continues by domain without claiming universal superiority.",validation_note:"κD = 0.56 · κR = 0.15 is an operational threshold under validation. It is not presented as a physical constant, legal certification, or factual oracle."});
 Object.assign(dict.es,{nav_access:"Acceso",hero_get_key:"Obtener API key",access_title:"Convertí la demo en uso real.",access_text:"Pedí una API key gratuita o actualizá a SAS Pro. La key se envía por email y los pagos activan el plan automáticamente.",free_title:"SAS Free",free_text:"50 requests por día para pruebas, desarrollo y evaluación técnica.",free_price_note:"sin tarjeta, por email",free_name:"Nombre opcional",name_placeholder:"Gonzalo",free_button:"Enviar API key gratis",free_or_cli:"o desde terminal",copy_btn:"copiar",free_note:"La API key se envía por correo. No pegues keys públicas en redes ni repositorios.",pro_title:"Upgrade a Pro",pro_text:"10.000 requests por mes, API key y soporte prioritario. Disponible para early adopters técnicos mientras la validación científica continúa.",pro_price_note:"o ARS 138.600 vía Mercado Pago",provider_polar:"Global · USD · suscripción",provider_mp:"LatAm · ARS · checkout local",billing_name:"Nombre",checkout_button:"Continuar al pago",pro_note:"Polar es recomendado para clientes globales. Mercado Pago es recomendado para Argentina y LatAm.",key_sent:"API key enviada. Revisá tu correo y spam.",key_rate:"Ya pediste una key hoy. Revisá tu correo o intentá mañana.",key_error:"No se pudo solicitar la key ahora.",checkout_redirecting:"Checkout creado. Redirigiendo al pago...",checkout_error:"No se pudo crear el checkout.",checkout_success:"Checkout completado. Si el pago fue aprobado, tu plan será actualizado automáticamente.",checkout_cancel:"Checkout cancelado. Podés volver a intentarlo cuando quieras.",checkout_pending:"Pago pendiente. Mercado Pago avisará cuando se apruebe.",checkout_failure:"Pago rechazado o fallido. Probá de nuevo o contactá soporte.",platform_title:"SAS operativo, observable y privado.",platform_text:"Estado público agregado de la plataforma. Mostramos señales operativas útiles sin exponer texto crudo, API keys, hashes de API keys ni request IDs.",platform_readyz:"Readiness",platform_interaction_total:"Análisis de interacción",platform_interaction_note:"Conteo agregado, no datos por usuario.",platform_latency:"Latencia media interaction",platform_latency_note:"Desde stats públicas agregadas.",platform_privacy:"Privacidad",platform_privacy_note:"Sin texto crudo en el store de observabilidad.",platform_links_title:"Verificabilidad pública",platform_links_text:"SAS expone endpoints públicos de estado, actividad y estadísticas agregadas para verificar que el sistema está vivo sin acceder a datos sensibles.",platform_low_volume_note:"Las métricas de interaction stability son agregadas. No se muestran distribuciones de estados como conclusión hasta tener volumen suficiente.",platform_unavailable:"No disponible",platform_ready:"ready",platform_degraded:"degraded",platform_private:"sin texto crudo",benchmark_limit_note:"Resultados específicos del dataset forense V1. No representan validación universal ni rendimiento garantizado en otros dominios.",key_accepted:"Solicitud recibida. Si el envío no se confirma, revisá correos previos, spam o contactá soporte.",key_existing:"Solicitud recibida. Si ese correo ya tenía una key, revisá correos anteriores o intentá mañana.",sending:"Enviando..."});
 Object.assign(dict.en,{nav_access:"Access",hero_get_key:"Get API key",access_title:"Turn the demo into real usage.",access_text:"Request a free API key or upgrade to SAS Pro. The key is sent by email and payments activate the plan automatically.",free_title:"SAS Free",free_text:"50 requests per day for testing, development, and technical evaluation.",free_price_note:"no card, email delivery",free_name:"Optional name",name_placeholder:"Your Name",free_button:"Send free API key",free_or_cli:"or from terminal",copy_btn:"copy",free_note:"The API key is sent by email. Do not publish keys in social posts or repositories.",pro_title:"Upgrade to Pro",pro_text:"10,000 requests per month, API key, and priority support. Available for technical early adopters while scientific validation continues.",pro_price_note:"or ARS 138,600 via Mercado Pago",provider_polar:"Global · USD · subscription",provider_mp:"LatAm · ARS · local checkout",billing_name:"Name",checkout_button:"Continue to payment",pro_note:"Polar is recommended for global customers. Mercado Pago is recommended for Argentina and LatAm.",key_sent:"API key sent. Check your inbox and spam folder.",key_rate:"You already requested a key today. Check your email or try again tomorrow.",key_error:"Could not request the key right now.",checkout_redirecting:"Checkout created. Redirecting to payment...",checkout_error:"Could not create checkout.",checkout_success:"Checkout completed. If the payment was approved, your plan will update automatically.",checkout_cancel:"Checkout canceled. You can try again anytime.",checkout_pending:"Payment pending. Mercado Pago will notify when it is approved.",checkout_failure:"Payment rejected or failed. Try again or contact support.",platform_title:"SAS is operational, observable, and private.",platform_text:"Public aggregate platform status. We show useful operational signals without exposing raw text, API keys, API-key hashes, or request IDs.",platform_readyz:"Readiness",platform_interaction_total:"Interaction analyses",platform_interaction_note:"Aggregate count, not user-level data.",platform_latency:"Avg interaction latency",platform_latency_note:"From public aggregate stats.",platform_privacy:"Privacy",platform_privacy_note:"No raw interaction text in the observability store.",platform_links_title:"Public verifiability",platform_links_text:"SAS exposes public status, activity, and aggregate stats endpoints so anyone can verify the system is alive without accessing sensitive data.",platform_low_volume_note:"Interaction stability metrics are aggregate. State distributions are not presented as conclusions until there is enough volume.",platform_unavailable:"Unavailable",platform_ready:"ready",platform_degraded:"degraded",platform_private:"no raw text",benchmark_limit_note:"Dataset-specific forensic V1 results. Not universal validation or guaranteed performance in other domains.",key_accepted:"Request accepted. If delivery is not confirmed, check previous emails, spam, or contact support.",key_existing:"Request accepted. If that email already had a key, check previous emails or try again tomorrow.",sending:"Sending..."});
+
+Object.assign(dict.es,{nav_how:"Cómo funciona",nav_hashchain:"Hash chain",how_title:"Ocho módulos. Una cascada. Un veredicto.",how_text:"SAS compara el texto fuente con la respuesta generada y calcula el Índice de Similitud Estructural (ISI). Cada módulo penaliza un tipo distinto de ruptura. El resultado cae en una de tres zonas.",how_s1_t:"Entrada",how_s1_d:"Pegás el texto fuente y la respuesta a auditar. Sin API key en la demo.",how_s2_t:"8 módulos",how_s2_d:"Solapamiento léxico, entidades críticas, flujo, negación, curvatura semántica, aritmética, referencias y topología.",how_s3_t:"Cascada",how_s3_d:"Cada módulo aplica una penalización multiplicativa. El R3.2 puede rescatar o vetar según invarianza topológica.",how_s4_t:"Zona",how_s4_d:"ISI ≥ κD (0.56) = COHERENTE. κR ≤ ISI < κD = RUPTURA RECUPERABLE. ISI < κR (0.15) = COLAPSO.",how_cta:"Probar la demo",how_repo:"Ver el código",scn_paraphrase_t:"Paráfrasis",scn_paraphrase_d:"Mismo contenido, otras palabras → RESCUE",scn_rescue:"RESCUE",scn_hallucination_t:"Alucinación",scn_hallucination_d:"Entidades mutadas → RUPTURA",scn_rupture:"RUPTURA",scn_contradiction_t:"Contradicción",scn_contradiction_d:"Negación invertida → VETO",scn_veto:"VETO",scn_copular_t:"Copular",scn_copular_d:"Equivalencia estructural → COHERENTE",scn_coherent:"COHERENTE",hc_title:"Verificá la integridad del sistema.",hc_text:"Cada archivo del sistema tiene un SHA-256 individual. Los hashes se anidan en 6 niveles y se anclan a Bitcoin vía OpenTimestamps. Pegá un hash para verificarlo contra la cadena pública.",hc_verify_label:"Verificar un hash",hc_placeholder:"Pegá un SHA-256 (64 caracteres hex)...",hc_verify_btn:"Verificar",hc_note:"La verificación compara contra los hashes publicados en el repositorio. Para verificación criptográfica completa contra Bitcoin, usá ots verify con los archivos .ots del repo.",hc_levels_label:"Cadena de 6 niveles",hc_l1:"103 archivos .py individuales",hc_l2:"8 módulos del tribunal concatenados",hc_l3:"app/main.py",hc_l4:"requirements.txt",hc_l5:"docker-compose.yml",hc_l6:"chain.txt (self-hash)",hc_repo_btn:"Ver hash_chain en GitHub",hc_ots_btn:"Prueba OTS",hc_ok:"Hash verificado: presente en la cadena pública.",hc_err:"Hash no encontrado en la cadena pública.",hc_invalid:"Formato inválido. Un SHA-256 tiene 64 caracteres hexadecimales.",hc_checking:"Verificando..."})
+Object.assign(dict.en,{nav_how:"How it works",nav_hashchain:"Hash chain",how_title:"Eight modules. One cascade. One verdict.",how_text:"SAS compares the source text with the generated response and computes the Structural Similarity Index (ISI). Each module penalizes a different kind of rupture. The result falls into one of three zones.",how_s1_t:"Input",how_s1_d:"Paste the source text and the response to audit. No API key needed in the demo.",how_s2_t:"8 modules",how_s2_d:"Lexical overlap, critical entities, flow, negation, semantic curvature, arithmetic, references, and topology.",how_s3_t:"Cascade",how_s3_d:"Each module applies a multiplicative penalty. R3.2 can rescue or veto based on topological invariance.",how_s4_t:"Zone",how_s4_d:"ISI ≥ κD (0.56) = COHERENT. κR ≤ ISI < κD = RECOVERABLE RUPTURE. ISI < κR (0.15) = COLLAPSE.",how_cta:"Try the demo",how_repo:"View the code",scn_paraphrase_t:"Paraphrase",scn_paraphrase_d:"Same content, different words → RESCUE",scn_rescue:"RESCUE",scn_hallucination_t:"Hallucination",scn_hallucination_d:"Mutated entities → RUPTURE",scn_rupture:"RUPTURE",scn_contradiction_t:"Contradiction",scn_contradiction_d:"Inverted negation → VETO",scn_veto:"VETO",scn_copular_t:"Copular",scn_copular_d:"Structural equivalence → COHERENT",scn_coherent:"COHERENT",hc_title:"Verify the integrity of the system.",hc_text:"Every file in the system has an individual SHA-256. The hashes are nested in 6 levels and anchored to Bitcoin via OpenTimestamps. Paste a hash to verify it against the public chain.",hc_verify_label:"Verify a hash",hc_placeholder:"Paste a SHA-256 (64 hex characters)...",hc_verify_btn:"Verify",hc_note:"Verification compares against the hashes published in the repository. For full cryptographic verification against Bitcoin, use ots verify with the .ots files in the repo.",hc_levels_label:"6-level chain",hc_l1:"103 individual .py files",hc_l2:"8 tribunal modules concatenated",hc_l3:"app/main.py",hc_l4:"requirements.txt",hc_l5:"docker-compose.yml",hc_l6:"chain.txt (self-hash)",hc_repo_btn:"View hash_chain on GitHub",hc_ots_btn:"OTS proof",hc_ok:"Hash verified: present in the public chain.",hc_err:"Hash not found in the public chain.",hc_invalid:"Invalid format. A SHA-256 has 64 hexadecimal characters.",hc_checking:"Verifying..."})
 
 function currentLang(){return localStorage.getItem("sas-lang")||"es"}
 function setLang(l){const d=dict[l]||dict.es;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(e=>{const k=e.dataset.i18n;if(d[k])e.textContent=d[k]});document.querySelectorAll("[data-i18n-placeholder]").forEach(e=>{const k=e.dataset.i18nPlaceholder;if(d[k])e.setAttribute("placeholder",d[k])});document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));localStorage.setItem("sas-lang",l);loadSasPublicActivity();loadPlatformSnapshot()}
@@ -787,6 +921,63 @@ function demoRender(data){const l=currentLang(),d=dict[l]||dict.es;const isiEl=d
 async function runSASDemo(){const l=currentLang(),d=dict[l]||dict.es,srcEl=document.getElementById("demo-source"),resEl=document.getElementById("demo-response"),btn=document.getElementById("demo-run-btn");if(!srcEl||!resEl)return;const source=srcEl.value.trim(),response=resEl.value.trim();if(source.length<30||response.length<30){demoShowError(d.demo_err_short);return}if(source.length>2000||response.length>2000){demoShowError(d.demo_err_long);return}if(btn){btn.disabled=true;btn.textContent=d.demo_running||"Analyzing..."}demoSetState("loading");try{const r=await fetch(SAS_DEMO_API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({source,response})});if(r.status===429){demoShowError(d.demo_limit);return}const data=await r.json().catch(()=>({}));if(!r.ok)throw new Error(data.detail||`HTTP ${r.status}`);demoRender(data)}catch(e){demoShowError((d.demo_err_generic||"Error")+" "+(e.message||""))}finally{if(btn){btn.disabled=false;btn.textContent=d.demo_audit||"Audit"}}}
 function initDemo(){const src=document.getElementById("demo-source"),res=document.getElementById("demo-response"),run=document.getElementById("demo-run-btn"),ex=document.getElementById("demo-example-btn");if(!src||!res)return;src.addEventListener("input",demoUpdateCounts);res.addEventListener("input",demoUpdateCounts);if(run)run.addEventListener("click",runSASDemo);if(ex)ex.addEventListener("click",demoExample);demoUpdateCounts();demoSetState("idle")}
 
+// ── Demo scenarios (pre-cargados) ────────────────────────────────────────────
+const DEMO_SCENARIOS={
+  paraphrase:{es:{source:"La Torre Eiffel está ubicada en París, Francia, y fue construida en 1889 como entrada de la Exposición Universal.",response:"La Torre Eiffel se encuentra en París, Francia, y fue erigida en 1889 para la Exposición Universal."},en:{source:"The Eiffel Tower is located in Paris, France, and was built in 1889 as the entrance to the World Fair.",response:"The Eiffel Tower stands in Paris, France, and was erected in 1889 for the World Fair."}},
+  hallucination:{es:{source:"La Torre Eiffel está ubicada en París, Francia, y fue construida en 1889 como entrada de la Exposición Universal.",response:"La Torre Eiffel está ubicada en Berlín, Alemania, y fue construida en 1950 durante la posguerra."},en:{source:"The Eiffel Tower is located in Paris, France, and was built in 1889 as the entrance to the World Fair.",response:"The Eiffel Tower is located in Berlin, Germany, and was built in 1950 after the war."}},
+  contradiction:{es:{source:"El agua hierve a 100 grados Celsius al nivel del mar.",response:"El agua no hierve a 100 grados Celsius al nivel del mar, sino a 90 grados."},en:{source:"Water boils at 100 degrees Celsius at sea level.",response:"Water does not boil at 100 degrees Celsius at sea level, but at 90 degrees."}},
+  copular:{es:{source:"El presidente de la empresa es María González, quien asumió en 2021.",response:"María González es la presidenta de la empresa y asumió en 2021."},en:{source:"The president of the company is María González, who took office in 2021.",response:"María González is the president of the company and took office in 2021."}}
+};
+function demoLoadScenario(key){
+  const l=currentLang(),scn=DEMO_SCENARIOS[key];
+  if(!scn)return;
+  const src=document.getElementById("demo-source"),res=document.getElementById("demo-response");
+  if(!src||!res)return;
+  const texts=scn[l]||scn.es;
+  src.value=texts.source;res.value=texts.response;
+  demoUpdateCounts();demoSetState("idle");
+  document.querySelectorAll(".demo-scenario-btn").forEach(b=>b.classList.toggle("active",b.dataset.scenario===key));
+}
+function initDemoScenarios(){
+  document.querySelectorAll(".demo-scenario-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>demoLoadScenario(btn.dataset.scenario));
+  });
+}
+
+// ── Hash chain verification widget ──────────────────────────────────────────
+const HASH_CHAIN_LEVELS=[
+  "efa44d32030f88a22ef86d0bc363c66aedd7222fc1aa7a3e917c710e67a97aed",
+  "16e31da6fbdae95ca186869ecef75814ea63e01a336e734538461adb349b98d8",
+  "b6290c5b49c35305d39ce8cfd689b6d377e091e85eccecaa385610f9a1ea36ce",
+  "3f0fe473610f461e052876bb46b9f7ae51cd0d3da08b206de07dbc3f5468cf87",
+  "748ed05910c1a6ccb12b985c1b1b115e9e9077e25b6732439c3c4ce8ceaed478",
+  "d8fe8721039baa38aaedf76ba9a19a5f1ff3d33c6e12a8d097552bb7537019e7"
+];
+function hashchainSetStatus(msg,type){
+  const el=document.getElementById("hashchain-status");
+  if(!el)return;
+  el.textContent=msg;
+  el.className="hashchain-status "+(type||"");
+}
+function hashchainVerify(){
+  const input=document.getElementById("hashchain-input");
+  if(!input)return;
+  const l=currentLang(),d=dict[l]||dict.es;
+  const value=input.value.trim().toLowerCase();
+  if(!value){hashchainSetStatus(d.hc_invalid,"err");return}
+  if(!/^[0-9a-f]{64}$/.test(value)){hashchainSetStatus(d.hc_invalid,"err");return}
+  hashchainSetStatus(d.hc_checking,"warn");
+  setTimeout(()=>{
+    if(HASH_CHAIN_LEVELS.includes(value)){hashchainSetStatus(d.hc_ok,"ok")}
+    else{hashchainSetStatus(d.hc_err,"err")}
+  },350);
+}
+function initHashchain(){
+  const btn=document.getElementById("hashchain-verify-btn"),input=document.getElementById("hashchain-input");
+  if(btn)btn.addEventListener("click",hashchainVerify);
+  if(input)input.addEventListener("keydown",e=>{if(e.key==="Enter")hashchainVerify()});
+}
+
 // ── Access forms ─────────────────────────────────────────────────────────────
 function accessSetStatus(id,msg,type){const el=document.getElementById(id);if(!el)return;el.textContent=msg;el.className="access-status "+(type||"ok")}
 async function accessPostJSON(url, payload, options = {}) {
@@ -842,7 +1033,7 @@ function accessDeliveryConfirmed(data){return data?.email_delivery?.sent===true|
 function initCheckoutNotice(){const params=new URLSearchParams(window.location.search),l=currentLang(),d=dict[l]||dict.es;const box=document.getElementById("checkout-notice");if(!box)return;let msg="",type="ok";if(params.get("checkout")==="success")msg=d.checkout_success;else if(params.get("checkout")==="cancel"){msg=d.checkout_cancel;type="warn"}else if(params.get("mp")==="success")msg=d.checkout_success;else if(params.get("mp")==="pending"){msg=d.checkout_pending;type="warn"}else if(params.get("mp")==="failure"){msg=d.checkout_failure;type="err"}if(msg)accessSetStatus("checkout-notice",msg,type)}
 function initAccess(){initCheckoutNotice();const freeForm=document.getElementById("free-key-form"),checkoutForm=document.getElementById("pro-checkout-form"),pilotForm=document.getElementById("pilot-checkout-form");if(freeForm){freeForm.addEventListener("submit",async e=>{e.preventDefault();const l=currentLang(),d=dict[l]||dict.es;const btn=document.getElementById("free-key-button"),email=document.getElementById("free-email")?.value.trim(),name=document.getElementById("free-name")?.value.trim();if(!email)return;if(btn){btn.disabled=true;btn.textContent=d.sending||"Sending..."}try{const data=await accessPostJSON(`${SAS_ACTIVITY_API_BASE}/public/request-key`,{email,name});if(accessDeliveryConfirmed(data)){accessSetStatus("free-key-status",d.key_sent,"ok")}else if(accessLooksExistingKey(data)){accessSetStatus("free-key-status",d.key_existing||d.key_rate,"warn")}else{accessSetStatus("free-key-status",d.key_accepted||d.key_sent,"warn")}}catch(err){const payload=err.payload||{};const msg=payload.message||payload.detail||payload.reason||err.message||"";accessSetStatus("free-key-status",err.status===429?d.key_rate:(d.key_error+" "+msg),err.status===429?"warn":"err")}finally{if(btn){btn.disabled=false;btn.textContent=d.free_button}}})}if(checkoutForm){checkoutForm.addEventListener("submit",async e=>{e.preventDefault();const l=currentLang(),d=dict[l]||dict.es;const btn=document.getElementById("checkout-button"),email=document.getElementById("checkout-email")?.value.trim(),name=document.getElementById("checkout-name")?.value.trim();const provider=document.querySelector('input[name="provider"]:checked')?.value||"polar";if(!email)return;if(btn){btn.disabled=true;btn.textContent=d.sending||"Sending..."}try{const endpoint=provider==="mercadopago"?"/billing/mercadopago/checkout":"/billing/polar/checkout";const payload=provider==="mercadopago"?{email,name,plan:"pro"}:{email,name};const data=await accessPostJSON(`${SAS_ACTIVITY_API_BASE}${endpoint}`,payload);if(!data.checkout_url)throw new Error("missing checkout_url");accessSetStatus("checkout-status",d.checkout_redirecting,"ok");setTimeout(()=>{window.location.href=data.checkout_url},650)}catch(err){accessSetStatus("checkout-status",d.checkout_error+" "+(err.message||""),"err");if(btn){btn.disabled=false;btn.textContent=d.checkout_button}}})}if(pilotForm){pilotForm.addEventListener("submit",async e=>{e.preventDefault();const l=currentLang(),d=dict[l]||dict.es;const btn=document.getElementById("pilot-checkout-button"),email=document.getElementById("pilot-email")?.value.trim(),name=document.getElementById("pilot-name")?.value.trim();if(!email)return;if(btn){btn.disabled=true;btn.textContent=d.sending||"Sending..."}try{const data=await accessPostJSON(`${SAS_ACTIVITY_API_BASE}/billing/mercadopago/checkout`,{email,name,plan:"pilot"});if(!data.checkout_url)throw new Error("missing checkout_url");accessSetStatus("pilot-checkout-status",d.checkout_redirecting,"ok");setTimeout(()=>{window.location.href=data.checkout_url},650)}catch(err){accessSetStatus("pilot-checkout-status",d.checkout_error+" "+(err.message||""),"err");if(btn){btn.disabled=false;btn.textContent=d.pilot_button}}})}}
 
-function init(){setTheme(localStorage.getItem("sas-theme")||"tech");setLang(localStorage.getItem("sas-lang")||"es");document.querySelectorAll("[data-theme]").forEach(b=>b.onclick=()=>setTheme(b.dataset.theme));document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);health()});let mb=document.querySelector("#menu-btn"),nl=document.querySelector("#navlinks");if(mb&&nl)mb.onclick=()=>{let open=nl.classList.toggle("open");mb.setAttribute("aria-expanded",String(open))};document.querySelectorAll("#navlinks a").forEach(a=>a.onclick=()=>nl&&nl.classList.remove("open"));let form=document.querySelector("#contact-form");if(form)form.addEventListener("submit",()=>{let b=form.querySelector('button[type="submit"]');if(b){b.disabled=true;b.textContent=(currentLang()==="en"?"Sending...":"Enviando...")}});let els=document.querySelectorAll(".reveal");if("IntersectionObserver"in window){let ob=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("visible");ob.unobserve(x.target)}}),{threshold:.12});els.forEach(e=>ob.observe(e));setTimeout(()=>{document.querySelectorAll(".reveal:not(.visible)").forEach(e=>e.classList.add("visible"))},3000)}else els.forEach(e=>e.classList.add("visible"));initAccess();initDemo();health();
+function init(){setTheme(localStorage.getItem("sas-theme")||"tech");setLang(localStorage.getItem("sas-lang")||"es");document.querySelectorAll("[data-theme]").forEach(b=>b.onclick=()=>setTheme(b.dataset.theme));document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);health()});let mb=document.querySelector("#menu-btn"),nl=document.querySelector("#navlinks");if(mb&&nl)mb.onclick=()=>{let open=nl.classList.toggle("open");mb.setAttribute("aria-expanded",String(open))};document.querySelectorAll("#navlinks a").forEach(a=>a.onclick=()=>nl&&nl.classList.remove("open"));let form=document.querySelector("#contact-form");if(form)form.addEventListener("submit",()=>{let b=form.querySelector('button[type="submit"]');if(b){b.disabled=true;b.textContent=(currentLang()==="en"?"Sending...":"Enviando...")}});let els=document.querySelectorAll(".reveal");if("IntersectionObserver"in window){let ob=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("visible");ob.unobserve(x.target)}}),{threshold:.12});els.forEach(e=>ob.observe(e));setTimeout(()=>{document.querySelectorAll(".reveal:not(.visible)").forEach(e=>e.classList.add("visible"))},3000)}else els.forEach(e=>e.classList.add("visible"));initAccess();initDemo();initDemoScenarios();initHashchain();health();
 /* loadSasPublicActivity() and loadPlatformSnapshot() are already called by setLang() above.
    Do not call them again here to avoid duplicate API requests on page load. */}
 document.addEventListener("DOMContentLoaded",init);
