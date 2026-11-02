@@ -15,7 +15,7 @@
 [![Qeios Paper](https://img.shields.io/badge/Qeios-10.32388%2FT420IV-purple?style=for-the-badge)](https://www.qeios.com/read/T420IV)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
 [![Benchmark](https://img.shields.io/badge/Benchmark-99.17%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
-[![Tribunal](https://img.shields.io/badge/Tribunal-v1.1.0-ffd700?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal)
+[![Tribunal](https://img.shields.io/badge/Tribunal-v1.3.0-ffd700?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal)
 
 </div>
 
@@ -37,7 +37,7 @@
 
 `/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core thresholds **κD = 0.56** (Durante Constant) and **κR = 0.15** (Recovery Threshold).
 
-SAS is a **research-alpha** defensive AI auditing system. It provides structural coherence auditing, semantic rupture detection, batch comparison workflows, experimental interaction stability analysis, and the **SAS Multimetric Tribunal v1.1.0** — a 7-module cascading classifier with optional R3.1 Differential Guard.
+SAS is a **research-alpha** defensive AI auditing system. It provides structural coherence auditing, semantic rupture detection, batch comparison workflows, experimental interaction stability analysis, and the **SAS Multimetric Tribunal v1.3.0** — a 13-module cascading classifier (7 core + R3.1–R3.6).
 
 This landing page is the public access layer for:
 
@@ -73,7 +73,7 @@ This landing page is the public access layer for:
 |---|---|
 | [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Core FastAPI service, scientific engine, API routes, benchmark artifacts, privacy docs, observability stores, and license. |
 | [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Static public website for the standard candidate, demo, benchmark summary, live activity, platform status, CLI onboarding, and commercial routing. |
-| [`sas-multimetric-tribunal`](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal) | Standalone tribunal classifier: 7 detection modules, cascading multiplicative penalty, R3.1 Differential Guard, and held-out multi-split validation (100 reps). |
+| [`sas-multimetric-tribunal`](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal) | Standalone tribunal classifier: 13 detection modules (7 core + R3.1–R3.6), cascading multiplicative penalty, and held-out multi-split validation (100 reps). |
 | [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Official Python package and CLI for developers integrating with the hosted or self-hosted SAS API. |
 | [`sas-js`](https://github.com/Leesintheblindmonk1999/sas-js) | Official Node.js/TypeScript SDK, published on npm as `sas-audit-client`. |
 
@@ -107,8 +107,13 @@ Its purpose is to:
 | R1-D structural evaluation | F1 0.5230 · Flow + CRE + Negation | Declarative QA corpus (halueval_qa) |
 | R1-D lexical baseline | AUC 0.749 | Same corpus, reference baseline |
 | R2.1 code AST | AUC 0.9141 raw · AUC 0.9421 length-controlled | Code domain, reference required |
-| **Tribunal v1.1.0** | **7 modules · κD=0.56 · κR=0.15 · ISI separation 0.8323** | Full (source, response) pair classification |
+| **Tribunal v1.3.0** | **13 modules · κD=0.56 · κR=0.15 · ISI separation 0.8323** | Full (source, response) pair classification |
 | **R3.1 Differential Guard** | **F1 0.833 ± 0.0055 (100 held-out splits)** | Grounding + Compression + Short-response heuristics |
+| **R3.2 Topological Invariance** | **7/7 tests PASS** | Paraphrase rescue + contradiction veto |
+| **R3.3 Semantic Drift** | **Break point detection** | Sentence-by-sentence ISI trajectory |
+| **R3.4 Entropy Differential** | **ΔH anomaly detection** | Shannon entropy comparison |
+| **R3.5 Kolmogorov Complexity** | **zlib ratio analysis** | LZ77 compression ratio |
+| **R3.6 Surprisal Analysis** | **Token-level localization** | Per-token self-information |
 | **FINQA detection** | **87.0%** | Financial QA numerical hallucination detection |
 
 Published Zenodo records:
@@ -134,7 +139,7 @@ Qeios DOI `10.32388/T420IV` — [https://www.qeios.com/read/T420IV](https://www.
 
 ## What SAS Communicates
 
-SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions. The **SAS Multimetric Tribunal v1.1.0** classifies (source, response) pairs into 3 structural zones using 7 detection modules with cascading multiplicative penalty, plus an optional R3.1 Differential Guard.
+SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions. The **SAS Multimetric Tribunal v1.3.0** classifies (source, response) pairs into 3 structural zones using 13 detection modules (7 core + R3.1–R3.6) with cascading multiplicative penalty.
 
 The landing communicates that SAS is:
 
@@ -584,7 +589,7 @@ This positioning prevents the standard candidate from being framed as closed, pa
 - Copy buttons for onboarding commands.
 - Dedicated Windows PowerShell path for API key setup.
 - Developer SDKs section for Python and Node.js.
-- **Tribunal section with 7 modules, structural zones, R3.1 Guard, and Qeios paper link.**
+- **Tribunal section with 13 modules (7 core + R3.1–R3.6), structural zones, and Qeios paper link.**
 - Pro checkout route through Polar and Mercado Pago.
 - Controlled fallback if the API is unavailable or blocked by CORS during local testing.
 - Self-contained benchmark visual.
@@ -963,7 +968,7 @@ Main links:
 
 `/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de sus umbrales centrales **κD = 0.56** (Durante Constant) y **κR = 0.15** (Recovery Threshold).
 
-SAS es un sistema de auditoría de IA en fase de investigación alpha. Proporciona auditoría de coherencia estructural, detección de ruptura semántica, comparación por lotes, análisis experimental de estabilidad de interacción y el **SAS Multimetric Tribunal v1.1.0** — un clasificador de 7 módulos con penalización multiplicativa en cascada y R3.1 Differential Guard opcional.
+SAS es un sistema de auditoría de IA en fase de investigación alpha. Proporciona auditoría de coherencia estructural, detección de ruptura semántica, comparación por lotes, análisis experimental de estabilidad de interacción y el **SAS Multimetric Tribunal v1.3.0** — un clasificador de 13 módulos (7 core + R3.1–R3.6).
 
 Esta landing page es la capa pública de acceso para:
 
@@ -999,7 +1004,7 @@ Esta landing page es la capa pública de acceso para:
 |---|---|
 | [`SAS`](https://github.com/Leesintheblindmonk1999/SAS) | Servicio FastAPI core, motor científico, rutas API, artefactos de benchmark, documentación de privacidad, observabilidad y licencia. |
 | [`sas-landing`](https://github.com/Leesintheblindmonk1999/sas-landing) | Sitio público estático para el candidato a estándar, demo, resumen de benchmark, actividad pública, estado de plataforma, onboarding y contacto comercial. |
-| [`sas-multimetric-tribunal`](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal) | Clasificador tribunal independiente: 7 módulos de detección, penalización multiplicativa en cascada, R3.1 Differential Guard y validación multi-split held-out (100 repeticiones). |
+| [`sas-multimetric-tribunal`](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal) | Clasificador tribunal independiente: 13 módulos de detección (7 core + R3.1–R3.6), penalización multiplicativa en cascada y validación multi-split held-out (100 repeticiones). |
 | [`sas-client`](https://github.com/Leesintheblindmonk1999/sas-client) | Paquete Python y CLI oficial para desarrolladores. |
 | [`sas-js`](https://github.com/Leesintheblindmonk1999/sas-js) | SDK oficial de Node.js/TypeScript, publicado en npm como `sas-audit-client`. |
 
@@ -1033,8 +1038,13 @@ Su función es:
 | Evaluación estructural R1-D | F1 0.5230 · Flow + CRE + Negation | Corpus QA declarativo (halueval_qa) |
 | Baseline lexical R1-D | AUC 0.749 | Mismo corpus, baseline de referencia |
 | Código AST R2.1 | AUC 0.9141 bruto · AUC 0.9421 controlado por longitud | Dominio código, requiere referencia |
-| **Tribunal v1.1.0** | **7 módulos · κD=0.56 · κR=0.15 · Separación ISI 0.8323** | Clasificación completa de pares (fuente, respuesta) |
+| **Tribunal v1.3.0** | **13 módulos · κD=0.56 · κR=0.15 · Separación ISI 0.8323** | Clasificación completa de pares (fuente, respuesta) |
 | **R3.1 Differential Guard** | **F1 0.833 ± 0.0055 (100 splits held-out)** | Grounding + Compresión + Heurísticas de respuesta corta |
+| **R3.2 Invarianza Topológica** | **7/7 tests PASS** | Rescate de paráfrasis + veto de contradicción |
+| **R3.3 Deriva Semántica** | **Detección de punto de quiebre** | Trayectoria ISI oración por oración |
+| **R3.4 Diferencial de Entropía** | **Detección de anomalía ΔH** | Comparación de entropía Shannon |
+| **R3.5 Complejidad Kolmogorov** | **Análisis de ratio zlib** | Ratio de compresión LZ77 |
+| **R3.6 Análisis de Surprisal** | **Localización por token** | Auto-información por token |
 | **FINQA** | **87.0%** | Detección de alucinación numérica en QA financiero |
 
 **Publicación revisada por pares:**  
@@ -1060,7 +1070,7 @@ R2.1-b function    https://doi.org/10.5281/zenodo.21466891
 
 ## Qué comunica SAS
 
-SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales. El **SAS Multimetric Tribunal v1.1.0** clasifica pares (fuente, respuesta) en 3 zonas estructurales usando 7 módulos de detección con penalización multiplicativa en cascada, más un R3.1 Differential Guard opcional.
+SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales. El **SAS Multimetric Tribunal v1.3.0** clasifica pares (fuente, respuesta) en 3 zonas estructurales usando 13 módulos de detección (7 core + R3.1–R3.6) con penalización multiplicativa en cascada.
 
 La landing comunica que SAS es:
 
@@ -1506,7 +1516,7 @@ Este posicionamiento evita que el estándar candidato sea interpretado como cerr
 - Botones de copiado para comandos de onboarding.
 - Ruta específica para usuarios Windows con PowerShell.
 - Sección de SDKs para Python y Node.js.
-- **Sección del Tribunal con 7 módulos, zonas estructurales, R3.1 Guard y enlace al paper Qeios.**
+- **Sección del Tribunal con 13 módulos (7 core + R3.1–R3.6), zonas estructurales y enlace al paper Qeios.**
 - Checkout Pro mediante Polar y Mercado Pago.
 - Fallback controlado si la API no responde o si CORS bloquea la consulta local.
 - Visual autocontenido del benchmark.
