@@ -7,7 +7,7 @@ Primary public OTS hash for the SAS landing page:
 
 Verification:
 
-ots verify .well-known/ots-proof.txt
+ots verify .well-known/ots-proof.txt.ots
 
 
 Research line integrity snapshot
@@ -22,8 +22,10 @@ SAS standard and software record
 
 Title       SAS — Symbiotic Autoprotection System
 Author      Gonzalo Emir Durante
-DOI         10.5281/zenodo.19702379
-Record      https://doi.org/10.5281/zenodo.19702379
+DOI (v9)    10.5281/zenodo.19702379
+DOI (v1.3.0 regulatory) 10.5281/zenodo.23917127
+Record v9   https://doi.org/10.5281/zenodo.19702379
+Record v1.3.0 https://doi.org/10.5281/zenodo.23917127
 
 
 Historical κD prior-art snapshot
@@ -44,8 +46,11 @@ implementation of SAS.
 Published Zenodo records
 ------------------------
 
-SAS standard
+SAS standard v9
 https://doi.org/10.5281/zenodo.19702379
+
+SAS regulatory package v1.3.0 (current)
+https://doi.org/10.5281/zenodo.23917127
 
 κD semantic shielding annex
 https://doi.org/10.5281/zenodo.18457687
@@ -87,9 +92,25 @@ https://doi.org/10.5281/zenodo.21466891
 Representative artifact hashes
 ------------------------------
 
-SAS benchmark artifact SHA-256
+SAS benchmark artifact SHA-256 (v9)
 
 0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe
+
+SAS regulatory package ZIP SHA-256 (v1.3.0)
+
+38748456e995c96616f458e81d06976edd48cbcf048118c7d1032a71e5669f21
+
+SAS regulatory paper SHA-256 (v1.3.0)
+
+189e3c6d6aaeea2f89d32209400e4775cf38b4981be34235694c67086dbfcb40
+
+Hash chain (v1.3.0, post-MedHallu fixes)
+L1 (108 .py files)      f940514600a451a2256799695fa56465da627accc371faf46ea0fcee8a09e319
+L2 (12 core modules)    97c4966aabc378fb9193c1cd6f15140c72bb77f9c246372ffbb282c1e4b69a25
+L3 (app/main.py)        b6290c5b49c35305d39ce8cfd689b6d377e091e85eccecaa385610f9a1ea36ce
+L4 (requirements.txt)   3f0fe473610f461e052876bb46b9f7ae51cd0d3da08b206de07dbc3f5468cf87
+L5 (docker-compose.yml) 748ed05910c1a6ccb12b985c1b1b115e9e9077e25b6732439c3c4ce8ceaed478
+L6 (chain.txt self-hash) ff7cb92920e8e1788876177e5c6733a7ed6065fd049669b8ac76b473c01dd0d8
 
 R0 public artifact SHA-256
 
@@ -98,6 +119,29 @@ b1c4b2eddc7b887f8721f3f193b5d1263e4822f13efd08f8b20ae95389dd36fe
 R0 integrity manifest master digest
 
 b8fbe7c0e334fd483634c16c87a8b2cff77debc118b35b115d89d25e04f45e1b
+
+
+Registry and public endpoints
+-----------------------------
+
+TAD Argentina registration  EX-2026-18792778
+Active SAS repository       https://github.com/Leesintheblindmonk1999/SAS
+SAS landing page            https://leesintheblindmonk1999.github.io/sas-landing/
+SAS public API              https://sas-api.onrender.com
+
+
+Methodological boundary
+-----------------------
+
+The records listed above document a reproducible research progression
+for structural coherence auditing, external-clean generation, verifier
+calibration, and prior-art traceability. They do not claim final
+production validation of SAS, universal hallucination detection, or
+benchmark superiority over other systems.
+
+κD = 0.56 is treated as an operational audit threshold under empirical
+validation by domain. It is not presented as a universal physical
+constant, legal certification, or factual oracle.
 
 
 Registry and public endpoints
