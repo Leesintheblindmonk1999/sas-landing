@@ -11,10 +11,10 @@
 [![Platform Status](https://img.shields.io/badge/Platform%20Status-public%20aggregate%20stats-00ffd0?style=for-the-badge)](https://leesintheblindmonk1999.github.io/sas-landing/#platform)
 [![PyPI](https://img.shields.io/badge/PyPI-sas--client-blue?style=for-the-badge)](https://pypi.org/project/sas-client/)
 [![npm](https://img.shields.io/badge/npm-sas--audit--client-red?style=for-the-badge)](https://www.npmjs.com/package/sas-audit-client)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19702379-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.19702379)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23917127-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.23917127)
 [![Qeios Paper](https://img.shields.io/badge/Qeios-10.32388%2FT420IV-purple?style=for-the-badge)](https://www.qeios.com/read/T420IV)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
-[![Benchmark](https://img.shields.io/badge/Benchmark-99.17%25%20Accuracy-success?style=for-the-badge)](#benchmark--validation)
+[![Benchmark](https://img.shields.io/badge/30%2C790%20pairs-F1%200.8901-success?style=for-the-badge)](#benchmark--validation)
 [![Tribunal](https://img.shields.io/badge/Tribunal-v1.3.0-ffd700?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal)
 
 </div>
@@ -103,11 +103,12 @@ Its purpose is to:
 
 | Evaluation | Result | Scope |
 |---|---|---|
-| Benchmark forensic V3 | Accuracy 99.17% · Precision 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset-specific: 1,800 hallucination + 1,800 sanity-check pairs 
+| **Tribunal v1.3.0 (aggregate)** | **30,790 pairs · P=0.9987 · R=0.8028 · F1=0.8901 · Acc=0.9009 · 22 FP** | 4 public datasets: HaluEval-QA, HaluEval-Dialogue, TruthfulQA, MedHallu |
+| **MedHallu (format-controlled)** | **85.10% detection · 0.01% identity FP** | 10,000 medical records, 4-condition protocol |
 | R1-D structural evaluation | F1 0.5230 · Flow + CRE + Negation | Declarative QA corpus (halueval_qa) |
 | R1-D lexical baseline | AUC 0.749 | Same corpus, reference baseline |
 | R2.1 code AST | AUC 0.9141 raw · AUC 0.9421 length-controlled | Code domain, reference required |
-| **Tribunal v1.3.0** | **13 modules · κD=0.56 · κR=0.15 · ISI separation 0.8323** | Full (source, response) pair classification |
+| **13 modules** | **κD=0.56 · κR=0.15 · ISI separation 0.6597 (MedHallu A vs A'')** | Full (source, response) pair classification |
 | **R3.1 Differential Guard** | **F1 0.833 ± 0.0055 (100 held-out splits)** | Grounding + Compression + Short-response heuristics |
 | **R3.2 Topological Invariance** | **7/7 tests PASS** | Paraphrase rescue + contradiction veto |
 | **R3.3 Semantic Drift** | **Break point detection** | Sentence-by-sentence ISI trajectory |
@@ -119,7 +120,8 @@ Its purpose is to:
 Published Zenodo records:
 
 ```text
-SAS standard       https://doi.org/10.5281/zenodo.19702379
+SAS regulatory v1.3.0  https://doi.org/10.5281/zenodo.23917127
+SAS standard v9        https://doi.org/10.5281/zenodo.19702379
 R0                 https://doi.org/10.5281/zenodo.20647532
 R0-bis             https://doi.org/10.5281/zenodo.20671824
 R0.5P-1            https://doi.org/10.5281/zenodo.20742205
@@ -208,28 +210,28 @@ sas diff "Paris is in France." "Paris is in Germany."
 
 ## Benchmark / Validation
 
-The landing displays the main SAS benchmark:
+The landing displays the aggregate SAS benchmark across 4 public datasets:
 
-| Metric | Result |
-|---|---:|
-| Evaluated pairs | 1,800 |
-| Hallucination pairs | 1,800 |
-| Sanity check pairs | 1,800 |
-| Accuracy | 99.17% |
-| Precision | 100.00% |
-| Recall | 98.00% |
-| F1 Score | 98.99% |
-| False positives | 0 |
-| κD | 0.56 |
+| Dataset | Pairs | Precision | Recall | F1 | Accuracy | FP |
+|---|---:|---:|---:|---:|---:|---:|
+| HaluEval-QA | 10,000 | 0.9999 | 0.8111 | 0.8956 | 0.9055 | 1 |
+| HaluEval-Dialogue | 10,000 | 0.9973 | 0.7805 | 0.8757 | 0.8892 | 21 |
+| TruthfulQA | 790 | 1.0000 | 0.9797 | 0.9898 | 0.9899 | 0 |
+| MedHallu (format-controlled) | 10,000 | — | 0.8510 | — | — | 1 |
+| **AGGREGATE** | **30,790** | **0.9987** | **0.8028** | **0.8901** | **0.9009** | **22** |
 
-### Confusion Matrix
+**MedHallu note:** precision is not directly comparable because the negative class (A→A') is a length artifact (A' = 15% of A). The format-controlled detection rate (85.10%) is the correct metric for this corpus.
+
+### Aggregate Confusion Matrix
 
 | Prediction | Actual hallucination | Actual clean |
 |---|---:|---:|
-| Hallucination | TP = 1,764 | FP = 0 |
-| Clean | FN = 36 | TN = 1,800 |
+| Hallucination | TP = 16,690 | FP = 22 |
+| Clean | FN = 4,100 | TN = 20,768 |
 
-This benchmark is presented as empirical validation for the evaluated dataset. It should not be interpreted as a universal guarantee across every domain, model, language, or input distribution.
+This benchmark is presented as empirical validation for the evaluated datasets. It should not be interpreted as a universal guarantee across every domain, model, language, or input distribution.
+
+**Regulatory submission:** [10.5281/zenodo.23917127](https://doi.org/10.5281/zenodo.23917127) — 46-file package, SHA-256 manifest, 0 audit discrepancies.
 
 ---
 
@@ -543,7 +545,8 @@ This is intended to convert common mistakes into onboarding rather than dead-end
 |---|---|
 | Author | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
-| Zenodo DOI | `10.5281/zenodo.19702379` |
+| Zenodo DOI (regulatory v1.3.0) | `10.5281/zenodo.23917127` |
+| Zenodo DOI (standard v9) | `10.5281/zenodo.19702379` |
 | **Qeios Paper DOI** | **`10.32388/T420IV`** |
 | OpenTimestamps public notice hash | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
 | Benchmark artifact SHA-256 | `0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe` |
@@ -919,7 +922,7 @@ The landing page is part of the public SAS communication layer and should preser
 
 - attribution to Gonzalo Emir Durante;
 - reference to TAD `EX-2026-18792778`;
-- reference to Zenodo DOI `10.5281/zenodo.19702379`;
+- reference to Zenodo DOI `10.5281/zenodo.23917127`;
 - OpenTimestamps public proof reference;
 - benchmark artifact hash reference;
 - neutrality statement;
@@ -947,7 +950,7 @@ Main links:
 - Main repository: [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
 - Python client: [https://pypi.org/project/sas-client/](https://pypi.org/project/sas-client/)
 - Node SDK: [https://www.npmjs.com/package/sas-audit-client](https://www.npmjs.com/package/sas-audit-client)
-- DOI: [https://doi.org/10.5281/zenodo.19702379](https://doi.org/10.5281/zenodo.19702379)
+- DOI: [https://doi.org/10.5281/zenodo.23917127](https://doi.org/10.5281/zenodo.23917127)
 
 ---
 
@@ -1034,11 +1037,12 @@ Su función es:
 
 | Evaluación | Resultado | Alcance |
 |---|---|---|
-| Benchmark forense V3 | Accuracy 99.17% · Precisión 100% · Recall 98.00% · F1 98.99% · FP 0 | Dataset específico: 1.800 pares con alucinación + 1.800 sanity check |
+| **Tribunal v1.3.0 (agregado)** | **30.790 pares · P=0.9987 · R=0.8028 · F1=0.8901 · Acc=0.9009 · 22 FP** | 4 datasets públicos: HaluEval-QA, HaluEval-Dialogue, TruthfulQA, MedHallu |
+| **MedHallu (formato controlado)** | **85.10% detección · 0.01% FP identidad** | 10.000 registros médicos, protocolo 4 condiciones |
 | Evaluación estructural R1-D | F1 0.5230 · Flow + CRE + Negation | Corpus QA declarativo (halueval_qa) |
 | Baseline lexical R1-D | AUC 0.749 | Mismo corpus, baseline de referencia |
 | Código AST R2.1 | AUC 0.9141 bruto · AUC 0.9421 controlado por longitud | Dominio código, requiere referencia |
-| **Tribunal v1.3.0** | **13 módulos · κD=0.56 · κR=0.15 · Separación ISI 0.8323** | Clasificación completa de pares (fuente, respuesta) |
+| **13 módulos** | **κD=0.56 · κR=0.15 · Separación ISI 0.6597 (MedHallu A vs A'')** | Clasificación completa de pares (fuente, respuesta) |
 | **R3.1 Differential Guard** | **F1 0.833 ± 0.0055 (100 splits held-out)** | Grounding + Compresión + Heurísticas de respuesta corta |
 | **R3.2 Invarianza Topológica** | **7/7 tests PASS** | Rescate de paráfrasis + veto de contradicción |
 | **R3.3 Deriva Semántica** | **Detección de punto de quiebre** | Trayectoria ISI oración por oración |
@@ -1053,7 +1057,8 @@ Qeios DOI `10.32388/T420IV` — [https://www.qeios.com/read/T420IV](https://www.
 Registros Zenodo publicados:
 
 ```text
-SAS standard       https://doi.org/10.5281/zenodo.19702379
+SAS regulatorio v1.3.0  https://doi.org/10.5281/zenodo.23917127
+SAS standard v9        https://doi.org/10.5281/zenodo.19702379
 R0                 https://doi.org/10.5281/zenodo.20647532
 R0-bis             https://doi.org/10.5281/zenodo.20671824
 R0.5P-1            https://doi.org/10.5281/zenodo.20742205
@@ -1139,28 +1144,28 @@ sas diff "Paris is in France." "Paris is in Germany."
 
 ## Benchmark / Validación
 
-La landing muestra el benchmark principal de SAS:
+La landing muestra el benchmark agregado de SAS sobre 4 datasets públicos:
 
-| Métrica | Resultado |
-|---|---:|
-| Pares evaluados | 1.800 |
-| Pares con alucinación | 1.800 |
-| Pares sanity check | 1.800 |
-| Accuracy | 99.17% |
-| Precision | 100.00% |
-| Recall | 98.00% |
-| F1 Score | 98.99% |
-| Falsos positivos | 0 |
-| κD | 0.56 |
+| Dataset | Pares | Precision | Recall | F1 | Accuracy | FP |
+|---|---:|---:|---:|---:|---:|---:|
+| HaluEval-QA | 10.000 | 0.9999 | 0.8111 | 0.8956 | 0.9055 | 1 |
+| HaluEval-Dialogue | 10.000 | 0.9973 | 0.7805 | 0.8757 | 0.8892 | 21 |
+| TruthfulQA | 790 | 1.0000 | 0.9797 | 0.9898 | 0.9899 | 0 |
+| MedHallu (formato controlado) | 10.000 | — | 0.8510 | — | — | 1 |
+| **AGREGADO** | **30.790** | **0.9987** | **0.8028** | **0.8901** | **0.9009** | **22** |
 
-### Matriz de confusión
+**Nota MedHallu:** precision no es comparable directamente porque la clase negativa (A→A') es un artefacto de longitud (A' = 15% de A). La tasa de detección en formato controlado (85.10%) es la métrica correcta para este corpus.
+
+### Matriz de confusión agregada
 
 | Predicción | Alucinación real | Texto limpio real |
 |---|---:|---:|
-| Alucinación | TP = 1,764 | FP = 0 |
-| Limpio | FN = 36 | TN = 1,800 |
+| Alucinación | TP = 16,690 | FP = 22 |
+| Limpio | FN = 4,100 | TN = 20,768 |
 
-Resultado forense específico del dataset. No representa validación universal ni rendimiento garantizado en otros dominios.
+Resultado forense específico de los datasets evaluados. No representa validación universal ni rendimiento garantizado en otros dominios.
+
+**Envío regulatorio:** [10.5281/zenodo.23917127](https://doi.org/10.5281/zenodo.23917127) — paquete de 46 archivos, manifiesto SHA-256, 0 discrepancias de auditoría.
 
 ---
 
@@ -1470,7 +1475,8 @@ El objetivo es convertir errores comunes en onboarding en lugar de callejones si
 |---|---|
 | Autor | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
-| Zenodo DOI | `10.5281/zenodo.19702379` |
+| Zenodo DOI (regulatorio v1.3.0) | `10.5281/zenodo.23917127` |
+| Zenodo DOI (estándar v9) | `10.5281/zenodo.19702379` |
 | **DOI Qeios** | **`10.32388/T420IV`** |
 | Hash público OpenTimestamps | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
 | SHA-256 del artefacto benchmark | `0713acbbf50e1a0054f545e5eb68078744f9c5a09d4bc370b5224bb81183a6fe` |
@@ -1842,7 +1848,7 @@ La landing page preserva:
 
 - atribución a Gonzalo Emir Durante;
 - TAD `EX-2026-18792778`;
-- Zenodo DOI `10.5281/zenodo.19702379`;
+- Zenodo DOI `10.5281/zenodo.23917127`;
 - prueba pública OpenTimestamps;
 - hash de benchmark;
 - declaración de neutralidad;
@@ -1870,7 +1876,7 @@ Enlaces principales:
 - Repositorio principal: [https://github.com/Leesintheblindmonk1999/SAS](https://github.com/Leesintheblindmonk1999/SAS)
 - Cliente Python: [https://pypi.org/project/sas-client/](https://pypi.org/project/sas-client/)
 - Node SDK: [https://www.npmjs.com/package/sas-audit-client](https://www.npmjs.com/package/sas-audit-client)
-- DOI: [https://doi.org/10.5281/zenodo.19702379](https://doi.org/10.5281/zenodo.19702379)
+- DOI: [https://doi.org/10.5281/zenodo.23917127](https://doi.org/10.5281/zenodo.23917127)
 
 ---
 
