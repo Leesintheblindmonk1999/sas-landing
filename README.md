@@ -226,8 +226,8 @@ The landing displays the aggregate SAS benchmark across 4 public datasets:
 
 | Prediction | Actual hallucination | Actual clean |
 |---|---:|---:|
-| Hallucination | TP = 16,690 | FP = 22 |
-| Clean | FN = 4,100 | TN = 20,768 |
+| Hallucination | TP = 20,534 | FP = 22 |
+| Clean | FN = 256 | TN = 20,768 |
 
 This benchmark is presented as empirical validation for the evaluated datasets. It should not be interpreted as a universal guarantee across every domain, model, language, or input distribution.
 
@@ -1160,8 +1160,8 @@ La landing muestra el benchmark agregado de SAS sobre 4 datasets públicos:
 
 | Predicción | Alucinación real | Texto limpio real |
 |---|---:|---:|
-| Alucinación | TP = 16,690 | FP = 22 |
-| Limpio | FN = 4,100 | TN = 20,768 |
+| Alucinación | TP = 20,534 | FP = 22 |
+| Limpio | FN = 256 | TN = 20,768 |
 
 Resultado forense específico de los datasets evaluados. No representa validación universal ni rendimiento garantizado en otros dominios.
 
