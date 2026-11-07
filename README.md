@@ -14,8 +14,8 @@
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23917127-blue?style=for-the-badge)](https://doi.org/10.5281/zenodo.23917127)
 [![Qeios Paper](https://img.shields.io/badge/Qeios-10.32388%2FT420IV-purple?style=for-the-badge)](https://www.qeios.com/read/T420IV)
 [![License](https://img.shields.io/badge/License-GPL--3.0%20%2B%20Durante%20Invariance-purple?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/SAS)
-[![Benchmark](https://img.shields.io/badge/30%2C790%20pairs-F1%200.8901-success?style=for-the-badge)](#benchmark--validation)
-[![Tribunal](https://img.shields.io/badge/Tribunal-v1.3.0-ffd700?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal)
+[![Benchmark](https://img.shields.io/badge/30%2C790%20pairs-F1%200.9933-success?style=for-the-badge)](#benchmark--validation)
+[![Tribunal](https://img.shields.io/badge/Tribunal-v1.4.1-ffd700?style=for-the-badge)](https://github.com/Leesintheblindmonk1999/sas-multimetric-tribunal)
 
 </div>
 
@@ -37,7 +37,7 @@
 
 `/sas-landing` is the official public landing page for **SAS — Symbiotic Autoprotection System** and its core thresholds **κD = 0.56** (Durante Constant) and **κR = 0.15** (Recovery Threshold).
 
-SAS is a **research-alpha** defensive AI auditing system. It provides structural coherence auditing, semantic rupture detection, batch comparison workflows, experimental interaction stability analysis, and the **SAS Multimetric Tribunal v1.3.0** — a 13-module cascading classifier (7 core + R3.1–R3.6).
+SAS is a **research-alpha** defensive AI auditing system. It provides structural coherence auditing, semantic rupture detection, batch comparison workflows, experimental interaction stability analysis, and the **SAS Multimetric Tribunal v1.4.1** — a 13-module cascading classifier (7 core + R3.1–R3.6) with structural fingerprint gate.
 
 This landing page is the public access layer for:
 
@@ -103,7 +103,7 @@ Its purpose is to:
 
 | Evaluation | Result | Scope |
 |---|---|---|
-| **Tribunal v1.3.0 (aggregate)** | **30,790 pairs · P=0.9987 · R=0.8028 · F1=0.8901 · Acc=0.9009 · 22 FP** | 4 public datasets: HaluEval-QA, HaluEval-Dialogue, TruthfulQA, MedHallu |
+| **Tribunal v1.4.1 (aggregate)** | **30,790 pairs · P=0.9989 · R=0.9877 · F1=0.9933 · Acc=0.9933 · 22 FP** | 4 public datasets: HaluEval-QA, HaluEval-Dialogue, TruthfulQA, MedHallu |
 | **MedHallu (format-controlled)** | **85.10% detection · 0.01% identity FP** | 10,000 medical records, 4-condition protocol |
 | R1-D structural evaluation | F1 0.5230 · Flow + CRE + Negation | Declarative QA corpus (halueval_qa) |
 | R1-D lexical baseline | AUC 0.749 | Same corpus, reference baseline |
@@ -120,7 +120,7 @@ Its purpose is to:
 Published Zenodo records:
 
 ```text
-SAS regulatory v1.3.0  https://doi.org/10.5281/zenodo.23917127
+SAS regulatory v1.4.1  https://doi.org/10.5281/zenodo.23917127
 SAS standard v9        https://doi.org/10.5281/zenodo.19702379
 R0                 https://doi.org/10.5281/zenodo.20647532
 R0-bis             https://doi.org/10.5281/zenodo.20671824
@@ -141,7 +141,7 @@ Qeios DOI `10.32388/T420IV` — [https://www.qeios.com/read/T420IV](https://www.
 
 ## What SAS Communicates
 
-SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions. The **SAS Multimetric Tribunal v1.3.0** classifies (source, response) pairs into 3 structural zones using 13 detection modules (7 core + R3.1–R3.6) with cascading multiplicative penalty.
+SAS evaluates whether generative AI outputs preserve structural coherence across semantic, logical, numerical, temporal, and reference-related dimensions. The **SAS Multimetric Tribunal v1.4.1** classifies (source, response) pairs into 3 structural zones using 13 detection modules (7 core + R3.1–R3.6) with cascading multiplicative penalty and structural fingerprint gate.
 
 The landing communicates that SAS is:
 
@@ -218,7 +218,7 @@ The landing displays the aggregate SAS benchmark across 4 public datasets:
 | HaluEval-Dialogue | 10,000 | 0.9973 | 0.7805 | 0.8757 | 0.8892 | 21 |
 | TruthfulQA | 790 | 1.0000 | 0.9797 | 0.9898 | 0.9899 | 0 |
 | MedHallu (format-controlled) | 10,000 | — | 0.8510 | — | — | 1 |
-| **AGGREGATE** | **30,790** | **0.9987** | **0.8028** | **0.8901** | **0.9009** | **22** |
+| **AGGREGATE** | **30,790** | **0.9989** | **0.9877** | **0.9933** | **0.9933** | **22** |
 
 **MedHallu note:** precision is not directly comparable because the negative class (A→A') is a length artifact (A' = 15% of A). The format-controlled detection rate (85.10%) is the correct metric for this corpus.
 
@@ -545,7 +545,7 @@ This is intended to convert common mistakes into onboarding rather than dead-end
 |---|---|
 | Author | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
-| Zenodo DOI (regulatory v1.3.0) | `10.5281/zenodo.23917127` |
+| Zenodo DOI (regulatory v1.4.1) | `10.5281/zenodo.23917127` |
 | Zenodo DOI (standard v9) | `10.5281/zenodo.19702379` |
 | **Qeios Paper DOI** | **`10.32388/T420IV`** |
 | OpenTimestamps public notice hash | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
@@ -971,7 +971,7 @@ Main links:
 
 `/sas-landing` es la landing page pública oficial de **SAS — Symbiotic Autoprotection System** y de sus umbrales centrales **κD = 0.56** (Durante Constant) y **κR = 0.15** (Recovery Threshold).
 
-SAS es un sistema de auditoría de IA en fase de investigación alpha. Proporciona auditoría de coherencia estructural, detección de ruptura semántica, comparación por lotes, análisis experimental de estabilidad de interacción y el **SAS Multimetric Tribunal v1.3.0** — un clasificador de 13 módulos (7 core + R3.1–R3.6).
+SAS es un sistema de auditoría de IA en fase de investigación alpha. Proporciona auditoría de coherencia estructural, detección de ruptura semántica, comparación por lotes, análisis experimental de estabilidad de interacción y el **SAS Multimetric Tribunal v1.4.1** — un clasificador de 13 módulos (7 core + R3.1–R3.6) con fingerprint gate estructural.
 
 Esta landing page es la capa pública de acceso para:
 
@@ -1037,7 +1037,7 @@ Su función es:
 
 | Evaluación | Resultado | Alcance |
 |---|---|---|
-| **Tribunal v1.3.0 (agregado)** | **30.790 pares · P=0.9987 · R=0.8028 · F1=0.8901 · Acc=0.9009 · 22 FP** | 4 datasets públicos: HaluEval-QA, HaluEval-Dialogue, TruthfulQA, MedHallu |
+| **Tribunal v1.4.1 (agregado)** | **30.790 pares · P=0.9989 · R=0.9877 · F1=0.9933 · Acc=0.9933 · 22 FP** | 4 datasets públicos: HaluEval-QA, HaluEval-Dialogue, TruthfulQA, MedHallu |
 | **MedHallu (formato controlado)** | **85.10% detección · 0.01% FP identidad** | 10.000 registros médicos, protocolo 4 condiciones |
 | Evaluación estructural R1-D | F1 0.5230 · Flow + CRE + Negation | Corpus QA declarativo (halueval_qa) |
 | Baseline lexical R1-D | AUC 0.749 | Mismo corpus, baseline de referencia |
@@ -1057,7 +1057,7 @@ Qeios DOI `10.32388/T420IV` — [https://www.qeios.com/read/T420IV](https://www.
 Registros Zenodo publicados:
 
 ```text
-SAS regulatorio v1.3.0  https://doi.org/10.5281/zenodo.23917127
+SAS regulatorio v1.4.1  https://doi.org/10.5281/zenodo.23917127
 SAS standard v9        https://doi.org/10.5281/zenodo.19702379
 R0                 https://doi.org/10.5281/zenodo.20647532
 R0-bis             https://doi.org/10.5281/zenodo.20671824
@@ -1075,7 +1075,7 @@ R2.1-b function    https://doi.org/10.5281/zenodo.21466891
 
 ## Qué comunica SAS
 
-SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales. El **SAS Multimetric Tribunal v1.3.0** clasifica pares (fuente, respuesta) en 3 zonas estructurales usando 13 módulos de detección (7 core + R3.1–R3.6) con penalización multiplicativa en cascada.
+SAS evalúa si las salidas de IA generativa preservan coherencia estructural en dimensiones semánticas, lógicas, numéricas, temporales y referenciales. El **SAS Multimetric Tribunal v1.4.1** clasifica pares (fuente, respuesta) en 3 zonas estructurales usando 13 módulos de detección (7 core + R3.1–R3.6) con penalización multiplicativa en cascada y fingerprint gate estructural.
 
 La landing comunica que SAS es:
 
@@ -1152,7 +1152,7 @@ La landing muestra el benchmark agregado de SAS sobre 4 datasets públicos:
 | HaluEval-Dialogue | 10.000 | 0.9973 | 0.7805 | 0.8757 | 0.8892 | 21 |
 | TruthfulQA | 790 | 1.0000 | 0.9797 | 0.9898 | 0.9899 | 0 |
 | MedHallu (formato controlado) | 10.000 | — | 0.8510 | — | — | 1 |
-| **AGREGADO** | **30.790** | **0.9987** | **0.8028** | **0.8901** | **0.9009** | **22** |
+| **AGREGADO** | **30.790** | **0.9989** | **0.9877** | **0.9933** | **0.9933** | **22** |
 
 **Nota MedHallu:** precision no es comparable directamente porque la clase negativa (A→A') es un artefacto de longitud (A' = 15% de A). La tasa de detección en formato controlado (85.10%) es la métrica correcta para este corpus.
 
@@ -1475,7 +1475,7 @@ El objetivo es convertir errores comunes en onboarding en lugar de callejones si
 |---|---|
 | Autor | Gonzalo Emir Durante |
 | TAD Argentina | `EX-2026-18792778` |
-| Zenodo DOI (regulatorio v1.3.0) | `10.5281/zenodo.23917127` |
+| Zenodo DOI (regulatorio v1.4.1) | `10.5281/zenodo.23917127` |
 | Zenodo DOI (estándar v9) | `10.5281/zenodo.19702379` |
 | **DOI Qeios** | **`10.32388/T420IV`** |
 | Hash público OpenTimestamps | `17a6cf5295bee006f94b5b787f21798b7c84220a323bdb91ca12a48a8e8e9b3a` |
